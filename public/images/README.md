@@ -26,7 +26,6 @@ Hoje há 6 slots em `/sales-village` (placeholders com rótulo):
 
 ## `mentores/` — fotos dos mentores
 Nome em kebab-case do mentor. Ex.:
-- `thiago-concer.jpg`
 - `luiz-paulo-teixeira.jpg`
 - `helio-azevedo.jpg`
 - `felipe-feldens.jpg`

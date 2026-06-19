@@ -52,7 +52,6 @@ export const imersoes: Imersao[] = [
       { numero: 4, titulo: 'Liderança comercial, incentivos e disciplina de gestão', descricao: 'O papel da liderança na sustentação da máquina de vendas: responsabilidades, modelo de comissionamento, desenvolvimento e retenção do time, rotinas e fóruns de gestão.' },
     ],
     mentores: [
-      { nome: 'Thiago Concer', cargo: 'Mentor de vendas', bio: 'Empresário, palestrante e autor; referência na formação de líderes comerciais.' },
       { nome: 'Raphael Lassance', cargo: 'Sócio-mentor', bio: 'Fundador da primeira agência de growth hacking do Brasil; comunidade E-commerce Hacks.' },
       { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Investidor e estrategista em vendas e marketing B2B.' },
       { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: 'Líder do maior ecossistema de vendas do Brasil.' },

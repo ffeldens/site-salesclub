@@ -34,11 +34,6 @@ export type Faq = {
 
 const MENTORES: Mentor[] = [
   {
-    nome: 'Thiago Concer',
-    cargo: 'Fundador e mentor',
-    bio: 'Empresário, palestrante e autor; referência nacional na formação de líderes comerciais. Fundador do movimento Orgulho de Ser Vendedor (OSV).',
-  },
-  {
     nome: 'Luiz Paulo Teixeira',
     cargo: 'CEO do Sales Club',
     bio: '20+ anos em educação executiva e estratégia empresarial, com atuação na FGV.',
