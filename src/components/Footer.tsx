@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
-import { siteConfig, solutionsMenu } from '@/lib/site'
+import { siteConfig, solutionsMenu, getSocialLinks, type SocialKey } from '@/lib/site'
+import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
+
+const SOCIAL_ICONS: Partial<Record<SocialKey, (p: { className?: string }) => React.ReactNode>> = {
+  youtube: YoutubeIcon,
+  spotify: SpotifyIcon,
+}
 
 /** Footer com navegação, dados legais (E-E-A-T/LGPD) e redes. */
 export function Footer() {
@@ -42,12 +48,22 @@ export function Footer() {
             <Link href="/politica-de-privacidade" className="hover:text-paper">
               Política de Privacidade
             </Link>
-            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
-              Instagram
-            </a>
-            <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
-              LinkedIn
-            </a>
+            {getSocialLinks().map((s) => {
+              const Icon = SOCIAL_ICONS[s.key]
+              return (
+                <a
+                  key={s.key}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="inline-flex items-center gap-1.5 hover:text-paper"
+                >
+                  {Icon && <Icon className="h-4 w-4" />}
+                  {s.label}
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>

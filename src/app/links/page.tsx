@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata } from '@/lib/seo'
-import { siteConfig } from '@/lib/site'
+import { siteConfig, getSocialLinks } from '@/lib/site'
 import { Logo } from '@/components/ui/Logo'
 import { whatsappLink } from '@/lib/whatsapp'
 
@@ -12,12 +12,19 @@ export const metadata: Metadata = buildMetadata({
   noindex: true,
 })
 
-const LINKS = [
+// Botões principais. Podcast (Spotify) e YouTube entram quando a URL existir.
+const LINKS: { label: string; href: string; external?: boolean }[] = [
   { label: 'Imersões presenciais', href: '/imersoes' },
+  { label: 'Sales Club pelo Brasil (encontros)', href: '/sales-club-pelo-brasil' },
+  { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
   { label: 'Diagnóstico Comercial gratuito', href: '/servicos/diagnostico-comercial' },
-  { label: 'Máquina de Vendas', href: '/servicos/maquina-de-vendas' },
   { label: 'Comunidade ELITE', href: '/elite' },
-  { label: 'Sales Village (eventos e podcast)', href: '/sales-village' },
+  ...(siteConfig.social.youtube
+    ? [{ label: '▶ Assista no YouTube', href: siteConfig.social.youtube, external: true }]
+    : []),
+  ...(siteConfig.social.spotify
+    ? [{ label: '🎧 Ouça nosso podcast (Spotify)', href: siteConfig.social.spotify, external: true }]
+    : []),
   { label: 'Falar com especialista (WhatsApp)', href: whatsappLink(), external: true },
 ]
 
@@ -51,13 +58,12 @@ export default function LinksPage() {
         )}
       </div>
 
-      <div className="mt-10 flex gap-5 text-sm text-mute">
-        <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
-          Instagram
-        </a>
-        <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
-          LinkedIn
-        </a>
+      <div className="mt-10 flex flex-wrap justify-center gap-5 text-sm text-mute">
+        {getSocialLinks().map((s) => (
+          <a key={s.key} href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
+            {s.label}
+          </a>
+        ))}
         <a href={siteConfig.telecomUrl} target="_blank" rel="noopener noreferrer" className="hover:text-paper">
           Sales Club Telecom
         </a>

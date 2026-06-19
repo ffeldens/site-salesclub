@@ -42,6 +42,22 @@ export function WhatsAppIcon({ className }: IconProps) {
   )
 }
 
+export function YoutubeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31.3 31.3 0 000 12a31.3 31.3 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31.3 31.3 0 0024 12a31.3 31.3 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z" />
+    </svg>
+  )
+}
+
+export function SpotifyIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm5.5 17.3a.75.75 0 01-1 .25c-2.8-1.7-6.3-2.1-10.4-1.1a.75.75 0 11-.34-1.46c4.5-1 8.4-.6 11.5 1.3.36.22.47.69.25 1.01zm1.47-3.27a.94.94 0 01-1.29.31c-3.2-1.97-8.08-2.54-11.87-1.39a.94.94 0 11-.54-1.8c4.33-1.3 9.7-.67 13.38 1.59.44.27.58.85.32 1.29zm.13-3.4C15.36 8.36 8.9 8.15 5.2 9.27a1.12 1.12 0 11-.65-2.15c4.25-1.29 11.38-1.04 15.86 1.62a1.12 1.12 0 11-1.15 1.92z" />
+    </svg>
+  )
+}
+
 export function CalendarIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true" className={className}>

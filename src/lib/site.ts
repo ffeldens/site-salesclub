@@ -24,11 +24,30 @@ export const siteConfig = {
   social: {
     instagram: 'https://instagram.com/salesclub_oficial',
     linkedin: 'https://linkedin.com/company/salesclub-oficial',
+    // TODO(social): preencher com as URLs oficiais do canal e do podcast.
     youtube: '',
+    spotify: '',
   },
   // Vertical Telecom mantém domínio próprio — linkamos para fora.
   telecomUrl: 'https://salesclubtelecom.com.br',
 } as const
+
+export type SocialKey = 'instagram' | 'linkedin' | 'youtube' | 'spotify'
+
+export type SocialLink = { key: SocialKey; label: string; href: string }
+
+/** Redes sociais com URL preenchida, em ordem de exibição. */
+export function getSocialLinks(): SocialLink[] {
+  const order: { key: SocialKey; label: string }[] = [
+    { key: 'instagram', label: 'Instagram' },
+    { key: 'linkedin', label: 'LinkedIn' },
+    { key: 'youtube', label: 'YouTube' },
+    { key: 'spotify', label: 'Spotify' },
+  ]
+  return order
+    .map(({ key, label }) => ({ key, label, href: String(siteConfig.social[key] ?? '') }))
+    .filter((s) => s.href.length > 0)
+}
 
 export type NavItem = {
   label: string
