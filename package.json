@@ -13,9 +13,16 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,css,md}\""
   },
   "dependencies": {
+    "@portabletext/react": "^6.2.0",
+    "@sanity/client": "^7.23.0",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^4.22.0",
     "next": "^15.1.6",
+    "next-sanity": "^11.6.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sanity": "^4.22.0",
+    "styled-components": "^6.4.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {

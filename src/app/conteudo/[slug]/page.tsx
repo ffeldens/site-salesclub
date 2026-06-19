@@ -10,11 +10,14 @@ import { Badge } from '@/components/ui/Badge'
 import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { NewsletterForm } from '@/components/blocks/NewsletterForm'
+import { PortableBody } from '@/components/PortableBody'
 import { formatDate } from '@/lib/format'
 import { getPost, getPosts } from '@/content/conteudo'
 
-export function generateStaticParams() {
-  return getPosts().map((p) => ({ slug: p.slug }))
+export const revalidate = 60
+
+export async function generateStaticParams() {
+  return (await getPosts()).map((p) => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({
@@ -23,14 +26,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const p = getPost(slug)
+  const p = await getPost(slug)
   if (!p) return buildMetadata({ title: 'Artigo não encontrado', noindex: true })
   return buildMetadata({ title: p.titulo, description: p.resumo, path: `/conteudo/${p.slug}` })
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const p = getPost(slug)
+  const p = await getPost(slug)
   if (!p) notFound()
 
   const url = `${siteConfig.url}/conteudo/${p.slug}`
@@ -75,23 +78,27 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </div>
 
           <div className="prose-sc mt-8 space-y-5">
-            {p.corpo.map((bloco, i) => {
-              if (bloco.tipo === 'h2')
-                return (
-                  <h2 key={i} className="font-display text-heading text-paper-pure">
-                    {bloco.texto}
-                  </h2>
-                )
-              if (bloco.tipo === 'ul')
-                return (
-                  <ul key={i} className="list-disc space-y-1 pl-5">
-                    {bloco.itens.map((it) => (
-                      <li key={it}>{it}</li>
-                    ))}
-                  </ul>
-                )
-              return <p key={i}>{bloco.texto}</p>
-            })}
+            {p.body && p.body.length > 0 ? (
+              <PortableBody value={p.body} />
+            ) : (
+              p.corpo?.map((bloco, i) => {
+                if (bloco.tipo === 'h2')
+                  return (
+                    <h2 key={i} className="font-display text-heading text-paper-pure">
+                      {bloco.texto}
+                    </h2>
+                  )
+                if (bloco.tipo === 'ul')
+                  return (
+                    <ul key={i} className="list-disc space-y-1 pl-5">
+                      {bloco.itens.map((it) => (
+                        <li key={it}>{it}</li>
+                      ))}
+                    </ul>
+                  )
+                return <p key={i}>{bloco.texto}</p>
+              })
+            )}
           </div>
         </article>
       </Section>

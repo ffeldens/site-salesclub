@@ -15,8 +15,10 @@ export const metadata: Metadata = buildMetadata({
   path: '/conteudo',
 })
 
-export default function ConteudoPage() {
-  const posts = getPosts()
+export const revalidate = 60
+
+export default async function ConteudoPage() {
+  const posts = await getPosts()
   return (
     <PageShell>
       <HeroInstitucional

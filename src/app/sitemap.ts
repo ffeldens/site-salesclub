@@ -11,7 +11,7 @@ import { getCampanhas } from '@/content/campanhas'
  * sitemap.xml. Rotas estáticas + detalhes de imersões/serviços/corporate.
  * Posts e materiais entram a partir do CMS na Fase 4/5.
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     '',
     '/imersoes',
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getServicos().map((s) => `/servicos/${s.slug}`),
     ...getCorporateOfertas().map((o) => `/corporate/${o.slug}`),
     ...getCursos().map((c) => `/universidade/${c.slug}`),
-    ...getPosts().map((p) => `/conteudo/${p.slug}`),
+    ...(await getPosts()).map((p) => `/conteudo/${p.slug}`),
     // LPs de campanha indexáveis (mídia paga costuma ser noindex)
     ...getCampanhas().filter((c) => !c.noindex).map((c) => `/lp/${c.slug}`),
   ]

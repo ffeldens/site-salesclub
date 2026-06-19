@@ -1,9 +1,12 @@
+import type { PortableTextBlock } from '@portabletext/react'
 import type { Faq } from '@/lib/content'
+import { sanityClient } from '@/sanity/client'
 
 /**
- * Artigos do blog (/conteudo). Estrutura preparada para o Sanity (Fase 4):
- * o corpo é uma lista de blocos simples (h2/p/ul), análogo ao portable text.
- * TODO(conteúdo): textos-semente provisórios — revisar/ampliar com o time.
+ * Artigos do blog (/conteudo). Lê do Sanity quando há conteúdo publicado;
+ * caso contrário, usa os seeds em TS (fallback robusto — o site nunca quebra).
+ * O corpo dos posts do Sanity vem em portable text (`body`); os seeds usam
+ * blocos simples (`corpo`).
  */
 
 export type Bloco =
@@ -19,11 +22,14 @@ export type Post = {
   autor: string
   dataPublicacao: string // ISO
   dataAtualizacao: string // ISO
-  corpo: Bloco[]
+  /** Corpo dos seeds (blocos simples). */
+  corpo?: Bloco[]
+  /** Corpo vindo do Sanity (portable text). */
+  body?: PortableTextBlock[]
   faq?: Faq[]
 }
 
-export const posts: Post[] = [
+const seedPosts: Post[] = [
   {
     slug: 'como-dar-previsibilidade-a-area-comercial',
     titulo: 'Como dar previsibilidade à área comercial em 4 pilares',
@@ -87,10 +93,34 @@ export const posts: Post[] = [
   },
 ]
 
-export function getPosts(): Post[] {
-  return [...posts].sort((a, b) => (a.dataPublicacao < b.dataPublicacao ? 1 : -1))
+const POSTS_QUERY = `*[_type == "post" && defined(slug.current)]|order(dataPublicacao desc){
+  "slug": slug.current,
+  titulo,
+  resumo,
+  "categoria": coalesce(categoria, "Conteúdo"),
+  "autor": coalesce(autor, "Sales Club"),
+  "dataPublicacao": string(dataPublicacao),
+  "dataAtualizacao": coalesce(string(dataAtualizacao), string(dataPublicacao)),
+  body,
+  "faq": faq[]{pergunta, resposta}
+}`
+
+async function fetchSanityPosts(): Promise<Post[] | null> {
+  try {
+    const docs = await sanityClient.fetch<Post[]>(POSTS_QUERY)
+    return docs && docs.length > 0 ? docs : null
+  } catch {
+    return null
+  }
 }
 
-export function getPost(slug: string): Post | undefined {
-  return posts.find((p) => p.slug === slug)
+export async function getPosts(): Promise<Post[]> {
+  const fromSanity = await fetchSanityPosts()
+  if (fromSanity) return fromSanity
+  return [...seedPosts].sort((a, b) => (a.dataPublicacao < b.dataPublicacao ? 1 : -1))
+}
+
+export async function getPost(slug: string): Promise<Post | undefined> {
+  const all = await getPosts()
+  return all.find((p) => p.slug === slug)
 }

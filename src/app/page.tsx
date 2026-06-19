@@ -26,7 +26,8 @@ import {
   getStats,
 } from '@/lib/content'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const ultimosPosts = (await getPosts()).slice(0, 2)
   return (
     <>
       <Header />
@@ -68,18 +69,16 @@ export default function HomePage() {
             description="Artigos, episódios e conteúdos em vídeo sobre gestão comercial, previsibilidade e liderança."
           />
           <div className="grid gap-6 lg:grid-cols-3">
-            {getPosts()
-              .slice(0, 2)
-              .map((p) => (
-                <CardConteudo
-                  key={p.slug}
-                  titulo={p.titulo}
-                  resumo={p.resumo}
-                  href={`/conteudo/${p.slug}`}
-                  categoria={p.categoria}
-                  dataPublicacao={formatDate(p.dataPublicacao)}
-                />
-              ))}
+            {ultimosPosts.map((p) => (
+              <CardConteudo
+                key={p.slug}
+                titulo={p.titulo}
+                resumo={p.resumo}
+                href={`/conteudo/${p.slug}`}
+                categoria={p.categoria}
+                dataPublicacao={formatDate(p.dataPublicacao)}
+              />
+            ))}
             <Card className="flex flex-col justify-between">
               <div>
                 <h3 className="font-display text-heading text-paper-pure">Ouça e assista</h3>
