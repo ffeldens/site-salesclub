@@ -4,6 +4,10 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
+    // SVGs próprios da marca (logos em /public/brand). Conteúdo confiável.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       // CDN do Sanity (quando o CMS for plugado na Fase 4)
       { protocol: 'https', hostname: 'cdn.sanity.io' },
