@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
 import { siteConfig, solutionsMenu, getSocialLinks, type SocialKey } from '@/lib/site'
 import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
+import { NewsletterForm } from '@/components/blocks/NewsletterForm'
 
 const SOCIAL_ICONS: Partial<Record<SocialKey, (p: { className?: string }) => React.ReactNode>> = {
   youtube: YoutubeIcon,
@@ -13,6 +14,23 @@ export function Footer() {
   const year = 2026 // ano fixo — sem Date no server para builds determinísticos
   return (
     <footer className="border-t border-subtle bg-ink-card">
+      {/* Inscrição na newsletter (site-wide) */}
+      <div className="border-b border-subtle">
+        <div className="container-content flex flex-col items-start justify-between gap-6 py-10 lg:flex-row lg:items-center">
+          <div className="max-w-md">
+            <p className="font-display text-heading text-paper-pure">
+              Conteúdos de vendas no seu e-mail
+            </p>
+            <p className="mt-1 text-sm text-paper/70">
+              Insights de gestão comercial e previsibilidade. Sem spam.
+            </p>
+          </div>
+          <div className="w-full max-w-md">
+            <NewsletterForm variant="inline" />
+          </div>
+        </div>
+      </div>
+
       <div className="container-content grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <Logo />

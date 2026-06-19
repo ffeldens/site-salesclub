@@ -10,6 +10,14 @@ import { SalesVillage } from '@/components/blocks/SalesVillage'
 import { Depoimentos } from '@/components/blocks/Depoimentos'
 import { FAQ } from '@/components/blocks/FAQ'
 import { CTASection } from '@/components/blocks/CTASection'
+import { Section, SectionHeading } from '@/components/ui/Section'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { CardConteudo } from '@/components/blocks/Cards'
+import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
+import { siteConfig } from '@/lib/site'
+import { formatDate } from '@/lib/format'
+import { getPosts } from '@/content/conteudo'
 import {
   getClienteLogos,
   getDepoimentos,
@@ -51,6 +59,48 @@ export default function HomePage() {
         <SalesVillage />
 
         <Depoimentos depoimentos={getDepoimentos()} />
+
+        {/* Conteúdo & Podcast */}
+        <Section>
+          <SectionHeading
+            eyebrow="Conteúdo & Podcast"
+            title="Aprenda com o maior ecossistema de vendas do Brasil"
+            description="Artigos, episódios e conteúdos em vídeo sobre gestão comercial, previsibilidade e liderança."
+          />
+          <div className="grid gap-6 lg:grid-cols-3">
+            {getPosts()
+              .slice(0, 2)
+              .map((p) => (
+                <CardConteudo
+                  key={p.slug}
+                  titulo={p.titulo}
+                  resumo={p.resumo}
+                  href={`/conteudo/${p.slug}`}
+                  categoria={p.categoria}
+                  dataPublicacao={formatDate(p.dataPublicacao)}
+                />
+              ))}
+            <Card className="flex flex-col justify-between">
+              <div>
+                <h3 className="font-display text-heading text-paper-pure">Ouça e assista</h3>
+                <p className="mt-2 text-sm text-paper/70">
+                  O podcast do Sales Club no Spotify e os conteúdos em vídeo no YouTube.
+                </p>
+              </div>
+              <div className="mt-4 flex flex-col gap-2">
+                <Button href={siteConfig.social.spotify} variant="secondary" size="sm">
+                  <SpotifyIcon className="h-4 w-4" /> Ouvir no Spotify
+                </Button>
+                <Button href={siteConfig.social.youtube} variant="secondary" size="sm">
+                  <YoutubeIcon className="h-4 w-4" /> Assistir no YouTube
+                </Button>
+                <Button href="/podcast" variant="ghost" size="sm">
+                  Ver tudo →
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </Section>
 
         <FAQ items={getFaqHome()} />
 

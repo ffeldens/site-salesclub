@@ -4,6 +4,7 @@ import { getImersoes } from '@/content/imersoes'
 import { getServicos } from '@/content/servicos'
 import { getCorporateOfertas } from '@/content/corporate'
 import { getCursos } from '@/content/universidade'
+import { getPosts } from '@/content/conteudo'
 
 /**
  * sitemap.xml. Rotas estáticas + detalhes de imersões/serviços/corporate.
@@ -21,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sales-village',
     '/sales-club-pelo-brasil',
     '/universidade',
+    '/podcast',
+    '/conteudo',
     '/sobre',
     '/cases',
     '/contato',
@@ -32,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getServicos().map((s) => `/servicos/${s.slug}`),
     ...getCorporateOfertas().map((o) => `/corporate/${o.slug}`),
     ...getCursos().map((c) => `/universidade/${c.slug}`),
+    ...getPosts().map((p) => `/conteudo/${p.slug}`),
   ]
 
   return [...staticRoutes, ...dynamicRoutes].map((route) => ({

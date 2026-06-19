@@ -22,7 +22,10 @@
 ## Espaço
 - [Sales Village](https://salesclub.com.br/sales-village): sede em São Paulo e espaço para locação de eventos e podcast (10–150 pessoas).
 
+## Conteúdo
+- [Conteúdo](https://salesclub.com.br/conteudo): blog de gestão comercial, previsibilidade e liderança de vendas.
+- [Podcast](https://salesclub.com.br/podcast): podcast do Sales Club (Spotify) e canal no YouTube.
+
 ## Institucional
 - [Sobre](https://salesclub.com.br/sobre): ecossistema, mentores e manifesto.
 - [Cases](https://salesclub.com.br/cases): resultados e prova social.
-- [Conteúdo](https://salesclub.com.br/conteudo): blog de gestão comercial.

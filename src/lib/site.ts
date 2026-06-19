@@ -124,7 +124,8 @@ export const solutionsMenu: NavGroup[] = [
 
 /** Itens de topo do header (além do mega-menu). */
 export const primaryNav: NavItem[] = [
-  { label: 'Cases', href: '/cases' },
   { label: 'Conteúdo', href: '/conteudo' },
+  { label: 'Podcast', href: '/podcast' },
+  { label: 'Cases', href: '/cases' },
   { label: 'Sobre', href: '/sobre' },
 ]
