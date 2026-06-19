@@ -5,6 +5,7 @@ import { getServicos } from '@/content/servicos'
 import { getCorporateOfertas } from '@/content/corporate'
 import { getCursos } from '@/content/universidade'
 import { getPosts } from '@/content/conteudo'
+import { getCampanhas } from '@/content/campanhas'
 
 /**
  * sitemap.xml. Rotas estáticas + detalhes de imersões/serviços/corporate.
@@ -36,6 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...getCorporateOfertas().map((o) => `/corporate/${o.slug}`),
     ...getCursos().map((c) => `/universidade/${c.slug}`),
     ...getPosts().map((p) => `/conteudo/${p.slug}`),
+    // LPs de campanha indexáveis (mídia paga costuma ser noindex)
+    ...getCampanhas().filter((c) => !c.noindex).map((c) => `/lp/${c.slug}`),
   ]
 
   return [...staticRoutes, ...dynamicRoutes].map((route) => ({
