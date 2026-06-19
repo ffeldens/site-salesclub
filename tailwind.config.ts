@@ -31,6 +31,12 @@ const config: Config = {
           pure: '#FFFFFF', // Branco puro
           cool: '#F8F9FC', // Branco azulado
         },
+        // Identidade ELITE (variante dourada da comunidade premium)
+        elite: {
+          DEFAULT: '#C08B52', // ouro oficial Elite
+          light: '#D4A874',
+          dark: '#A06F3C',
+        },
         // Acento decorativo (uso mínimo — ~6% opacidade)
         teal: '#6AD1D2',
       },

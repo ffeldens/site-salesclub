@@ -22,6 +22,8 @@ export type FormLeadProps = {
   ctaLabel?: string
   /** Campos de qualificação rica (cargo, nº vendedores, faturamento). */
   rich?: boolean
+  /** Variante do botão de envio (ex.: 'gold' na página ELITE). */
+  ctaVariant?: 'primary' | 'gold'
 }
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
@@ -37,6 +39,7 @@ export function FormLead({
   description,
   ctaLabel = 'Enviar',
   rich = true,
+  ctaVariant = 'primary',
 }: FormLeadProps) {
   const [status, setStatus] = useState<Status>('idle')
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -201,7 +204,12 @@ export function FormLead({
 
       {errors.form && <p className="mt-4 text-sm text-brand-vivid">{errors.form}</p>}
 
-      <Button type="submit" className="mt-6 w-full" disabled={status === 'submitting'}>
+      <Button
+        type="submit"
+        variant={ctaVariant}
+        className="mt-6 w-full"
+        disabled={status === 'submitting'}
+      >
         {status === 'submitting' ? 'Enviando…' : ctaLabel}
       </Button>
     </form>

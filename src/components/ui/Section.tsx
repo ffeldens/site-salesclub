@@ -26,6 +26,8 @@ type SectionHeadingProps = {
   description?: string
   align?: 'left' | 'center'
   className?: string
+  /** Cor do eyebrow — 'gold' para a identidade ELITE. */
+  accent?: 'brand' | 'gold'
 }
 
 export function SectionHeading({
@@ -34,6 +36,7 @@ export function SectionHeading({
   description,
   align = 'left',
   className,
+  accent = 'brand',
 }: SectionHeadingProps) {
   return (
     <div
@@ -44,7 +47,12 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-vivid">
+        <p
+          className={cn(
+            'mb-3 text-sm font-semibold uppercase tracking-widest',
+            accent === 'gold' ? 'text-elite' : 'text-brand-vivid',
+          )}
+        >
           {eyebrow}
         </p>
       )}

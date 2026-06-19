@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { forwardRef } from 'react'
 import { cn } from '@/lib/cn'
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'whatsapp'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'whatsapp' | 'gold'
 type Size = 'sm' | 'md' | 'lg'
 
 const base =
@@ -13,6 +13,7 @@ const variants: Record<Variant, string> = {
   secondary: 'border border-subtle bg-ink-card text-paper hover:border-brand hover:text-paper-pure',
   ghost: 'text-paper hover:text-brand-vivid',
   whatsapp: 'bg-[#25D366] text-[#0C0C0C] hover:brightness-95',
+  gold: 'bg-elite text-ink hover:bg-elite-dark',
 }
 
 const sizes: Record<Size, string> = {
