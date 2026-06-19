@@ -71,6 +71,13 @@ export const solutionsMenu: NavGroup[] = [
     ],
   },
   {
+    label: 'Eventos & Educação',
+    items: [
+      { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil', description: 'Encontros executivos de 1 dia pelo país' },
+      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro', description: 'Formação online para times de vendas' },
+    ],
+  },
+  {
     label: 'Comunidade & Conselho',
     items: [
       { label: 'ELITE', href: '/elite', description: 'Comunidade de empresários' },

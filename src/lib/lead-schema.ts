@@ -30,6 +30,8 @@ export const LEAD_SOURCES = [
   'corporate',
   'elite',
   'sales-village',
+  'eventos',
+  'universidade',
   'materiais',
   'contato',
 ] as const
