@@ -1,0 +1,105 @@
+import type { Metadata } from 'next'
+import { buildMetadata } from '@/lib/seo'
+import { siteConfig } from '@/lib/site'
+import { PageShell } from '@/components/PageShell'
+import { JsonLd } from '@/components/JsonLd'
+import { HeroInstitucional } from '@/components/blocks/HeroInstitucional'
+import { Section, SectionHeading } from '@/components/ui/Section'
+import { Beneficios } from '@/components/blocks/Beneficios'
+import { AnswerBlock } from '@/components/blocks/AnswerBlock'
+import { FormLead } from '@/components/blocks/FormLead'
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Sales Village — espaço para eventos e podcast em São Paulo',
+  description:
+    'O Sales Village é a sede do Sales Club em São Paulo, disponível para locação de eventos corporativos e gravação de podcast, com serviço completo para 10 a 150 pessoas.',
+  path: '/sales-village',
+})
+
+const GALERIA = ['Auditório', 'Estúdio de podcast', 'Lounge', 'Salas de mentoria', 'Coffee & catering', 'Espaço de networking']
+
+export default function SalesVillagePage() {
+  return (
+    <PageShell whatsappMessage="Olá! Quero orçar um evento no Sales Village.">
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'EventVenue',
+          name: 'Sales Village',
+          description:
+            'Sede do Sales Club em São Paulo, disponível para locação de eventos corporativos e gravação de podcast (10 a 150 pessoas).',
+          url: `${siteConfig.url}/sales-village`,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'R. Verbo Divino, 2001, 17º andar, Torre A',
+            addressLocality: 'São Paulo',
+            addressRegion: 'SP',
+            postalCode: '04719-002',
+            addressCountry: 'BR',
+          },
+          maximumAttendeeCapacity: 150,
+        }}
+      />
+
+      <HeroInstitucional
+        eyebrow="Espaço"
+        title="Sales Village: a sede do Sales Club, também para o seu evento"
+        subtitle="Mais que a nossa casa em São Paulo — um espaço completo para locação de eventos corporativos e gravação de podcast, de 10 a 150 pessoas, com serviço ponta a ponta."
+        primaryCta={{ label: 'Reservar / Orçar evento', href: '#cta' }}
+      />
+
+      <Section>
+        <div className="max-w-3xl">
+          <AnswerBlock>
+            O Sales Village é a sede do Sales Club em São Paulo (R. Verbo Divino, 2001) e também um espaço
+            de locação para eventos corporativos e gravação de podcast, com serviço completo para 10 a
+            150 pessoas — auditório, estúdio, lounge e salas de mentoria.
+          </AnswerBlock>
+        </div>
+      </Section>
+
+      <Section tone="card">
+        <SectionHeading eyebrow="O espaço" title="Estrutura completa" />
+        {/* TODO(assets): substituir placeholders pela galeria de fotos do Sales Village. */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {GALERIA.map((label) => (
+            <div
+              key={label}
+              className="flex aspect-[4/3] items-center justify-center rounded-card border border-subtle bg-ink text-sm text-mute"
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Beneficios
+        eyebrow="Para o seu evento"
+        title="Formatos de uso"
+        items={[
+          { titulo: 'Eventos corporativos', descricao: 'Convenções, kickoffs, treinamentos e workshops.' },
+          { titulo: 'Gravação de podcast', descricao: 'Estúdio preparado para áudio e vídeo.' },
+          { titulo: 'Capacidade flexível', descricao: 'De 10 a 150 pessoas, conforme o formato.' },
+          { titulo: 'Serviço completo', descricao: 'Produção, catering e suporte ponta a ponta.' },
+        ]}
+      />
+
+      <Section id="cta">
+        <SectionHeading
+          eyebrow="Reserva"
+          title="Reservar / Orçar evento"
+          description="Conte a data, o número de pessoas e o tipo de evento. Retornamos com uma proposta."
+          align="center"
+        />
+        <div className="mx-auto max-w-2xl">
+          <FormLead
+            source="sales-village"
+            produto="Sales Village"
+            title=""
+            ctaLabel="Solicitar orçamento"
+          />
+        </div>
+      </Section>
+    </PageShell>
+  )
+}

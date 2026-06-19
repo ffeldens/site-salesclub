@@ -7,13 +7,15 @@
 export const siteConfig = {
   name: 'Sales Club',
   tagline: 'O maior ecossistema de vendas do Brasil',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://salesclub.com.br',
+  // MVP hospedado em subdomínio da MudAção; migra para salesclub.com.br no go-live.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sitesc.mudacao.com.br',
   description:
     'Imersões, serviços, comunidade e tecnologia para dar previsibilidade e escala à sua área comercial. O maior ecossistema de vendas do Brasil.',
   // E-E-A-T — visíveis no Footer e no JSON-LD Organization
   legalName: 'Sales Club',
-  cnpj: 'CNPJ a confirmar',
-  address: 'Sales Village — São Paulo, SP',
+  cnpj: '42.839.048/0001-38',
+  address:
+    'Sales Village — R. Verbo Divino, 2001, 17º andar, Torre A, Chácara Santo Antônio, São Paulo/SP, CEP 04719-002',
   whatsapp: {
     // TODO: confirmar número oficial
     number: '5511999999999',
@@ -24,12 +26,16 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/company/salesclub-oficial',
     youtube: '',
   },
+  // Vertical Telecom mantém domínio próprio — linkamos para fora.
+  telecomUrl: 'https://salesclubtelecom.com.br',
 } as const
 
 export type NavItem = {
   label: string
   href: string
   description?: string
+  /** Abre em nova aba (ex.: vertical Telecom, que mantém domínio próprio). */
+  external?: boolean
 }
 
 export type NavGroup = {
@@ -76,6 +82,17 @@ export const solutionsMenu: NavGroup[] = [
     items: [
       { label: 'Sales Village', href: '/sales-village', description: 'Locação para eventos e podcast' },
       { label: 'App de OKRs', href: '/produtos/okrs', description: 'Gestão por OKRs' },
+    ],
+  },
+  {
+    label: 'Verticais',
+    items: [
+      {
+        label: 'Sales Club Telecom',
+        href: 'https://salesclubtelecom.com.br',
+        description: 'Movimento para empresas de telecom',
+        external: true,
+      },
     ],
   },
 ]

@@ -72,19 +72,34 @@ function MegaMenu() {
               {group.label}
             </p>
             <ul className="space-y-1">
-              {group.items.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block rounded-md px-2 py-1.5 text-sm text-paper/85 hover:bg-paper/5 hover:text-paper-pure"
-                  >
-                    <span className="font-medium">{item.label}</span>
+              {group.items.map((item) => {
+                const cls =
+                  'block rounded-md px-2 py-1.5 text-sm text-paper/85 hover:bg-paper/5 hover:text-paper-pure'
+                const inner = (
+                  <>
+                    <span className="font-medium">
+                      {item.label}
+                      {item.external && <span aria-hidden> ↗</span>}
+                    </span>
                     {item.description && (
                       <span className="block text-xs text-mute">{item.description}</span>
                     )}
-                  </Link>
-                </li>
-              ))}
+                  </>
+                )
+                return (
+                  <li key={item.href}>
+                    {item.external ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className={cls}>
+                        {inner}
+                      </Link>
+                    )}
+                  </li>
+                )
+              })}
             </ul>
           </div>
         ))}
@@ -103,17 +118,30 @@ function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
               {group.label}
             </p>
             <ul className="space-y-1">
-              {group.items.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={onNavigate}
-                    className={cn('block py-1.5 text-paper/85 hover:text-paper-pure')}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {group.items.map((item) =>
+                item.external ? (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block py-1.5 text-paper/85 hover:text-paper-pure"
+                    >
+                      {item.label} ↗
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={onNavigate}
+                      className={cn('block py-1.5 text-paper/85 hover:text-paper-pure')}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
         ))}

@@ -1,12 +1,15 @@
 import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/lib/site'
+import { getImersoes } from '@/content/imersoes'
+import { getServicos } from '@/content/servicos'
+import { getCorporateOfertas } from '@/content/corporate'
 
 /**
- * sitemap.xml. Rotas estáticas conhecidas; rotas dinâmicas (imersões, posts,
- * materiais) serão somadas a partir do CMS na Fase 4/5.
+ * sitemap.xml. Rotas estáticas + detalhes de imersões/serviços/corporate.
+ * Posts e materiais entram a partir do CMS na Fase 4/5.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
+  const staticRoutes = [
     '',
     '/imersoes',
     '/servicos',
@@ -17,13 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sales-village',
     '/sobre',
     '/cases',
-    '/conteudo',
-    '/materiais',
     '/contato',
     '/politica-de-privacidade',
   ]
 
-  return routes.map((route) => ({
+  const dynamicRoutes = [
+    ...getImersoes().map((i) => `/imersoes/${i.slug}`),
+    ...getServicos().map((s) => `/servicos/${s.slug}`),
+    ...getCorporateOfertas().map((o) => `/corporate/${o.slug}`),
+  ]
+
+  return [...staticRoutes, ...dynamicRoutes].map((route) => ({
     url: `${siteConfig.url}${route}`,
     changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.7,

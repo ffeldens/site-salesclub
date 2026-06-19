@@ -33,22 +33,58 @@ export type Faq = {
 // --- Seed data (provisório; migrar do site atual / Sanity) ---
 
 const MENTORES: Mentor[] = [
-  { nome: 'Thiago Concer', cargo: 'Especialista em Vendas', bio: 'Referência nacional em treinamento de equipes comerciais.' },
-  { nome: 'Raphael Lassance', cargo: 'Sales & Marketing', bio: 'Estrategista de aceleração comercial e marketing B2B.' },
-  { nome: 'Hélio Azevedo', cargo: 'Gestão Comercial', bio: 'Especialista em previsibilidade e governança de vendas.' },
-  { nome: 'Luiz Paulo Teixeira', cargo: 'Liderança Comercial', bio: 'Mentor de líderes e diretores comerciais.' },
+  {
+    nome: 'Thiago Concer',
+    cargo: 'Fundador e mentor',
+    bio: 'Empresário, palestrante e autor; referência nacional na formação de líderes comerciais. Fundador do movimento Orgulho de Ser Vendedor (OSV).',
+  },
+  {
+    nome: 'Luiz Paulo Teixeira',
+    cargo: 'CEO do Sales Club',
+    bio: '20+ anos em educação executiva e estratégia empresarial, com atuação na FGV.',
+  },
+  {
+    nome: 'Hélio Azevedo',
+    cargo: 'CRO do Sales Club',
+    bio: '30+ anos em IBM, Microsoft e SAP. Especialista em operações comerciais B2B complexas e IA aplicada à receita.',
+  },
+  {
+    nome: 'Felipe Feldens',
+    cargo: 'COO do Sales Club',
+    bio: 'Especialista em estratégia, inovação e transformação organizacional; 18+ anos liderando mudanças em grandes empresas e scale-ups.',
+  },
+  {
+    nome: 'Raphael Lassance',
+    cargo: 'Sócio-mentor',
+    bio: 'Fundador da primeira agência de growth hacking do Brasil; 25 anos em negócios digitais. Forbes Under 30.',
+  },
+  {
+    nome: 'Guilherme Junqueira',
+    cargo: 'CEO da Delta Academy',
+    bio: 'Empreendedor e investidor; fundador da Gama Academy (vendida à Ânima Educação). Forbes Under 30.',
+  },
 ]
 
 const STATS: Stat[] = [
-  { valor: '+5.000', label: 'empresários formados' },
-  { valor: '9,7', label: 'nota de satisfação' },
-  { valor: '+30%', label: 'crescimento médio em vendas' },
+  { valor: '+500 mil', label: 'profissionais formados' },
+  { valor: '+800', label: 'empresas atendidas' },
+  { valor: '+10 anos', label: 'de ecossistema comercial' },
   { valor: '1', label: 'Sales Village próprio em SP' },
 ]
 
 const DEPOIMENTOS: Depoimento[] = [
-  { quote: 'Saímos de uma operação no improviso para uma máquina de vendas previsível.', nome: 'CEO', empresa: 'Indústria nacional' },
-  { quote: 'O nível dos mentores e do networking não existe em nenhum outro lugar.', nome: 'Diretor Comercial', empresa: 'Scale-up de tecnologia' },
+  {
+    quote:
+      'A imersão foi fundamental na minha jornada profissional. Abriu minha mente para uma visão diferente de como lidar com vendas, pessoas, processo e liderança.',
+    nome: 'Participante',
+    empresa: 'Sales Strategy',
+  },
+  {
+    quote:
+      'Conteúdo riquíssimo, experiência excepcional, mentores que dominam as técnicas abordadas. O que vimos aqui não veremos em nenhum outro lugar.',
+    nome: 'Participante',
+    empresa: 'Sales Strategy',
+  },
 ]
 
 const FAQ_HOME: Faq[] = [
@@ -73,11 +109,11 @@ const LOGOS: string[] = [
   'Google',
   'Coca-Cola',
   'Disney',
-  'Bayer',
   'Subway',
   'iFood',
   'Walmart',
-  'Lego',
+  'Mobil',
+  'LEGO',
 ]
 
 export function getMentores(): Mentor[] {
