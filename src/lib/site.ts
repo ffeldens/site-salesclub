@@ -24,9 +24,8 @@ export const siteConfig = {
   social: {
     instagram: 'https://instagram.com/salesclub_oficial',
     linkedin: 'https://linkedin.com/company/salesclub-oficial',
-    // TODO(social): preencher com as URLs oficiais do canal e do podcast.
-    youtube: '',
-    spotify: '',
+    youtube: 'https://www.youtube.com/@salesclub_oficial',
+    spotify: 'https://open.spotify.com/show/4NaJg4ebdAU9ofF58V6a3u',
   },
   // Vertical Telecom mantém domínio próprio — linkamos para fora.
   telecomUrl: 'https://salesclubtelecom.com.br',
