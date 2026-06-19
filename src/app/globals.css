@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-paper font-sans antialiased;
+  }
+
+  /* Headings de display usam small-caps (variante "Heebo SC" do brand guide) */
+  .font-display {
+    font-feature-settings: 'smcp' on;
+  }
+
+  ::selection {
+    @apply bg-brand text-paper-pure;
+  }
+
+  /* Foco visível e acessível (WCAG AA) */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-vivid ring-offset-2 ring-offset-ink;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Texto com leve hierarquia em corpo longo */
+  .prose-sc {
+    @apply max-w-prose text-paper/80 leading-relaxed;
+  }
+}

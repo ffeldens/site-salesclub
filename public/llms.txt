@@ -1,0 +1,24 @@
+# Sales Club
+
+> O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE), conselho consultivo (Sales Board) e tecnologia (app de OKRs e Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria — o Sales Village, em São Paulo.
+
+## Imersões
+- [Sales Strategy](https://salesclub.com.br/imersoes/sales-strategy): imersão de estratégia comercial para líderes.
+- [Sales Leadership](https://salesclub.com.br/imersoes/sales-leadership): imersão de liderança de vendas.
+- [Sales AI](https://salesclub.com.br/imersoes/sales-ai): IA aplicada a vendas.
+
+## Serviços
+- [Máquina de Vendas](https://salesclub.com.br/servicos/maquina-de-vendas): squad de especialistas que estrutura a operação comercial.
+- [Diagnóstico Comercial](https://salesclub.com.br/servicos/diagnostico-comercial): raio-x da área de vendas.
+
+## Comunidade e Conselho
+- [ELITE](https://salesclub.com.br/elite): comunidade de empresários (capacitação + Máquina de Vendas + mentoria + networking).
+- [Sales Board](https://salesclub.com.br/sales-board): conselho consultivo de vendas.
+
+## Espaço
+- [Sales Village](https://salesclub.com.br/sales-village): sede em São Paulo e espaço para locação de eventos e podcast (10–150 pessoas).
+
+## Institucional
+- [Sobre](https://salesclub.com.br/sobre): ecossistema, mentores e manifesto.
+- [Cases](https://salesclub.com.br/cases): resultados e prova social.
+- [Conteúdo](https://salesclub.com.br/conteudo): blog de gestão comercial.
