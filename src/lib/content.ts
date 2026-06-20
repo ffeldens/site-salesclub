@@ -37,26 +37,31 @@ const MENTORES: Mentor[] = [
     nome: 'Luiz Paulo Teixeira',
     cargo: 'CEO do Sales Club',
     bio: '20+ anos em educação executiva e estratégia empresarial, com atuação na FGV.',
+    foto: '/images/mentores/luiz-paulo-teixeira.webp',
   },
   {
     nome: 'Hélio Azevedo',
     cargo: 'CRO do Sales Club',
     bio: '30+ anos em IBM, Microsoft e SAP. Especialista em operações comerciais B2B complexas e IA aplicada à receita.',
+    foto: '/images/mentores/helio-azevedo.webp',
   },
   {
     nome: 'Felipe Feldens',
     cargo: 'COO do Sales Club',
     bio: 'Especialista em estratégia, inovação e transformação organizacional; 18+ anos liderando mudanças em grandes empresas e scale-ups.',
+    foto: '/images/mentores/felipe-feldens.webp',
   },
   {
     nome: 'Raphael Lassance',
     cargo: 'Sócio-mentor',
     bio: 'Fundador da primeira agência de growth hacking do Brasil; 25 anos em negócios digitais. Forbes Under 30.',
+    foto: '/images/mentores/raphael-lassance.webp',
   },
   {
     nome: 'Guilherme Junqueira',
     cargo: 'CEO da Delta Academy',
     bio: 'Empreendedor e investidor; fundador da Gama Academy (vendida à Ânima Educação). Forbes Under 30.',
+    foto: '/images/mentores/guilherme-junqueira.webp',
   },
 ]
 
@@ -100,15 +105,28 @@ const FAQ_HOME: Faq[] = [
   },
 ]
 
-const LOGOS: string[] = [
-  'Google',
-  'Coca-Cola',
-  'Disney',
-  'Subway',
-  'iFood',
-  'Walmart',
-  'Mobil',
-  'LEGO',
+export type ClienteLogo = { nome: string; src?: string }
+
+const LOGOS: ClienteLogo[] = [
+  { nome: 'Google', src: '/images/clientes/google.svg' },
+  { nome: 'Coca-Cola', src: '/images/clientes/coca-cola.svg' },
+  { nome: 'Disney', src: '/images/clientes/disney.svg' },
+  { nome: 'Subway', src: '/images/clientes/subway.svg' },
+  { nome: 'iFood', src: '/images/clientes/ifood.svg' },
+  { nome: 'Walmart', src: '/images/clientes/walmart.svg' },
+  { nome: 'Mobil', src: '/images/clientes/mobil.svg' },
+  { nome: 'Bayer', src: '/images/clientes/bayer.svg' },
+  { nome: 'LEGO', src: '/images/clientes/lego.svg' },
+]
+
+/** Fotos do Sales Village (galeria real). */
+export type VillageFoto = { src: string; alt: string }
+const VILLAGE_FOTOS: VillageFoto[] = [
+  { src: '/images/sales-village/auditorio-led.webp', alt: 'Auditório do Sales Village com painel de LED do Sales Club' },
+  { src: '/images/sales-village/roundtable.webp', alt: 'Mentoria em formato roundtable no Sales Village' },
+  { src: '/images/sales-village/palestra.webp', alt: 'Palestra para empresários no Sales Village' },
+  { src: '/images/sales-village/sala-1.webp', alt: 'Sala de imersão do Sales Village' },
+  { src: '/images/sales-village/sala-2.webp', alt: 'Espaço de eventos do Sales Village' },
 ]
 
 export function getMentores(): Mentor[] {
@@ -127,6 +145,10 @@ export function getFaqHome(): Faq[] {
   return FAQ_HOME
 }
 
-export function getClienteLogos(): string[] {
+export function getClienteLogos(): ClienteLogo[] {
   return LOGOS
+}
+
+export function getSalesVillageFotos(): VillageFoto[] {
+  return VILLAGE_FOTOS
 }

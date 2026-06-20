@@ -1,11 +1,14 @@
+import Image from 'next/image'
+import type { ClienteLogo } from '@/lib/content'
+
 export type LogosProvaSocialProps = {
   title?: string
-  logos: string[]
+  logos: ClienteLogo[]
 }
 
 /**
- * Grid de logos de clientes (prova social). Por ora renderiza os nomes em
- * texto; trocar por <Image> dos SVGs quando os assets estiverem em /public/brand.
+ * Grid de logos de clientes (prova social). Logos em SVG branco (monocromático)
+ * sobre o fundo escuro; cai para texto se algum logo não tiver `src`.
  */
 export function LogosProvaSocial({
   title = 'Empresas que confiam no Sales Club',
@@ -17,15 +20,27 @@ export function LogosProvaSocial({
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-mute">
           {title}
         </p>
-        <div className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
-          {logos.map((logo) => (
-            <span
-              key={logo}
-              className="text-center font-display text-lg font-semibold text-paper/50 grayscale transition hover:text-paper hover:grayscale-0"
-            >
-              {logo}
-            </span>
-          ))}
+        <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+          {logos.map((logo) =>
+            logo.src ? (
+              <div key={logo.nome} className="flex items-center justify-center">
+                <Image
+                  src={logo.src}
+                  alt={logo.nome}
+                  width={120}
+                  height={40}
+                  className="h-7 w-auto object-contain opacity-60 transition-opacity hover:opacity-100"
+                />
+              </div>
+            ) : (
+              <span
+                key={logo.nome}
+                className="text-center font-display text-lg font-semibold text-paper/50"
+              >
+                {logo.nome}
+              </span>
+            ),
+          )}
         </div>
       </div>
     </section>

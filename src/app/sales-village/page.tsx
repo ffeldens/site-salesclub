@@ -4,10 +4,12 @@ import { siteConfig } from '@/lib/site'
 import { PageShell } from '@/components/PageShell'
 import { JsonLd } from '@/components/JsonLd'
 import { HeroInstitucional } from '@/components/blocks/HeroInstitucional'
+import Image from 'next/image'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Beneficios } from '@/components/blocks/Beneficios'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
+import { getSalesVillageFotos } from '@/lib/content'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sales Village — espaço para eventos e podcast em São Paulo',
@@ -15,8 +17,6 @@ export const metadata: Metadata = buildMetadata({
     'O Sales Village é a sede do Sales Club em São Paulo, disponível para locação de eventos corporativos e gravação de podcast, com serviço completo para 10 a 150 pessoas.',
   path: '/sales-village',
 })
-
-const GALERIA = ['Auditório', 'Estúdio de podcast', 'Lounge', 'Salas de mentoria', 'Coffee & catering', 'Espaço de networking']
 
 export default function SalesVillagePage() {
   return (
@@ -60,14 +60,19 @@ export default function SalesVillagePage() {
 
       <Section tone="card">
         <SectionHeading eyebrow="O espaço" title="Estrutura completa" />
-        {/* TODO(assets): substituir placeholders pela galeria de fotos do Sales Village. */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {GALERIA.map((label) => (
+          {getSalesVillageFotos().map((foto) => (
             <div
-              key={label}
-              className="flex aspect-[4/3] items-center justify-center rounded-card border border-subtle bg-ink text-sm text-mute"
+              key={foto.src}
+              className="relative aspect-[4/3] overflow-hidden rounded-card border border-subtle"
             >
-              {label}
+              <Image
+                src={foto.src}
+                alt={foto.alt}
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
           ))}
         </div>

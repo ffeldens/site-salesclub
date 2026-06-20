@@ -52,11 +52,11 @@ export const imersoes: Imersao[] = [
       { numero: 4, titulo: 'Liderança comercial, incentivos e disciplina de gestão', descricao: 'O papel da liderança na sustentação da máquina de vendas: responsabilidades, modelo de comissionamento, desenvolvimento e retenção do time, rotinas e fóruns de gestão.' },
     ],
     mentores: [
-      { nome: 'Raphael Lassance', cargo: 'Sócio-mentor', bio: 'Fundador da primeira agência de growth hacking do Brasil; comunidade E-commerce Hacks.' },
-      { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Investidor e estrategista em vendas e marketing B2B.' },
-      { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: 'Líder do maior ecossistema de vendas do Brasil.' },
-      { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: 'Estratégia, inovação e transformação organizacional.' },
-      { nome: 'Guilherme Junqueira', cargo: 'CEO da Delta Academy', bio: 'Empreendedor e investidor; Forbes Under 30.' },
+      { nome: 'Raphael Lassance', cargo: 'Sócio-mentor', bio: 'Fundador da primeira agência de growth hacking do Brasil; comunidade E-commerce Hacks.', foto: '/images/mentores/raphael-lassance.webp' },
+      { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Investidor e estrategista em vendas e marketing B2B.', foto: '/images/mentores/helio-azevedo.webp' },
+      { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: 'Líder do maior ecossistema de vendas do Brasil.', foto: '/images/mentores/luiz-paulo-teixeira.webp' },
+      { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: 'Estratégia, inovação e transformação organizacional.', foto: '/images/mentores/felipe-feldens.webp' },
+      { nome: 'Guilherme Junqueira', cargo: 'CEO da Delta Academy', bio: 'Empreendedor e investidor; Forbes Under 30.', foto: '/images/mentores/guilherme-junqueira.webp' },
     ],
     beneficios: [
       'Máquina de vendas com direção clara e receita mais previsível',
@@ -102,11 +102,11 @@ export const imersoes: Imersao[] = [
       { numero: 4, titulo: 'Capacitação por função', descricao: 'Trilhas por papel (Pré-vendas, Vendas e Sucesso do Cliente); playbooks e processos para reduzir variação e acelerar onboarding; simulações em sala e rotinas de execução.' },
     ],
     mentores: [
-      { nome: 'Adriana Gomes', cargo: 'Liderança e governança', bio: 'Especialista em desenvolvimento de lideranças, governança corporativa, diversidade e inclusão.' },
-      { nome: 'Gustavo Malavota', cargo: 'Vendas e treinamento', bio: 'Capacitou +180 mil vendedores e líderes em 15 anos. Fundador da Mola Educação; autor de "52 Semanas em Ações de Vendas".' },
-      { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: '18+ anos liderando mudanças em grandes empresas e scale-ups (99, Sicredi, varejo nacional).' },
-      { nome: 'Thiago Bezerra', cargo: 'Head Comercial e de Serviços', bio: '15 anos na área comercial, da operação à liderança; responde por crescimento de receita e execução estratégica.' },
-      { nome: 'Luiz Ambrósio', cargo: 'Fundador e COO da Vinci Society', bio: 'Growth e Vendas; ex-Growth Lead no G4 Educação, Liv Up e Raccoon.' },
+      { nome: 'Adriana Gomes', cargo: 'Liderança e governança', bio: 'Especialista em desenvolvimento de lideranças, governança corporativa, diversidade e inclusão.', foto: '/images/mentores/adriana-gomes.webp' },
+      { nome: 'Gustavo Malavota', cargo: 'Vendas e treinamento', bio: 'Capacitou +180 mil vendedores e líderes em 15 anos. Fundador da Mola Educação; autor de "52 Semanas em Ações de Vendas".', foto: '/images/mentores/gustavo-malavota.webp' },
+      { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: '18+ anos liderando mudanças em grandes empresas e scale-ups (99, Sicredi, varejo nacional).', foto: '/images/mentores/felipe-feldens.webp' },
+      { nome: 'Thiago Bezerra', cargo: 'Head Comercial e de Serviços', bio: '15 anos na área comercial, da operação à liderança; responde por crescimento de receita e execução estratégica.', foto: '/images/mentores/thiago-bezerra.webp' },
+      { nome: 'Luiz Ambrósio', cargo: 'Fundador e COO da Vinci Society', bio: 'Growth e Vendas; ex-Growth Lead no G4 Educação, Liv Up e Raccoon.', foto: '/images/mentores/luiz-ambrosio.webp' },
     ],
     beneficios: [
       'Conduzir 1:1 e revisões de funil com uma régua clara',

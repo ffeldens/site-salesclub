@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/Button'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { CTASection } from '@/components/blocks/CTASection'
 import { getCorporateOfertas } from '@/content/corporate'
+import { getClienteLogos } from '@/lib/content'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Corporate — educação e soluções comerciais para grandes contas',
@@ -39,7 +40,7 @@ export default function CorporatePage() {
         </div>
       </Section>
 
-      <LogosProvaSocial title="Já atendemos times comerciais de" logos={['Coca-Cola', 'Disney', 'Google', 'Eletrobras', 'Pearson', 'Cyrela']} />
+      <LogosProvaSocial title="Já atendemos times comerciais de" logos={getClienteLogos()} />
 
       <Section tone="card">
         <SectionHeading eyebrow="O que oferecemos" title="Cinco frentes para o seu time comercial" />
