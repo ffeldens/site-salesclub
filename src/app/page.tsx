@@ -14,6 +14,8 @@ import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { CardConteudo } from '@/components/blocks/Cards'
+import { Ecossistema } from '@/components/blocks/Ecossistema'
+import { ParaQuemPerfil } from '@/components/blocks/ParaQuemPerfil'
 import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
 import { siteConfig } from '@/lib/site'
 import { formatDate } from '@/lib/format'
@@ -34,15 +36,22 @@ export default async function HomePage() {
       <main>
         <HeroInstitucional
           eyebrow="O maior ecossistema de vendas do Brasil"
-          title="Transforme sua área comercial em uma máquina de vendas previsível."
-          subtitle="Imersões, serviços, comunidade e tecnologia para dar processo, gestão e escala às vendas de empresas B2B."
-          primaryCta={{ label: 'Conhecer as imersões', href: '/imersoes' }}
+          title="Do improviso à previsibilidade de receita."
+          subtitle="O Sales Club é o ecossistema que reúne imersões, consultoria, comunidade e tecnologia em um só lugar — para transformar a área comercial de empresas B2B em uma máquina de vendas previsível, com processo, gestão e gente de alta performance."
+          primaryCta={{ label: 'Conhecer o ecossistema', href: '#ecossistema' }}
           secondaryCta={{ label: 'Falar com especialista', href: '/contato' }}
+          imagem={{ src: '/images/sales-village/roundtable.webp', alt: 'Mentoria e networking entre empresários no Sales Village' }}
         />
 
         <LogosProvaSocial logos={getClienteLogos()} />
 
         <Stats stats={getStats()} />
+
+        <div id="ecossistema">
+          <Ecossistema />
+        </div>
+
+        <ParaQuemPerfil />
 
         <Beneficios
           eyebrow="O que muda na sua operação"

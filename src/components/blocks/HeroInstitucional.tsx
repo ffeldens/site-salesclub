@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 
@@ -7,6 +8,8 @@ export type HeroInstitucionalProps = {
   subtitle?: string
   primaryCta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
+  /** Foto de fundo full-bleed (autoridade) com overlay escuro para legibilidade. */
+  imagem?: { src: string; alt: string }
 }
 
 /** Hero institucional (Home / serviços). Conteúdo no HTML inicial (SEO/GEO). */
@@ -16,14 +19,21 @@ export function HeroInstitucional({
   subtitle,
   primaryCta,
   secondaryCta,
+  imagem,
 }: HeroInstitucionalProps) {
   return (
     <section className="relative overflow-hidden border-b border-subtle">
-      {/* brilho decorativo sutil */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand/20 blur-[120px]"
-      />
+      {imagem ? (
+        <>
+          <Image src={imagem.src} alt={imagem.alt} fill priority className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/55" />
+        </>
+      ) : (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand/20 blur-[120px]"
+        />
+      )}
       <div className="container-content relative py-20 sm:py-28 lg:py-32">
         <div className="max-w-3xl">
           {eyebrow && (
