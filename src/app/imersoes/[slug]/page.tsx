@@ -74,6 +74,8 @@ export default async function ImersaoPage({ params }: { params: Promise<{ slug: 
         formato={im.formato}
         applyHref="#aplicar"
         whatsappHref={whatsappLink(`Olá! Quero aplicar para a imersão ${im.titulo}.`)}
+        imagem={im.heroImagem}
+        imagemModo={im.heroModo}
       />
 
       <Section>

@@ -26,6 +26,9 @@ export type Imersao = {
   faq: Faq[]
   ctaLabel: string
   destaque?: boolean
+  /** Imagem do hero (opcional). */
+  heroImagem?: { src: string; alt: string }
+  heroModo?: 'fundo' | 'recorte'
 }
 
 const SALES_VILLAGE =
@@ -81,6 +84,8 @@ export const imersoes: Imersao[] = [
     ],
     ctaLabel: 'Aplicar para a turma',
     destaque: true,
+    heroImagem: { src: '/images/sales-village/auditorio-led.webp', alt: 'Sala de imersão do Sales Village com painel de LED Sales Strategy' },
+    heroModo: 'fundo',
   },
   {
     slug: 'sales-leadership',
@@ -131,6 +136,8 @@ export const imersoes: Imersao[] = [
       { pergunta: 'A Sales Leadership substitui consultoria?', resposta: 'Não. Ela acelera a construção de método e governança para o líder implementar internamente. Para um desenho completo, combine com os programas de engenharia comercial.' },
     ],
     ctaLabel: 'Aplicar para a turma',
+    heroImagem: { src: '/images/mentores/grupo-leadership.webp', alt: 'Mentores da imersão Sales Leadership do Sales Club' },
+    heroModo: 'recorte',
   },
   {
     slug: 'sales-ai',
