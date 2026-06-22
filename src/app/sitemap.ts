@@ -2,7 +2,6 @@ import type { MetadataRoute } from 'next'
 import { siteConfig } from '@/lib/site'
 import { getImersoes } from '@/content/imersoes'
 import { getServicos } from '@/content/servicos'
-import { getCorporateOfertas } from '@/content/corporate'
 import { getCursos } from '@/content/universidade'
 import { getPosts } from '@/content/conteudo'
 import { getCampanhas } from '@/content/campanhas'
@@ -35,7 +34,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dynamicRoutes = [
     ...getImersoes().map((i) => `/imersoes/${i.slug}`),
     ...getServicos().map((s) => `/servicos/${s.slug}`),
-    ...getCorporateOfertas().map((o) => `/corporate/${o.slug}`),
     ...getCursos().map((c) => `/universidade/${c.slug}`),
     ...(await getPosts()).map((p) => `/conteudo/${p.slug}`),
     // LPs de campanha indexáveis (mídia paga costuma ser noindex)

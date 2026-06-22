@@ -14,6 +14,7 @@ import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
 import { BadgeDREG } from '@/components/BadgeDREG'
+import { ResultadoDREG } from '@/components/blocks/ResultadoDREG'
 import { getServico, getServicos } from '@/content/servicos'
 
 export function generateStaticParams() {
@@ -94,6 +95,8 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
           </div>
         </Section>
       )}
+
+      {s.slug === 'diagnostico-comercial' && <ResultadoDREG />}
 
       {s.fases && (
         <Section>

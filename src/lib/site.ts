@@ -81,11 +81,11 @@ export const solutionsMenu: NavGroup[] = [
   {
     label: 'Corporate',
     items: [
-      { label: 'Capacitações', href: '/corporate/capacitacoes', description: 'Educação corporativa' },
-      { label: 'Palestras', href: '/corporate/palestras' },
-      { label: 'Convenções', href: '/corporate/convencoes' },
-      { label: 'Projetos Especiais', href: '/corporate/projetos-especiais' },
-      { label: 'Mentoria', href: '/corporate/mentoria' },
+      { label: 'Capacitações', href: '/corporate#capacitacoes', description: 'Educação corporativa' },
+      { label: 'Palestras', href: '/corporate#palestras' },
+      { label: 'Convenções', href: '/corporate#convencoes' },
+      { label: 'Projetos Especiais', href: '/corporate#projetos-especiais' },
+      { label: 'Mentoria', href: '/corporate#mentoria' },
     ],
   },
   {

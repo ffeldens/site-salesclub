@@ -70,7 +70,7 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
       { label: 'App de OKRs', href: '/produtos/okrs' },
       { label: 'Máquina de Vendas (governança)', href: '/servicos/maquina-de-vendas' },
       { label: 'Sales Board', href: '/sales-board' },
-      { label: 'Mentoria (Corporate)', href: '/corporate/mentoria' },
+      { label: 'Mentoria (Corporate)', href: '/corporate#mentoria' },
     ],
   },
 ]

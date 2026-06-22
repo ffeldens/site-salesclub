@@ -37,8 +37,13 @@ const nextConfig = {
   // Ver docs/PRD.md §4 e CLAUDE.md §4 "Migração".
   async redirects() {
     return [
-      // Exemplo (descomentar/expandir na Fase 5):
-      // { source: '/imersao-presencial/sales-strategy', destination: '/imersoes/sales-strategy', permanent: true },
+      // Corporate consolidado em página única com âncoras (P2.5)
+      { source: '/corporate/capacitacoes', destination: '/corporate#capacitacoes', permanent: true },
+      { source: '/corporate/palestras', destination: '/corporate#palestras', permanent: true },
+      { source: '/corporate/convencoes', destination: '/corporate#convencoes', permanent: true },
+      { source: '/corporate/projetos-especiais', destination: '/corporate#projetos-especiais', permanent: true },
+      { source: '/corporate/mentoria', destination: '/corporate#mentoria', permanent: true },
+      // TODO(Fase 5): 301 das URLs antigas (/imersao-presencial/*, salesclubtelecom, etc.)
     ]
   },
 }
