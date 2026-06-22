@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/Button'
 import { CardConteudo } from '@/components/blocks/Cards'
 import { Ecossistema } from '@/components/blocks/Ecossistema'
 import { ParaQuemPerfil } from '@/components/blocks/ParaQuemPerfil'
+import { Dor } from '@/components/blocks/Dor'
 import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
 import { siteConfig } from '@/lib/site'
 import { formatDate } from '@/lib/format'
@@ -38,10 +39,12 @@ export default async function HomePage() {
           eyebrow="O maior ecossistema de vendas do Brasil"
           title="Do improviso à previsibilidade de receita."
           subtitle="O Sales Club é o ecossistema que reúne imersões, consultoria, comunidade e tecnologia em um só lugar — para transformar a área comercial de empresas B2B em uma máquina de vendas previsível, com processo, gestão e gente de alta performance."
-          primaryCta={{ label: 'Conhecer o ecossistema', href: '#ecossistema' }}
+          primaryCta={{ label: 'Fazer diagnóstico gratuito (5 min)', href: '/servicos/diagnostico-comercial' }}
           secondaryCta={{ label: 'Falar com especialista', href: '/contato' }}
           imagem={{ src: '/images/sales-village/roundtable.webp', alt: 'Mentoria e networking entre empresários no Sales Village' }}
         />
+
+        <Dor />
 
         <LogosProvaSocial logos={getClienteLogos()} />
 

@@ -10,10 +10,14 @@ export type MentoresProps = {
 }
 
 /** Cards de mentores: retrato em destaque quando há foto; iniciais como fallback. */
-export function Mentores({ eyebrow = 'Quem ensina', title = 'Mentores de marca', mentores }: MentoresProps) {
+export function Mentores({ eyebrow = 'Quem ensina', title = 'Mentores na mesa com você', mentores }: MentoresProps) {
   return (
     <Section tone="card">
-      <SectionHeading eyebrow={eyebrow} title={title} />
+      <SectionHeading
+        eyebrow={eyebrow}
+        title={title}
+        description="Executivos que constroem operações de verdade — sentam à mesa com você para discutir o caso real da sua empresa, não no palco."
+      />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {mentores.map((m) => (
           <Card key={m.nome} as="article" className="bg-ink">

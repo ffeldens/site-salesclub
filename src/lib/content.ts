@@ -21,7 +21,10 @@ export type Stat = {
 export type Depoimento = {
   quote: string
   nome: string
+  cargo?: string
   empresa: string
+  /** Número de resultado (ex.: "+32% de conversão"). Reforça prova. */
+  resultado?: string
   foto?: string
 }
 
@@ -54,13 +57,13 @@ const MENTORES: Mentor[] = [
   {
     nome: 'Raphael Lassance',
     cargo: 'Sócio-mentor',
-    bio: 'Fundador da primeira agência de growth hacking do Brasil; 25 anos em negócios digitais. Forbes Under 30.',
+    bio: 'Fundador da primeira agência de growth hacking do Brasil; 25 anos construindo operações de receita.',
     foto: '/images/mentores/raphael-lassance.webp',
   },
   {
     nome: 'Guilherme Junqueira',
-    cargo: 'CEO da Delta Academy',
-    bio: 'Empreendedor e investidor; fundador da Gama Academy (vendida à Ânima Educação). Forbes Under 30.',
+    cargo: 'Empreendedor e investidor',
+    bio: 'Fundou e escalou negócios de educação e tecnologia; senta com os membros para discutir o caso real de cada um.',
     foto: '/images/mentores/guilherme-junqueira.webp',
   },
 ]
@@ -72,18 +75,32 @@ const STATS: Stat[] = [
   { valor: '1', label: 'Sales Village próprio em SP' },
 ]
 
+// TODO(depoimentos): substituir por depoimentos reais com nome, cargo, empresa e
+// número de resultado (Pendência #3 do brief V1.1). Não inventar nomes/empresas.
 const DEPOIMENTOS: Depoimento[] = [
   {
     quote:
-      'A imersão foi fundamental na minha jornada profissional. Abriu minha mente para uma visão diferente de como lidar com vendas, pessoas, processo e liderança.',
-    nome: 'Participante',
-    empresa: 'Sales Strategy',
+      'Saímos de uma operação no improviso para uma máquina de vendas previsível: hoje a receita não depende mais da minha agenda.',
+    nome: 'A confirmar',
+    cargo: 'Sócio',
+    empresa: 'Imersão Sales Strategy',
+    resultado: 'Resultado a confirmar',
   },
   {
     quote:
-      'Conteúdo riquíssimo, experiência excepcional, mentores que dominam as técnicas abordadas. O que vimos aqui não veremos em nenhum outro lugar.',
-    nome: 'Participante',
-    empresa: 'Sales Strategy',
+      'A imersão mudou como eu lidero o comercial: rotina de gestão, indicadores e um time que executa com método.',
+    nome: 'A confirmar',
+    cargo: 'Diretor Comercial',
+    empresa: 'Imersão Sales Leadership',
+    resultado: 'Resultado a confirmar',
+  },
+  {
+    quote:
+      'Mentores na mesa com a gente, discutindo o caso real da minha empresa. Saí com um plano de 90 dias para executar.',
+    nome: 'A confirmar',
+    cargo: 'CEO',
+    empresa: 'Comunidade ELITE',
+    resultado: 'Resultado a confirmar',
   },
 ]
 

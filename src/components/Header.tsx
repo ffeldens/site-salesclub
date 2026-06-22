@@ -14,6 +14,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-subtle bg-ink/90 backdrop-blur supports-[backdrop-filter]:bg-ink/70">
+      {/* Faixa fina — diagnóstico como porta de entrada (P1.2) */}
+      <Link
+        href="/servicos/diagnostico-comercial"
+        className="block border-b border-subtle bg-brand/10 py-1.5 text-center text-xs font-medium text-paper/90 hover:bg-brand/20"
+      >
+        Não sabe por onde começar?{' '}
+        <span className="font-semibold text-brand-vivid">Diagnóstico gratuito em 5 min →</span>
+      </Link>
+
       <div className="container-content flex h-16 items-center justify-between gap-4">
         <Logo />
 
@@ -35,6 +44,13 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          {/* Destaque: diagnóstico fora do submenu de Soluções (P1.2) */}
+          <Link
+            href="/servicos/diagnostico-comercial"
+            className="ml-1 rounded-full border border-brand/40 px-3 py-1.5 text-sm font-semibold text-brand-vivid hover:bg-brand/10"
+          >
+            Diagnóstico gratuito
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -157,9 +173,14 @@ function MobileMenu({ onNavigate }: { onNavigate: () => void }) {
             </Link>
           ))}
         </div>
-        <Button href="/contato" className="w-full" onClick={onNavigate}>
-          Falar com especialista
-        </Button>
+        <div className="flex flex-col gap-2">
+          <Button href="/servicos/diagnostico-comercial" className="w-full" onClick={onNavigate}>
+            Diagnóstico gratuito (5 min)
+          </Button>
+          <Button href="/contato" variant="secondary" className="w-full" onClick={onNavigate}>
+            Falar com especialista
+          </Button>
+        </div>
       </nav>
     </div>
   )
