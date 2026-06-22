@@ -13,6 +13,7 @@ import { ParaQuem } from '@/components/blocks/ParaQuem'
 import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
+import { BadgeDREG } from '@/components/BadgeDREG'
 import { getServico, getServicos } from '@/content/servicos'
 
 export function generateStaticParams() {
@@ -67,6 +68,11 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
 
       <Section>
         <div className="max-w-3xl">
+          {s.dreg && (
+            <div className="mb-6">
+              <BadgeDREG etapa={s.dreg === 'ciclo' ? undefined : s.dreg} ciclo={s.dreg === 'ciclo'} />
+            </div>
+          )}
           <AnswerBlock>{s.resumo}</AnswerBlock>
           <p className="prose-sc mt-8">{s.descricao}</p>
         </div>

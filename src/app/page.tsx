@@ -17,6 +17,8 @@ import { CardConteudo } from '@/components/blocks/Cards'
 import { Ecossistema } from '@/components/blocks/Ecossistema'
 import { ParaQuemPerfil } from '@/components/blocks/ParaQuemPerfil'
 import { Dor } from '@/components/blocks/Dor'
+import { MetodoDREG } from '@/components/blocks/MetodoDREG'
+import { ComoPensamos } from '@/components/blocks/ComoPensamos'
 import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
 import { siteConfig } from '@/lib/site'
 import { formatDate } from '@/lib/format'
@@ -54,7 +56,11 @@ export default async function HomePage() {
           <Ecossistema />
         </div>
 
+        <MetodoDREG />
+
         <ParaQuemPerfil />
+
+        <ComoPensamos />
 
         <Beneficios
           eyebrow="O que muda na sua operação"

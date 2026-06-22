@@ -15,6 +15,7 @@ import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
 import { CheckIcon } from '@/components/ui/icons'
+import { BadgeDREG } from '@/components/BadgeDREG'
 import { getCurso, getCursos } from '@/content/universidade'
 
 export function generateStaticParams() {
@@ -72,6 +73,9 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
 
       <Section>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <BadgeDREG etapa="Educar" />
+          </div>
           <AnswerBlock>{c.resumo}</AnswerBlock>
           <p className="prose-sc mt-8">{c.descricao}</p>
           <div className="mt-6 flex flex-wrap gap-2">

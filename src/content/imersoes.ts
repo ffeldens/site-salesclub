@@ -29,6 +29,8 @@ export type Imersao = {
   /** Imagem do hero (opcional). */
   heroImagem?: { src: string; alt: string }
   heroModo?: 'fundo' | 'recorte'
+  /** Etapa DREG primária da solução (selo BadgeDREG). */
+  dreg?: string
 }
 
 const SALES_VILLAGE =
@@ -86,6 +88,7 @@ export const imersoes: Imersao[] = [
     destaque: true,
     heroImagem: { src: '/images/sales-village/auditorio-led.webp', alt: 'Sala de imersão do Sales Village com painel de LED Sales Strategy' },
     heroModo: 'fundo',
+    dreg: 'Desenhar',
   },
   {
     slug: 'sales-leadership',
@@ -138,6 +141,7 @@ export const imersoes: Imersao[] = [
     ctaLabel: 'Aplicar para a turma',
     heroImagem: { src: '/images/mentores/grupo-leadership.webp', alt: 'Mentores da imersão Sales Leadership do Sales Club' },
     heroModo: 'recorte',
+    dreg: 'Gerenciar',
   },
   {
     slug: 'sales-ai',
@@ -183,6 +187,7 @@ export const imersoes: Imersao[] = [
       { pergunta: 'Qual o valor do investimento?', resposta: 'Os valores variam conforme lote, condições comerciais e parcerias. Entre em contato para receber uma proposta atualizada.' },
     ],
     ctaLabel: 'Entrar na lista de espera',
+    dreg: 'Desenhar',
   },
 ]
 

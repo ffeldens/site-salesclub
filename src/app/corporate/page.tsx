@@ -9,6 +9,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { CTASection } from '@/components/blocks/CTASection'
+import { BadgeDREG } from '@/components/BadgeDREG'
 import { getCorporateOfertas } from '@/content/corporate'
 import { getClienteLogos } from '@/lib/content'
 
@@ -32,6 +33,9 @@ export default function CorporatePage() {
 
       <Section>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <BadgeDREG etapa="Educar" />
+          </div>
           <AnswerBlock>
             O Sales Club Corporate leva a metodologia comercial validada em +800 empresas para grandes
             organizações, por meio de capacitações in company, palestras, convenções, projetos especiais

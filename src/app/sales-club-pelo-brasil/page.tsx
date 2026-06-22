@@ -14,6 +14,7 @@ import { Beneficios } from '@/components/blocks/Beneficios'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
 import { CheckIcon } from '@/components/ui/icons'
+import { BadgeDREG } from '@/components/BadgeDREG'
 import { getSalesClubPeloBrasil } from '@/content/eventos'
 
 const ev = getSalesClubPeloBrasil()
@@ -65,6 +66,9 @@ export default function SalesClubPeloBrasilPage() {
 
       <Section>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <BadgeDREG etapa="Educar" />
+          </div>
           <AnswerBlock>{ev.resumo}</AnswerBlock>
           <p className="prose-sc mt-8">{ev.descricao}</p>
         </div>

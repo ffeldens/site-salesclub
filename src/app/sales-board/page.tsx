@@ -6,6 +6,7 @@ import { Section } from '@/components/ui/Section'
 import { Beneficios } from '@/components/blocks/Beneficios'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { CTASection } from '@/components/blocks/CTASection'
+import { BadgeDREG } from '@/components/BadgeDREG'
 
 // TODO(conteúdo): validar a descrição e o formato do Sales Board com o cliente.
 export const metadata: Metadata = buildMetadata({
@@ -27,6 +28,9 @@ export default function SalesBoardPage() {
 
       <Section>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <BadgeDREG etapa="Gerenciar" />
+          </div>
           <AnswerBlock>
             O Sales Board é o conselho consultivo de vendas do Sales Club: um grupo de especialistas que
             acompanha a sua operação comercial de forma recorrente, ajudando a tomar decisões de

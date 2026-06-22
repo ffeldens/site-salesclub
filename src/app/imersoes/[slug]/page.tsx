@@ -13,6 +13,7 @@ import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { FormLead } from '@/components/blocks/FormLead'
+import { BadgeDREG } from '@/components/BadgeDREG'
 import { whatsappLink } from '@/lib/whatsapp'
 import { getImersao, getImersoes } from '@/content/imersoes'
 
@@ -80,6 +81,11 @@ export default async function ImersaoPage({ params }: { params: Promise<{ slug: 
 
       <Section>
         <div className="max-w-3xl">
+          {im.dreg && (
+            <div className="mb-6">
+              <BadgeDREG etapa={im.dreg} />
+            </div>
+          )}
           <AnswerBlock>{im.resumo}</AnswerBlock>
           <p className="prose-sc mt-8">{im.descricao}</p>
         </div>

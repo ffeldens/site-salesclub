@@ -93,6 +93,7 @@ export const solutionsMenu: NavGroup[] = [
     items: [
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil', description: 'Encontros executivos de 1 dia pelo país' },
       { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro', description: 'Formação online para times de vendas' },
+      { label: 'Podcast', href: '/podcast', description: 'Episódios no Spotify e YouTube' },
     ],
   },
   {
@@ -124,8 +125,8 @@ export const solutionsMenu: NavGroup[] = [
 
 /** Itens de topo do header (além do mega-menu). */
 export const primaryNav: NavItem[] = [
+  { label: 'Método', href: '/metodo' },
   { label: 'Conteúdo', href: '/conteudo' },
-  { label: 'Podcast', href: '/podcast' },
   { label: 'Cases', href: '/cases' },
   { label: 'Sobre', href: '/sobre' },
 ]

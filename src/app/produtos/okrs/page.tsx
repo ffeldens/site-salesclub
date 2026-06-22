@@ -6,6 +6,7 @@ import { Section } from '@/components/ui/Section'
 import { Beneficios } from '@/components/blocks/Beneficios'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { CTASection } from '@/components/blocks/CTASection'
+import { BadgeDREG } from '@/components/BadgeDREG'
 
 // TODO(produto): definir se a v1 terá apenas vitrine + link de login externo
 // (atual) ou login integrado. Atualizar OKRS_APP_URL com a URL real do app.
@@ -31,6 +32,9 @@ export default function OkrsPage() {
 
       <Section>
         <div className="max-w-3xl">
+          <div className="mb-6">
+            <BadgeDREG etapa="Gerenciar" />
+          </div>
           <AnswerBlock>
             O app de OKRs do Sales Club é a ferramenta de gestão por objetivos e resultados-chave para
             times comerciais. Permite definir metas, acompanhar o progresso em tempo real e sustentar

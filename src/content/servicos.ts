@@ -27,6 +27,8 @@ export type Servico = {
   faq: Faq[]
   ctaLabel: string
   ctaHref?: string
+  /** Etapa DREG ('ciclo' = percorre as quatro etapas). */
+  dreg?: string
 }
 
 export const servicos: Servico[] = [
@@ -100,6 +102,7 @@ export const servicos: Servico[] = [
       { pergunta: 'O que acontece com os materiais depois?', resposta: 'Tudo fica com a empresa: Manual Comercial, roteiros, painéis, fluxogramas, Universidade Interna e documentação, em formato editável. A independência da operação é objetivo central.' },
     ],
     ctaLabel: 'Quero estruturar minha operação',
+    dreg: 'ciclo',
   },
   {
     slug: 'diagnostico-comercial',
@@ -152,6 +155,7 @@ export const servicos: Servico[] = [
       { pergunta: 'Minhas informações ficam seguras?', resposta: 'Sim. Os dados são usados exclusivamente para gerar o diagnóstico personalizado e, se solicitado, para contato. Não há compartilhamento com terceiros.' },
     ],
     ctaLabel: 'Quero meu diagnóstico gratuito',
+    dreg: 'Desenhar',
   },
 ]
 
