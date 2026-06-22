@@ -7,6 +7,7 @@ import { Stats } from '@/components/blocks/Stats'
 import { Mentores } from '@/components/blocks/Mentores'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { CTASection } from '@/components/blocks/CTASection'
+import { LivroAutoridade } from '@/components/blocks/LivroAutoridade'
 import { getMentores, getStats } from '@/lib/content'
 
 export const metadata: Metadata = buildMetadata({
@@ -46,6 +47,8 @@ export default function SobrePage() {
       <Stats stats={getStats()} tone="card" />
 
       <Mentores eyebrow="Quem está à frente" title="Mentores e sócios" mentores={getMentores()} />
+
+      <LivroAutoridade />
 
       <CTASection
         title="Faça parte do ecossistema"

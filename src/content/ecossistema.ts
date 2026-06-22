@@ -1,7 +1,7 @@
 /**
  * Estrutura do ecossistema Sales Club para a Home: reforça o posicionamento de
- * "ecossistema de crescimento comercial" (não apenas treinamentos) e facilita a
- * navegação por perfil de público (feedback Lucas Barreira).
+ * "ecossistema de crescimento comercial" (não apenas treinamentos) e o
+ * recomendador por dor/etapa DREG (feedback Lucas + brief V1.1 P3.2).
  */
 
 export type EcossistemaPilar = {
@@ -47,43 +47,41 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
   },
 ]
 
-export type PerfilPublico = {
-  perfil: string
+/** Recomendador por dor → etapa DREG → trilha (P3.2). Ponte para o diagnóstico. */
+export type DorRecomendacao = {
   dor: string
+  etapa: 'Desenhar' | 'Recrutar' | 'Educar' | 'Gerenciar'
   recomendados: { label: string; href: string }[]
 }
 
-export const perfis: PerfilPublico[] = [
+export const recomendadorDor: DorRecomendacao[] = [
   {
-    perfil: 'Sócio / CEO',
-    dor: 'Quero descentralizar as vendas e ter previsibilidade de receita.',
+    dor: 'O crescimento ainda passa pela minha mesa.',
+    etapa: 'Desenhar',
     recomendados: [
       { label: 'Sales Strategy', href: '/imersoes/sales-strategy' },
-      { label: 'Comunidade ELITE', href: '/elite' },
+      { label: 'Máquina de Vendas', href: '/servicos/maquina-de-vendas' },
     ],
   },
   {
-    perfil: 'Diretor / Head comercial',
-    dor: 'Preciso estruturar processo, gestão e uma máquina de vendas.',
+    dor: 'Não tenho as pessoas certas nas funções certas.',
+    etapa: 'Recrutar',
+    recomendados: [{ label: 'Máquina de Vendas', href: '/servicos/maquina-de-vendas' }],
+  },
+  {
+    dor: 'Cada vendedor vende de um jeito; o bom resultado não se repete.',
+    etapa: 'Educar',
     recomendados: [
-      { label: 'Máquina de Vendas', href: '/servicos/maquina-de-vendas' },
+      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
     ],
   },
   {
-    perfil: 'Gestor / Coordenador',
-    dor: 'Quero rotina de gestão e consistência de resultados no time.',
+    dor: 'Bato meta num mês, frustro no outro — e decido no achismo.',
+    etapa: 'Gerenciar',
     recomendados: [
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
       { label: 'App de OKRs', href: '/produtos/okrs' },
-    ],
-  },
-  {
-    perfil: 'Time de vendas',
-    dor: 'Quero método e ritmo para vender com mais previsibilidade.',
-    recomendados: [
-      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
-      { label: 'Diagnóstico Comercial', href: '/servicos/diagnostico-comercial' },
     ],
   },
 ]
@@ -92,6 +90,6 @@ export function getEcossistemaPilares(): EcossistemaPilar[] {
   return ecossistemaPilares
 }
 
-export function getPerfis(): PerfilPublico[] {
-  return perfis
+export function getRecomendadorDor(): DorRecomendacao[] {
+  return recomendadorDor
 }

@@ -19,6 +19,7 @@ import { ParaQuemPerfil } from '@/components/blocks/ParaQuemPerfil'
 import { Dor } from '@/components/blocks/Dor'
 import { MetodoDREG } from '@/components/blocks/MetodoDREG'
 import { ComoPensamos } from '@/components/blocks/ComoPensamos'
+import { LivroAutoridade } from '@/components/blocks/LivroAutoridade'
 import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
 import { siteConfig } from '@/lib/site'
 import { formatDate } from '@/lib/format'
@@ -58,13 +59,15 @@ export default async function HomePage() {
 
         <MetodoDREG />
 
+        <LivroAutoridade tone="base" />
+
         <ParaQuemPerfil />
 
         <ComoPensamos />
 
         <Beneficios
           eyebrow="O que muda na sua operação"
-          title="Previsibilidade, processo e governança comercial"
+          title="O que muda quando vendas viram arquitetura"
           items={[
             { titulo: 'Processo comercial estruturado', descricao: 'Do topo do funil ao fechamento, com etapas claras.' },
             { titulo: 'Gestão por indicadores e OKRs', descricao: 'Decisões guiadas por dados, não por achismo.' },
@@ -122,10 +125,10 @@ export default async function HomePage() {
         <FAQ items={getFaqHome()} />
 
         <CTASection
-          title="Pronto para dar previsibilidade às suas vendas?"
-          description="Converse com um especialista do Sales Club e descubra o melhor caminho para a sua empresa."
-          primaryCta={{ label: 'Falar com especialista', href: '/contato' }}
-          secondaryCta={{ label: 'Aplicar para uma imersão', href: '/imersoes' }}
+          title="Sua máquina de vendas começa por um diagnóstico."
+          description="Em 5 minutos, descubra qual etapa do método DREG está travando o seu crescimento — e a trilha para destravar."
+          primaryCta={{ label: 'Fazer diagnóstico gratuito (5 min)', href: '/servicos/diagnostico-comercial' }}
+          secondaryCta={{ label: 'Falar com especialista', href: '/contato' }}
         />
       </main>
       <Footer />

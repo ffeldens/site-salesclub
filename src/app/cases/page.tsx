@@ -30,8 +30,8 @@ export default function CasesPage() {
     <PageShell>
       <HeroInstitucional
         eyebrow="Cases"
-        title="Resultados que falam por nós"
-        subtitle="Empresas de diferentes setores que estruturaram a máquina de vendas com o Sales Club e ganharam previsibilidade."
+        title="Empresas que trocaram o improviso pela arquitetura"
+        subtitle="Negócios de diferentes setores que estruturaram a máquina de vendas com o método DREG do Sales Club e ganharam previsibilidade."
         primaryCta={{ label: 'Quero resultados assim', href: '/contato' }}
       />
 
