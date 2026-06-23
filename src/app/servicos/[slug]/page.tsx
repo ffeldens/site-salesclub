@@ -15,6 +15,7 @@ import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
 import { BadgeDREG } from '@/components/BadgeDREG'
 import { ResultadoDREG } from '@/components/blocks/ResultadoDREG'
+import { DiagnosticoTool } from '@/components/blocks/DiagnosticoTool'
 import { getServico, getServicos } from '@/content/servicos'
 
 export function generateStaticParams() {
@@ -155,12 +156,21 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
       <Section id="cta">
         <SectionHeading
           eyebrow={isImplementacao ? 'Próximo passo' : 'Comece agora'}
-          title={s.ctaLabel}
+          title={s.slug === 'diagnostico-comercial' ? 'Faça seu diagnóstico gratuito' : s.ctaLabel}
+          description={
+            s.slug === 'diagnostico-comercial'
+              ? 'Responda às perguntas (escala 0 a 10) e receba na hora o score de maturidade da sua operação, pilar por pilar, com a etapa do DREG a priorizar.'
+              : undefined
+          }
           align="center"
         />
-        <div className="mx-auto max-w-2xl">
-          <FormLead source="servicos" produto={s.titulo} title="" ctaLabel={s.ctaLabel} />
-        </div>
+        {s.slug === 'diagnostico-comercial' ? (
+          <DiagnosticoTool />
+        ) : (
+          <div className="mx-auto max-w-2xl">
+            <FormLead source="servicos" produto={s.titulo} title="" ctaLabel={s.ctaLabel} />
+          </div>
+        )}
       </Section>
     </PageShell>
   )

@@ -19,6 +19,7 @@ const PIPELINE_ENV: Record<LeadSource, string | undefined> = {
   'sales-village': process.env.PIPEDRIVE_PIPELINE_VILLAGE,
   eventos: process.env.PIPEDRIVE_PIPELINE_EVENTOS,
   universidade: process.env.PIPEDRIVE_PIPELINE_UNIVERSIDADE,
+  diagnostico: process.env.PIPEDRIVE_PIPELINE_DIAGNOSTICO ?? process.env.PIPEDRIVE_PIPELINE_MATERIAIS,
   materiais: process.env.PIPEDRIVE_PIPELINE_MATERIAIS,
   contato: process.env.PIPEDRIVE_PIPELINE_SERVICOS,
 }
