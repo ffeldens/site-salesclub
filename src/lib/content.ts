@@ -139,11 +139,15 @@ const LOGOS: ClienteLogo[] = [
 /** Fotos do Sales Village (galeria real). */
 export type VillageFoto = { src: string; alt: string }
 const VILLAGE_FOTOS: VillageFoto[] = [
-  { src: '/images/sales-village/auditorio-led.webp', alt: 'Auditório do Sales Village com painel de LED do Sales Club' },
-  { src: '/images/sales-village/roundtable.webp', alt: 'Mentoria em formato roundtable no Sales Village' },
-  { src: '/images/sales-village/palestra.webp', alt: 'Palestra para empresários no Sales Village' },
-  { src: '/images/sales-village/sala-1.webp', alt: 'Sala de imersão do Sales Village' },
-  { src: '/images/sales-village/sala-2.webp', alt: 'Espaço de eventos do Sales Village' },
+  { src: '/images/sales-village/auditorio-led-frontal.jpg', alt: 'Auditório do Sales Village com painel de LED gigante exibindo a marca Sales Village' },
+  { src: '/images/sales-village/auditorio-led-lateral.jpg', alt: 'Vista lateral do auditório do Sales Village montado para evento corporativo' },
+  { src: '/images/sales-village/auditorio-experience.jpg', alt: 'Auditório do Sales Village montado para o Sales Club Experience, com telão de LED' },
+  { src: '/images/sales-village/palestra-plateia.jpg', alt: 'Palestra para empresários no auditório do Sales Village, com plateia' },
+  { src: '/images/sales-village/plateia-teloes.jpg', alt: 'Plateia acompanhando apresentação nos telões de LED do Sales Village' },
+  { src: '/images/sales-village/lounge-vista.jpg', alt: 'Lounge do Sales Village com vista panorâmica de São Paulo' },
+  { src: '/images/sales-village/lounge-tv.jpg', alt: 'Lounge do Sales Village com smart TV e vista para o parque' },
+  { src: '/images/sales-village/sala-reuniao.jpg', alt: 'Sala de reunião do Sales Village com mesa redonda e vista para a cidade' },
+  { src: '/images/sales-village/sala-executiva.jpg', alt: 'Sala de reunião executiva do Sales Village com vista panorâmica' },
 ]
 
 export function getMentores(): Mentor[] {
