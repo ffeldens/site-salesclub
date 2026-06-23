@@ -16,7 +16,8 @@
 
 ## Eventos e Educação
 - [Sales Club pelo Brasil](https://salesclub.com.br/sales-club-pelo-brasil): encontro executivo de 1 dia, mensal, em diferentes cidades do Brasil.
-- [Universidade · Formação Sales Pro](https://salesclub.com.br/universidade/sales-pro): formação online (síncrona e assíncrona) de 12 meses para times de vendas.
+- [Universidade Sales Club](https://salesclub.com.br/universidade): plataforma de treinamento de vendas white-label que a empresa implementa com a própria marca (trilha de aulas, mentorias, planos de ação e indicadores; onboarding em até 5 dias; planos por nº de acessos).
+- [Formação Sales Pro](https://salesclub.com.br/universidade/sales-pro): curso online (síncrono e assíncrono) de 12 meses para profissionais de vendas.
 
 ## Comunidade e Conselho
 - [ELITE](https://salesclub.com.br/elite): comunidade de empresários (capacitação + Máquina de Vendas + mentoria + networking).
