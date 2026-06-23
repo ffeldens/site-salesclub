@@ -51,7 +51,8 @@ export default async function HomePage() {
 
         <LogosProvaSocial logos={getClienteLogos()} />
 
-        <Stats stats={getStats()} />
+        {/* Home: 3 big numbers (sem o "1 Sales Village", que segue no /sobre). */}
+        <Stats stats={getStats().filter((s) => !/Sales Village/i.test(s.label))} />
 
         <div id="ecossistema">
           <Ecossistema />
