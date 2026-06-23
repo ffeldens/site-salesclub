@@ -168,7 +168,13 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
           <DiagnosticoTool />
         ) : (
           <div className="mx-auto max-w-2xl">
-            <FormLead source="servicos" produto={s.titulo} title="" ctaLabel={s.ctaLabel} />
+            <FormLead
+              source="servicos"
+              produto={s.titulo}
+              title=""
+              ctaLabel={s.ctaLabel}
+              mensagem={{ label: 'Mensagem (opcional)', placeholder: 'Conte o seu desafio comercial.' }}
+            />
           </div>
         )}
       </Section>

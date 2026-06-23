@@ -223,6 +223,7 @@ export default function UniversidadePage() {
             produto="Universidade Sales Club"
             title=""
             ctaLabel="Quero estruturar minha universidade"
+            mensagem={{ label: 'Sobre a sua operação', placeholder: 'Quantas pessoas no time comercial e o que você quer desenvolver?' }}
           />
         </div>
       </Section>

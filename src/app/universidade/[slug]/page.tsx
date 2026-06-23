@@ -256,7 +256,13 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       <Section id="cta" tone="card">
         <SectionHeading eyebrow="Aplicação" title={c.ctaLabel} align="center" />
         <div className="mx-auto max-w-2xl">
-          <FormLead source="universidade" produto={c.titulo} title="" ctaLabel={c.ctaLabel} />
+          <FormLead
+            source="universidade"
+            produto={c.titulo}
+            title=""
+            ctaLabel={c.ctaLabel}
+            mensagem={{ label: 'Mensagem (opcional)', placeholder: 'Conte o seu objetivo com a formação.' }}
+          />
         </div>
       </Section>
     </PageShell>

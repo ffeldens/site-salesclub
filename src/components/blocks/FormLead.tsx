@@ -13,6 +13,17 @@ import { getStoredOrigin } from '@/lib/utm'
 import { track } from '@/lib/analytics'
 import { cn } from '@/lib/cn'
 
+/** Campo extra específico do contexto (ex.: data do evento). Vai para a nota. */
+export type ExtraField = {
+  name: string
+  label: string
+  type?: 'text' | 'date' | 'number' | 'select'
+  options?: readonly string[]
+  placeholder?: string
+  /** ocupa as 2 colunas */
+  full?: boolean
+}
+
 export type FormLeadProps = {
   /** Roteia o lead para o pipeline correto no Pipedrive. */
   source: LeadSource
@@ -20,7 +31,15 @@ export type FormLeadProps = {
   title?: string
   description?: string
   ctaLabel?: string
-  /** Campos de qualificação rica (cargo, nº vendedores, faturamento). */
+  /** Cargo + Empresa (default: true). */
+  perfil?: boolean
+  /** Qualificação comercial: nº de vendedores, faturamento e segmento (default: true). */
+  comercial?: boolean
+  /** Textarea de mensagem livre. Passe um objeto para customizar label/placeholder. */
+  mensagem?: boolean | { label?: string; placeholder?: string }
+  /** Campos extras do contexto (ex.: data/participantes do evento). Concatenados na nota. */
+  extras?: ExtraField[]
+  /** @deprecated Atalho usado pelas LPs — equivale a perfil+comercial juntos. */
   rich?: boolean
   /** Variante do botão de envio (ex.: 'gold' na página ELITE). */
   ctaVariant?: 'primary' | 'gold'
@@ -38,12 +57,23 @@ export function FormLead({
   title = 'Fale com um especialista',
   description,
   ctaLabel = 'Enviar',
-  rich = true,
+  perfil,
+  comercial,
+  mensagem = false,
+  extras = [],
+  rich,
   ctaVariant = 'primary',
 }: FormLeadProps) {
   const [status, setStatus] = useState<Status>('idle')
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [started, setStarted] = useState(false)
+
+  // Defaults preservam o comportamento atual; `rich` é o atalho legado das LPs.
+  const showPerfil = perfil ?? rich ?? true
+  const showComercial = comercial ?? rich ?? true
+  const showMensagem = Boolean(mensagem)
+  const msgLabel = (typeof mensagem === 'object' && mensagem.label) || 'Mensagem'
+  const msgPlaceholder = typeof mensagem === 'object' ? mensagem.placeholder : undefined
 
   function onFirstInteraction() {
     if (!started) {
@@ -58,6 +88,17 @@ export function FormLead({
     setErrors({})
 
     const form = new FormData(e.currentTarget)
+
+    // Campos extras do contexto + mensagem livre são concatenados na nota.
+    const extraLinhas = extras
+      .map((f) => {
+        const v = String(form.get(f.name) ?? '').trim()
+        return v ? `${f.label}: ${v}` : null
+      })
+      .filter(Boolean) as string[]
+    const msgLivre = String(form.get('mensagem') ?? '').trim()
+    const mensagemFinal = [...extraLinhas, ...(msgLivre ? [msgLivre] : [])].join('\n') || undefined
+
     const payload = {
       nome: String(form.get('nome') ?? ''),
       email: String(form.get('email') ?? ''),
@@ -67,7 +108,7 @@ export function FormLead({
       vendedores: (form.get('vendedores') as string) || undefined,
       faturamento: (form.get('faturamento') as string) || undefined,
       segmento: (form.get('segmento') as string) || undefined,
-      mensagem: (form.get('mensagem') as string) || undefined,
+      mensagem: mensagemFinal,
       consentimento: form.get('consentimento') === 'on',
       website: String(form.get('website') ?? ''), // honeypot
       source,
@@ -134,7 +175,7 @@ export function FormLead({
           <input name="whatsapp" className={inputCls} autoComplete="tel" placeholder="(11) 99999-9999" />
         </Field>
 
-        {rich && (
+        {showPerfil && (
           <>
             <Field label="Cargo" error={errors.cargo}>
               <select name="cargo" className={inputCls} defaultValue="">
@@ -151,6 +192,11 @@ export function FormLead({
             <Field label="Empresa" error={errors.empresa}>
               <input name="empresa" className={inputCls} autoComplete="organization" />
             </Field>
+          </>
+        )}
+
+        {showComercial && (
+          <>
             <Field label="Nº de vendedores" error={errors.vendedores}>
               <select name="vendedores" className={inputCls} defaultValue="">
                 <option value="" disabled>
@@ -179,6 +225,41 @@ export function FormLead({
               <input name="segmento" className={inputCls} />
             </Field>
           </>
+        )}
+
+        {extras.map((f) => (
+          <Field
+            key={f.name}
+            label={f.label}
+            error={errors[f.name]}
+            className={f.full ? 'sm:col-span-2' : undefined}
+          >
+            {f.type === 'select' ? (
+              <select name={f.name} className={inputCls} defaultValue="">
+                <option value="" disabled>
+                  Selecione
+                </option>
+                {(f.options ?? []).map((o) => (
+                  <option key={o} value={o}>
+                    {o}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                name={f.name}
+                type={f.type === 'date' || f.type === 'number' ? f.type : 'text'}
+                className={inputCls}
+                placeholder={f.placeholder}
+              />
+            )}
+          </Field>
+        ))}
+
+        {showMensagem && (
+          <Field label={msgLabel} error={errors.mensagem} className="sm:col-span-2">
+            <textarea name="mensagem" rows={4} className={inputCls} placeholder={msgPlaceholder} />
+          </Field>
         )}
       </div>
 

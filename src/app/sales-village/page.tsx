@@ -102,6 +102,16 @@ export default function SalesVillagePage() {
             produto="Sales Village"
             title=""
             ctaLabel="Solicitar orçamento"
+            comercial={false}
+            extras={[
+              { name: 'data_evento', label: 'Data desejada', type: 'date' },
+              { name: 'participantes', label: 'Nº de participantes', type: 'select', options: ['10–30', '31–60', '61–100', '101–150'] },
+              { name: 'tipo_evento', label: 'Tipo de evento', type: 'select', full: true, options: ['Convenção / Kickoff', 'Treinamento / Workshop', 'Palestra', 'Gravação de podcast', 'Outro'] },
+            ]}
+            mensagem={{
+              label: 'Detalhes do evento',
+              placeholder: 'Conte mais sobre o formato, horário e o que você precisa.',
+            }}
           />
         </div>
       </Section>

@@ -163,6 +163,7 @@ export default function ElitePage() {
             title=""
             ctaLabel="Aplicar para a comunidade"
             ctaVariant="gold"
+            mensagem={{ label: 'Sobre você e sua empresa', placeholder: 'Conte um pouco da sua trajetória e por que quer entrar para a comunidade.' }}
           />
         </div>
       </Section>

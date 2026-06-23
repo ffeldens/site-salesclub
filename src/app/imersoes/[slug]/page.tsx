@@ -118,6 +118,7 @@ export default async function ImersaoPage({ params }: { params: Promise<{ slug: 
             produto={im.titulo}
             title=""
             ctaLabel={im.ctaLabel}
+            mensagem={{ label: 'Mensagem (opcional)', placeholder: 'Conte o seu objetivo com a imersão.' }}
           />
         </div>
       </Section>

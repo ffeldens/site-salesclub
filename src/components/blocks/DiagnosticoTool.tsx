@@ -45,7 +45,7 @@ export function DiagnosticoTool() {
     if (dom && PUBLIC_DOMAINS.includes(dom)) return 'Use um e-mail corporativo (ex.: nome@suaempresa.com.br).'
     if (user.telefone.replace(/\D/g, '').length < 10) return 'Insira um telefone válido com DDD.'
     if (!user.tamanho) return 'Selecione o número de vendedores.'
-    if (!user.faturamento) return 'Selecione o faturamento anual.'
+    if (!user.faturamento) return 'Selecione o faturamento mensal.'
     return null
   }
 
@@ -103,7 +103,6 @@ export function DiagnosticoTool() {
   async function enviarLead() {
     const resumo = [
       `Diagnóstico Comercial — score geral ${resultado.geral.toFixed(1)}/10`,
-      `Nº vendedores: ${user.tamanho} · Faturamento anual: ${user.faturamento}`,
       `Etapa DREG mais fraca: ${resultado.maisFraca?.etapa ?? '-'}`,
       'Scores por pilar: ' + resultado.porPilar.map((p) => `${p.name} ${p.score}`).join(' · '),
     ].join('\n')
@@ -116,7 +115,8 @@ export function DiagnosticoTool() {
           email: user.email,
           whatsapp: user.telefone,
           empresa: user.empresa,
-          segmento: undefined,
+          vendedores: user.tamanho || undefined,
+          faturamento: user.faturamento || undefined,
           mensagem: resumo,
           consentimento: true,
           source: 'diagnostico',
@@ -257,7 +257,7 @@ export function DiagnosticoTool() {
                 {tamanhoOptions.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </Field>
-            <Field label="Faturamento anual*" className="sm:col-span-2">
+            <Field label="Faturamento mensal*" className="sm:col-span-2">
               <select className={inputCls} value={user.faturamento} onChange={(e) => setUser({ ...user, faturamento: e.target.value })}>
                 <option value="" disabled>Selecione…</option>
                 {faturamentoOptions.map((o) => <option key={o} value={o}>{o}</option>)}

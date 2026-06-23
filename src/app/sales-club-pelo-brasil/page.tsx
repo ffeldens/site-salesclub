@@ -181,7 +181,17 @@ export default function SalesClubPeloBrasilPage() {
           align="center"
         />
         <div className="mx-auto max-w-2xl">
-          <FormLead source="eventos" produto="Sales Club pelo Brasil" title="" ctaLabel={ev.ctaLabel} />
+          <FormLead
+            source="eventos"
+            produto="Sales Club pelo Brasil"
+            title=""
+            ctaLabel={ev.ctaLabel}
+            comercial={false}
+            extras={[
+              { name: 'cidade_interesse', label: 'Cidade de interesse', type: 'text', full: true, placeholder: 'Ex.: Campinas, Itajaí, Luiz Eduardo Magalhães…' },
+            ]}
+            mensagem={{ label: 'Mensagem (opcional)', placeholder: 'Quer participar, levar o time ou receber o evento na sua cidade?' }}
+          />
         </div>
       </Section>
     </PageShell>

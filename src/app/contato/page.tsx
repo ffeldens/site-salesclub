@@ -25,7 +25,16 @@ export default function ContatoPage() {
             align="center"
           />
           <div className="mx-auto max-w-2xl">
-            <FormLead source="contato" title="" ctaLabel="Quero falar com um especialista" />
+            <FormLead
+              source="contato"
+              title=""
+              ctaLabel="Quero falar com um especialista"
+              comercial={false}
+              mensagem={{
+                label: 'Como podemos ajudar?',
+                placeholder: 'Conte um pouco sobre a sua operação comercial e o que você procura.',
+              }}
+            />
           </div>
         </Section>
       </main>

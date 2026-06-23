@@ -47,7 +47,7 @@ function buildNote(lead: LeadInput): string {
     lead.vendedores && `<b>Nº de vendedores:</b> ${lead.vendedores}`,
     lead.faturamento && `<b>Faturamento:</b> ${lead.faturamento}`,
     lead.segmento && `<b>Segmento:</b> ${lead.segmento}`,
-    lead.mensagem && `<b>Mensagem:</b> ${lead.mensagem}`,
+    lead.mensagem && `<b>Mensagem:</b><br>${lead.mensagem.replace(/\n/g, '<br>')}`,
     '',
     `<b>Página:</b> ${lead.page_url ?? '-'}`,
     `<b>UTM source/medium/campaign:</b> ${lead.utm_source ?? '-'} / ${lead.utm_medium ?? '-'} / ${lead.utm_campaign ?? '-'}`,

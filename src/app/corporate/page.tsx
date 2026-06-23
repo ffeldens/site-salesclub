@@ -102,7 +102,16 @@ export default function CorporatePage() {
           align="center"
         />
         <div className="mx-auto max-w-2xl">
-          <FormLead source="corporate" produto="Corporate" title="" ctaLabel="Solicitar proposta" />
+          <FormLead
+            source="corporate"
+            produto="Corporate"
+            title=""
+            ctaLabel="Solicitar proposta"
+            mensagem={{
+              label: 'Seu desafio comercial',
+              placeholder: 'Descreva o contexto, o time envolvido e o resultado que você busca.',
+            }}
+          />
         </div>
       </Section>
     </PageShell>
