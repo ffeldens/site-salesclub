@@ -14,9 +14,9 @@ import { getCorporateOfertas } from '@/content/corporate'
 import { getClienteLogos } from '@/lib/content'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Corporate — educação e soluções comerciais para grandes contas',
+  title: 'Treinamento de vendas corporativo e educação corporativa em vendas',
   description:
-    'Capacitações, palestras, convenções, projetos especiais e mentoria executiva do Sales Club para empresas enterprise.',
+    'Programa de treinamento de vendas corporativo e educação corporativa em vendas para empresas B2B: capacitações in company, palestras, convenções, projetos especiais e mentoria executiva do Sales Club.',
   path: '/corporate',
 })
 
