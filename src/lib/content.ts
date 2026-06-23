@@ -66,6 +66,36 @@ const MENTORES: Mentor[] = [
     bio: 'Fundou e escalou negócios de educação e tecnologia; senta com os membros para discutir o caso real de cada um.',
     foto: '/images/mentores/guilherme-junqueira.webp',
   },
+  {
+    nome: 'Viviane Machado',
+    cargo: 'Especialista em Enablement',
+    bio: '10+ anos em Treinamento & Desenvolvimento, com passagem estratégica pela Proteste e background em consultoria de Máquina de Vendas.',
+    foto: '/images/mentores/viviane-machado.webp',
+  },
+  {
+    nome: 'Adriana Gomes',
+    cargo: 'Liderança e governança',
+    bio: 'Especialista em desenvolvimento de lideranças, governança corporativa, diversidade e inclusão.',
+    foto: '/images/mentores/adriana-gomes.webp',
+  },
+  {
+    nome: 'Gustavo Malavota',
+    cargo: 'Vendas e treinamento',
+    bio: 'Capacitou +180 mil vendedores e líderes em 15 anos. Fundador da Mola Educação; autor de "52 Semanas em Ações de Vendas".',
+    foto: '/images/mentores/gustavo-malavota.webp',
+  },
+  {
+    nome: 'Thiago Bezerra',
+    cargo: 'Head Comercial e de Serviços',
+    bio: '15 anos na área comercial, da operação à liderança; responde por crescimento de receita e execução estratégica.',
+    foto: '/images/mentores/thiago-bezerra.webp',
+  },
+  {
+    nome: 'Luiz Ambrósio',
+    cargo: 'Fundador e COO da Vinci Society',
+    bio: 'Growth e Vendas; ex-Growth Lead no G4 Educação, Liv Up e Raccoon.',
+    foto: '/images/mentores/luiz-ambrosio.webp',
+  },
 ]
 
 const STATS: Stat[] = [
