@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { RadarPilares } from '@/components/blocks/RadarPilares'
 import { cn } from '@/lib/cn'
 import { getStoredOrigin } from '@/lib/utm'
 import { track } from '@/lib/analytics'
@@ -142,15 +143,21 @@ export function DiagnosticoTool() {
           <p className="font-semibold text-brand-vivid">{user.empresa}</p>
         </div>
 
-        {/* Score geral */}
-        <div className="mt-8 rounded-card border border-subtle bg-ink-card p-8 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-mute">Score geral de maturidade</p>
-          <p className="mt-3 font-display text-6xl font-extrabold" style={{ color: getScoreColor(resultado.geral) }}>
-            {resultado.geral.toFixed(1)}
-            <span className="text-2xl text-mute">/10</span>
-          </p>
-          <p className="mt-2 text-lg font-bold" style={{ color: c.cor }}>{c.label}</p>
-          <p className="prose-sc mx-auto mt-2 text-sm">{c.desc}</p>
+        {/* Score geral + radar */}
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col justify-center rounded-card border border-subtle bg-ink-card p-8 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-mute">Score geral de maturidade</p>
+            <p className="mt-3 font-display text-6xl font-extrabold" style={{ color: getScoreColor(resultado.geral) }}>
+              {resultado.geral.toFixed(1)}
+              <span className="text-2xl text-mute">/10</span>
+            </p>
+            <p className="mt-2 text-lg font-bold" style={{ color: c.cor }}>{c.label}</p>
+            <p className="prose-sc mx-auto mt-2 text-sm">{c.desc}</p>
+          </div>
+          <div className="rounded-card border border-subtle bg-ink-card p-6">
+            <p className="mb-2 text-center text-xs font-bold uppercase tracking-widest text-mute">Visão por pilar</p>
+            <RadarPilares data={resultado.porPilar.map((p) => ({ name: p.name, score: p.score }))} />
+          </div>
         </div>
 
         {/* Leitura por DREG + trilha da etapa mais fraca */}
