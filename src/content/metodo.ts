@@ -67,9 +67,8 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
     etapa: 'Gerenciar',
     solucoes: [
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
-      { label: 'App de OKRs', href: '/produtos/okrs' },
       { label: 'Máquina de Vendas (governança)', href: '/servicos/maquina-de-vendas' },
-      { label: 'Sales Board', href: '/sales-board' },
+      { label: 'Sales Advisory', href: '/sales-advisory' },
       { label: 'Mentoria (Corporate)', href: '/corporate#mentoria' },
     ],
   },

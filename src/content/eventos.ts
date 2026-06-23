@@ -69,10 +69,15 @@ export const salesClubPeloBrasil = {
     { valor: '+500', label: 'empresas com máquina estruturada' },
   ],
   // TODO(conteúdo): atualizar a agenda mensalmente.
-  edicoes: [
-    { cidade: 'Garibaldi', uf: 'RS', data: '06 de junho', local: 'Mosteiro Hotel de Charme', status: 'Vagas limitadas' },
-    { cidade: 'Teresina', uf: 'PI', data: '22 de maio', status: 'Vagas limitadas' },
-  ] satisfies Edicao[],
+  proximasEdicoes: [
+    { cidade: 'Campinas', uf: 'SP', data: 'Agosto', status: 'Inscrições abertas' },
+    { cidade: 'Itajaí', uf: 'SC', data: 'Setembro', status: 'Em breve' },
+    { cidade: 'Luiz Eduardo Magalhães', uf: 'BA', data: 'Outubro', status: 'Em breve' },
+  ] as Edicao[],
+  ultimasEdicoes: [
+    { cidade: 'Garibaldi', uf: 'RS', data: 'Junho', local: 'Mosteiro Hotel de Charme' },
+    { cidade: 'Teresina', uf: 'PI', data: 'Maio' },
+  ] as Edicao[],
   ctaLabel: 'Quero participar do encontro',
 }
 

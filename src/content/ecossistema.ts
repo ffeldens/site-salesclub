@@ -34,15 +34,15 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
     descricao: 'Comunidade e conselho para crescer entre pares.',
     itens: [
       { label: 'ELITE — comunidade de empresários', href: '/elite' },
-      { label: 'Sales Board — conselho de vendas', href: '/sales-board' },
+      { label: 'Sales Advisory — conselho de vendas', href: '/sales-advisory' },
     ],
   },
   {
-    titulo: 'Tecnologia & Espaço',
-    descricao: 'Ferramentas e sede própria que sustentam a previsibilidade.',
+    titulo: 'Espaço & Conteúdo',
+    descricao: 'Sede própria e conteúdo que sustentam a comunidade.',
     itens: [
-      { label: 'App de OKRs', href: '/produtos/okrs' },
       { label: 'Sales Village (eventos e podcast)', href: '/sales-village' },
+      { label: 'Podcast & Conteúdo', href: '/podcast' },
     ],
   },
 ]
@@ -81,7 +81,7 @@ export const recomendadorDor: DorRecomendacao[] = [
     etapa: 'Gerenciar',
     recomendados: [
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
-      { label: 'App de OKRs', href: '/produtos/okrs' },
+      { label: 'Sales Advisory', href: '/sales-advisory' },
     ],
   },
 ]

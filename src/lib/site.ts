@@ -100,14 +100,13 @@ export const solutionsMenu: NavGroup[] = [
     label: 'Comunidade & Conselho',
     items: [
       { label: 'ELITE', href: '/elite', description: 'Comunidade de empresários' },
-      { label: 'Sales Board', href: '/sales-board', description: 'Conselho consultivo' },
+      { label: 'Sales Advisory', href: '/sales-advisory', description: 'Conselho consultivo' },
     ],
   },
   {
-    label: 'Espaço & Produtos',
+    label: 'Espaço',
     items: [
       { label: 'Sales Village', href: '/sales-village', description: 'Locação para eventos e podcast' },
-      { label: 'App de OKRs', href: '/produtos/okrs', description: 'Gestão por OKRs' },
     ],
   },
   {

@@ -43,6 +43,8 @@ const nextConfig = {
       { source: '/corporate/convencoes', destination: '/corporate#convencoes', permanent: true },
       { source: '/corporate/projetos-especiais', destination: '/corporate#projetos-especiais', permanent: true },
       { source: '/corporate/mentoria', destination: '/corporate#mentoria', permanent: true },
+      // Rebrand Sales Board → Sales Advisory
+      { source: '/sales-board', destination: '/sales-advisory', permanent: true },
       // TODO(Fase 5): 301 das URLs antigas (/imersao-presencial/*, salesclubtelecom, etc.)
     ]
   },

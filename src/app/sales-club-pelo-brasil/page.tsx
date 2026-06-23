@@ -30,8 +30,8 @@ export default function SalesClubPeloBrasilPage() {
   const url = `${siteConfig.url}/sales-club-pelo-brasil`
   return (
     <PageShell whatsappMessage="Olá! Quero participar do Sales Club pelo Brasil.">
-      {/* Um Event por edição (cidade/data) */}
-      {ev.edicoes.map((e) => (
+      {/* Um Event por edição futura (cidade/data) */}
+      {ev.proximasEdicoes.map((e) => (
         <JsonLd
           key={`${e.cidade}-${e.data}`}
           data={{
@@ -83,7 +83,7 @@ export default function SalesClubPeloBrasilPage() {
           description="Uma vez por mês, em uma cidade diferente do Brasil. Vagas limitadas por edição."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {ev.edicoes.map((e) => (
+          {ev.proximasEdicoes.map((e) => (
             <Card key={`${e.cidade}-${e.data}`} className="bg-ink">
               <div className="flex items-center justify-between gap-2">
                 <h3 className="font-display text-heading text-paper-pure">
@@ -95,6 +95,29 @@ export default function SalesClubPeloBrasilPage() {
               {e.local && <p className="mt-1 text-sm text-mute">📍 {e.local}</p>}
             </Card>
           ))}
+        </div>
+
+        {/* Últimas edições */}
+        <div className="mt-12">
+          <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-mute">
+            Últimas edições
+          </h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {ev.ultimasEdicoes.map((e) => (
+              <div
+                key={`${e.cidade}-${e.data}`}
+                className="rounded-card border border-subtle bg-ink/50 p-4"
+              >
+                <p className="font-medium text-paper/80">
+                  {e.cidade} · {e.uf}
+                </p>
+                <p className="mt-1 text-sm text-mute">
+                  {e.data}
+                  {e.local ? ` · ${e.local}` : ''}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 

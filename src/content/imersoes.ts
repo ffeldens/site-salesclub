@@ -96,7 +96,7 @@ export const imersoes: Imersao[] = [
     headline: 'Sales Leadership: formando líderes comerciais de alta performance',
     subtitulo:
       'Em 2 dias intensivos você fortalece sua liderança comercial com metodologia e ferramentas práticas para criar rotinas de gestão consistentes, ganhar previsibilidade de receita e alinhar pessoas, processos e indicadores.',
-    data: '16 e 17 de junho',
+    data: '21 e 22 de agosto',
     local: SALES_VILLAGE,
     formato: 'Presencial · 20 horas',
     resumo:
