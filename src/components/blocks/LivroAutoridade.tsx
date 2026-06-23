@@ -16,9 +16,9 @@ export function LivroAutoridade({ tone = 'card' }: { tone?: 'base' | 'card' }) {
           <Image
             src={dregLivro.capa}
             alt={`Capa do livro ${dregLivro.titulo}`}
-            width={180}
-            height={260}
-            className="rounded-lg border border-subtle shadow-card"
+            width={586}
+            height={800}
+            className="h-auto w-44 rounded-lg border border-subtle shadow-card"
           />
         ) : (
           <div className="flex h-[260px] w-[180px] flex-col justify-between rounded-lg border border-subtle bg-gradient-to-br from-ink-line to-ink p-5 shadow-card">

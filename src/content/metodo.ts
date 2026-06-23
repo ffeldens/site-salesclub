@@ -77,7 +77,7 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
 export const dregLivro = {
   titulo: 'Arquitetura de Vendas de Alta Performance',
   autores: 'Hélio Azevedo (CRO do Sales Club) e Gustavo Pagotto',
-  // TODO(livro): capa em alta + link de compra/landing (Pendência #4 do brief).
-  capa: null as string | null,
+  capa: '/images/livro/arquitetura-de-vendas.jpg' as string | null,
+  // TODO(livro): link de compra/landing do livro (quando disponível).
   link: null as string | null,
 }
