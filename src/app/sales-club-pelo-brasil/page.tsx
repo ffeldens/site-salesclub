@@ -15,6 +15,7 @@ import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { FormLead } from '@/components/blocks/FormLead'
 import { CheckIcon } from '@/components/ui/icons'
 import { BadgeDREG } from '@/components/BadgeDREG'
+import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { getSalesClubPeloBrasil } from '@/content/eventos'
 
 const ev = getSalesClubPeloBrasil()
@@ -94,6 +95,18 @@ export default function SalesClubPeloBrasilPage() {
               {e.local && <p className="mt-1 text-sm text-mute">📍 {e.local}</p>}
             </Card>
           ))}
+        </div>
+      </Section>
+
+      {/* Como foi: vídeo da edição de Garibaldi */}
+      <Section>
+        <SectionHeading
+          eyebrow="Como foi"
+          title="A edição de Garibaldi (RS)"
+          description="Um dia intenso de estratégia, conexões e prática. Veja como foi o Sales Club pelo Brasil em Garibaldi."
+        />
+        <div className="mx-auto max-w-4xl">
+          <YoutubeEmbed id="1nPs7Cuz7OI" title="Sales Club pelo Brasil — edição de Garibaldi (RS)" />
         </div>
       </Section>
 

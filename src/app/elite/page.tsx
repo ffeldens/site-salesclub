@@ -7,8 +7,11 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Depoimentos } from '@/components/blocks/Depoimentos'
 import { FormLead } from '@/components/blocks/FormLead'
-import { CheckIcon } from '@/components/ui/icons'
+import { YoutubeEmbed } from '@/components/YoutubeEmbed'
+import { CheckIcon, YoutubeIcon } from '@/components/ui/icons'
 import { getDepoimentos } from '@/lib/content'
+import { getEmpresasElite } from '@/content/elite'
+import { siteConfig } from '@/lib/site'
 
 // TODO(conteúdo): validar pilares, benefícios e depoimentos de membros da ELITE.
 export const metadata: Metadata = buildMetadata({
@@ -93,7 +96,56 @@ export default function ElitePage() {
         </div>
       </Section>
 
+      {/* Empresas que confiam no ELITE */}
+      <Section tone="card">
+        <SectionHeading
+          eyebrow="Comunidade"
+          title="Empresas que confiam no ELITE"
+          accent="gold"
+        />
+        <div className="grid grid-cols-2 items-center gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {getEmpresasElite().map((e) => (
+            <div key={e.src} className="flex h-24 items-center justify-center rounded-card bg-white p-5">
+              <Image
+                src={e.src}
+                alt={e.nome}
+                width={200}
+                height={80}
+                className="max-h-14 w-auto object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Sales Club na Estrada — entrega de comunidade */}
+      <Section>
+        <SectionHeading
+          eyebrow="Comunidade"
+          title="Sales Club na Estrada"
+          accent="gold"
+          description="Uma das entregas mais marcantes do ELITE: encontros itinerantes que levam os membros para vivências, troca e networking pelo Brasil. Veja a edição de Santa Catarina (2025)."
+        />
+        <div className="mx-auto max-w-4xl">
+          <YoutubeEmbed id="G60tyr6d6Qs" title="Sales Club na Estrada — Santa Catarina 2025" />
+        </div>
+      </Section>
+
       <Depoimentos title="O que dizem os membros" depoimentos={getDepoimentos()} />
+
+      {/* Podcast ELITE */}
+      <Section tone="card">
+        <SectionHeading
+          eyebrow="Conteúdo"
+          title="Podcast ELITE"
+          accent="gold"
+          description="Conversas com empresários e especialistas da comunidade. 1ª temporada: 9 episódios · 2ª temporada: 10 episódios lançados."
+        />
+        {/* TODO(podcast): trocar pelo link da playlist específica do Podcast ELITE no YouTube. */}
+        <Button href={siteConfig.social.youtube} variant="gold" size="lg">
+          <YoutubeIcon className="h-5 w-5" /> Assistir aos episódios no YouTube
+        </Button>
+      </Section>
 
       {/* CTA dourado */}
       <Section id="cta">
