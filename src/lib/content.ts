@@ -102,7 +102,6 @@ const STATS: Stat[] = [
   { valor: '+500 mil', label: 'profissionais formados' },
   { valor: '+800', label: 'empresas atendidas' },
   { valor: '+10 anos', label: 'de ecossistema comercial' },
-  { valor: '1', label: 'Sales Village próprio em SP' },
 ]
 
 // TODO(depoimentos): substituir por depoimentos reais com nome, cargo, empresa e
