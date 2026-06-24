@@ -8,7 +8,7 @@ export const siteConfig = {
   name: 'Sales Club',
   tagline: 'O maior ecossistema de vendas do Brasil',
   // MVP temporário em subdomínio da MudAção; migra para salesclub.com.br no go-live.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sc.mudacao.com.br',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://salesclub.com.br',
   description:
     'Imersões, serviços, comunidade e tecnologia para dar previsibilidade e escala à sua área comercial. O maior ecossistema de vendas do Brasil.',
   // E-E-A-T — visíveis no Footer e no JSON-LD Organization

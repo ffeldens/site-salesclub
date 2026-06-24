@@ -39,6 +39,13 @@ const nextConfig = {
   // Ver docs/PRD.md §4 e CLAUDE.md §4 "Migração".
   async redirects() {
     return [
+      // Canônico: www → apex (salesclub.com.br). Evita conteúdo duplicado.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.salesclub.com.br' }],
+        destination: 'https://salesclub.com.br/:path*',
+        permanent: true,
+      },
       // Corporate consolidado em página única com âncoras (P2.5)
       { source: '/corporate/capacitacoes', destination: '/corporate#capacitacoes', permanent: true },
       { source: '/corporate/palestras', destination: '/corporate#palestras', permanent: true },
