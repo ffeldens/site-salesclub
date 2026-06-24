@@ -68,9 +68,19 @@ export function VideoDepoimentos({
                 </button>
               )}
             </div>
-            <figcaption className="flex items-center justify-between gap-2 px-4 py-3">
-              <span className="font-medium text-paper-pure">{v.empresa}</span>
-              <span className="text-xs text-mute">{v.segmento}</span>
+            <figcaption className="px-4 py-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-medium text-paper-pure">{v.empresa}</span>
+                <span className="text-xs text-mute">{v.segmento}</span>
+              </div>
+              {v.quote && (
+                <blockquote className="mt-3 border-t border-subtle pt-3 text-sm italic text-paper/80">
+                  “{v.quote}”
+                  {v.pessoa && (
+                    <footer className="mt-1 text-xs not-italic text-mute">— {v.pessoa}</footer>
+                  )}
+                </blockquote>
+              )}
             </figcaption>
           </figure>
         ))}

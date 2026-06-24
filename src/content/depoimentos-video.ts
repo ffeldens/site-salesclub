@@ -8,15 +8,66 @@ export type VideoDepoimento = {
   segmento: string
   videoId: string
   featured?: boolean
+  /** Frase extraída do depoimento (legenda revisada). */
+  quote?: string
+  /** Atribuição da frase (cargo e/ou nome, quando informado no vídeo). */
+  pessoa?: string
 }
 
 export const depoimentosVideo: VideoDepoimento[] = [
-  { empresa: 'Estácio', segmento: 'Educação', videoId: 'c9gUSvERWfg', featured: true },
-  { empresa: 'Point Solar', segmento: 'Energia', videoId: 'Xtvd5y6NmZ0', featured: true },
-  { empresa: 'Sankhya', segmento: 'Gestão de negócios', videoId: 'h1la-baNkxI', featured: true },
-  { empresa: 'Sicredi', segmento: 'Financeiro', videoId: 'h21ghLu6U4E', featured: true },
-  { empresa: 'Grupo Ric', segmento: 'Comunicação e mídia', videoId: 'IODXoM0TKGI', featured: true },
-  { empresa: 'Monteo Investimentos', segmento: 'Financeiro', videoId: 'kdqo5zMUXnM', featured: true },
+  {
+    empresa: 'Estácio',
+    segmento: 'Educação',
+    videoId: 'c9gUSvERWfg',
+    featured: true,
+    quote:
+      'Se eu pudesse definir o Sales Club em uma palavra, seria perfeito. Cada minuto aqui é precioso — e todo profissional de vendas, em qualquer segmento, tem a obrigação de participar.',
+    pessoa: 'Coordenadora de vendas indiretas',
+  },
+  {
+    empresa: 'Point Solar',
+    segmento: 'Energia',
+    videoId: 'Xtvd5y6NmZ0',
+    featured: true,
+    quote:
+      'Foi a melhor coisa que fizemos. Trouxe uma mudança enorme no clima da empresa e no faturamento — impactou em pelo menos 300%.',
+    pessoa: 'Marcos Tavares, diretor',
+  },
+  {
+    empresa: 'Sankhya',
+    segmento: 'Gestão de negócios',
+    videoId: 'h1la-baNkxI',
+    featured: true,
+    quote:
+      '90% você até já sabe — mas são os 10% restantes que fazem toda a diferença. Para nós, está sendo um divisor de águas.',
+    pessoa: 'Antônio, diretor nacional de vendas',
+  },
+  {
+    empresa: 'Sicredi',
+    segmento: 'Financeiro',
+    videoId: 'h21ghLu6U4E',
+    featured: true,
+    quote:
+      'Paguei barato pelo conhecimento que adquiri. Saí com ideias fantásticas para executar já na segunda-feira.',
+  },
+  {
+    empresa: 'Grupo Ric',
+    segmento: 'Comunicação e mídia',
+    videoId: 'IODXoM0TKGI',
+    featured: true,
+    quote:
+      'Ficou claro que comercial e marketing andam juntos do começo ao fim. E o melhor: eles ensinam o que aplicaram na prática, não o que leram em livros.',
+    pessoa: 'Laila, marketing',
+  },
+  {
+    empresa: 'Monteo Investimentos',
+    segmento: 'Financeiro',
+    videoId: 'kdqo5zMUXnM',
+    featured: true,
+    quote:
+      'Já estamos entre as cinco maiores do país no segmento. O conhecimento que faltava para chegar ao topo estava aqui.',
+    pessoa: 'Sócio',
+  },
   { empresa: 'Afine-se', segmento: 'Saúde e áreas médicas', videoId: 'aOM6zknr3w8' },
   { empresa: 'GS Select Car', segmento: 'Auto-center', videoId: 'Y1GlnGLsrLk' },
   { empresa: 'Xgen', segmento: 'Software', videoId: 'lX1LVE8oCfg' },

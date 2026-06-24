@@ -7,7 +7,6 @@ import { Stats } from '@/components/blocks/Stats'
 import { Beneficios } from '@/components/blocks/Beneficios'
 import { Mentores } from '@/components/blocks/Mentores'
 import { SalesVillage } from '@/components/blocks/SalesVillage'
-import { Depoimentos } from '@/components/blocks/Depoimentos'
 import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { FAQ } from '@/components/blocks/FAQ'
 import { CTASection } from '@/components/blocks/CTASection'
@@ -28,7 +27,6 @@ import { getPosts } from '@/content/conteudo'
 import { getVideoDepoimentosFeatured } from '@/content/depoimentos-video'
 import {
   getClienteLogos,
-  getDepoimentos,
   getFaqHome,
   getMentoresHome,
   getStats,
@@ -88,8 +86,6 @@ export default async function HomePage() {
           description="Líderes de diferentes segmentos contam o que mudou com o Sales Club."
           videos={getVideoDepoimentosFeatured(3)}
         />
-
-        <Depoimentos depoimentos={getDepoimentos()} />
 
         {/* Conteúdo & Podcast */}
         <Section>

@@ -6,10 +6,9 @@ import { LogosProvaSocial } from '@/components/blocks/LogosProvaSocial'
 import { Stats } from '@/components/blocks/Stats'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
-import { Depoimentos } from '@/components/blocks/Depoimentos'
 import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { CTASection } from '@/components/blocks/CTASection'
-import { getClienteLogos, getDepoimentos, getStats } from '@/lib/content'
+import { getClienteLogos, getStats } from '@/lib/content'
 import { getVideoDepoimentos } from '@/content/depoimentos-video'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,8 +64,6 @@ export default function CasesPage() {
         videos={getVideoDepoimentos()}
         tone="card"
       />
-
-      <Depoimentos depoimentos={getDepoimentos()} />
 
       <CTASection
         title="A próxima história de resultado pode ser a sua"
