@@ -45,7 +45,7 @@ export function DiagnosticoTool() {
     if (dom && PUBLIC_DOMAINS.includes(dom)) return 'Use um e-mail corporativo (ex.: nome@suaempresa.com.br).'
     if (user.telefone.replace(/\D/g, '').length < 10) return 'Insira um telefone válido com DDD.'
     if (!user.tamanho) return 'Selecione o número de vendedores.'
-    if (!user.faturamento) return 'Selecione o faturamento mensal.'
+    if (!user.faturamento) return 'Selecione o faturamento anual.'
     return null
   }
 
@@ -257,7 +257,7 @@ export function DiagnosticoTool() {
                 {tamanhoOptions.map((o) => <option key={o} value={o}>{o}</option>)}
               </select>
             </Field>
-            <Field label="Faturamento mensal*" className="sm:col-span-2">
+            <Field label="Faturamento anual*" className="sm:col-span-2">
               <select className={inputCls} value={user.faturamento} onChange={(e) => setUser({ ...user, faturamento: e.target.value })}>
                 <option value="" disabled>Selecione…</option>
                 {faturamentoOptions.map((o) => <option key={o} value={o}>{o}</option>)}

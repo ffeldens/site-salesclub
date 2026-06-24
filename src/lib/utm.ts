@@ -12,6 +12,8 @@ export const UTM_KEYS = [
   'utm_term',
   'gclid',
   'fbclid',
+  'ttclid',
+  'msclkid',
 ] as const
 
 export type UtmKey = (typeof UTM_KEYS)[number]

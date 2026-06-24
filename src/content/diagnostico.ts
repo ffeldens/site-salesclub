@@ -155,13 +155,15 @@ export const sections: Section[] = [
 
 // Mesmas faixas do leadSchema (FAIXAS_VENDEDORES / FAIXAS_FATURAMENTO) para que
 // o lead do diagnóstico chegue ao Pipedrive consistente com os demais formulários.
-export const tamanhoOptions = ['1-5', '6-20', '21-50', '51-100', '100+']
+export const tamanhoOptions = ['1-5', '6-10', '11-20', '21-30', '31-40', '41-50', '50+']
 export const faturamentoOptions = [
-  'Até R$ 100k/mês',
-  'R$ 100k–500k/mês',
-  'R$ 500k–1M/mês',
-  'R$ 1M–5M/mês',
-  'Acima de R$ 5M/mês',
+  'Até R$ 500 mil',
+  'R$ 500 mil a R$ 1 milhão',
+  'R$ 1 milhão a R$ 5 milhões',
+  'R$ 5 milhões a R$ 10 milhões',
+  'R$ 10 milhões a R$ 50 milhões',
+  'R$ 50 milhões a R$ 100 milhões',
+  'Acima de R$ 100 milhões',
 ]
 
 export const PUBLIC_DOMAINS = [

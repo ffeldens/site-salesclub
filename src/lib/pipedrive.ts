@@ -41,19 +41,26 @@ function buildTitle(lead: LeadInput): string {
 
 /** Resumo de qualificação + atribuição para a nota do negócio. */
 function buildNote(lead: LeadInput): string {
+  const dores = lead.dores && lead.dores.length > 0 ? lead.dores.join(', ') : ''
+  const dataHora = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
   const linhas = [
+    `<b>Recebido em:</b> ${dataHora}`,
     `<b>Origem:</b> ${lead.source}${lead.produto ? ` (${lead.produto})` : ''}`,
     lead.cargo && `<b>Cargo:</b> ${lead.cargo}`,
-    lead.vendedores && `<b>Nº de vendedores:</b> ${lead.vendedores}`,
-    lead.faturamento && `<b>Faturamento:</b> ${lead.faturamento}`,
-    lead.segmento && `<b>Segmento:</b> ${lead.segmento}`,
+    lead.setor && `<b>Setor:</b> ${lead.setor}`,
+    lead.vendedores && `<b>Tamanho do time comercial:</b> ${lead.vendedores}`,
+    lead.faturamento && `<b>Faturamento anual:</b> ${lead.faturamento}`,
+    dores && `<b>Principal desafio comercial:</b> ${dores}`,
     lead.mensagem && `<b>Mensagem:</b><br>${lead.mensagem.replace(/\n/g, '<br>')}`,
+    `<b>Aceite LGPD:</b> ${lead.consentimento ? 'Sim' : 'Não'}`,
     '',
     `<b>Página:</b> ${lead.page_url ?? '-'}`,
     `<b>UTM source/medium/campaign:</b> ${lead.utm_source ?? '-'} / ${lead.utm_medium ?? '-'} / ${lead.utm_campaign ?? '-'}`,
     (lead.utm_content || lead.utm_term) && `<b>UTM content/term:</b> ${lead.utm_content ?? '-'} / ${lead.utm_term ?? '-'}`,
     lead.gclid && `<b>gclid:</b> ${lead.gclid}`,
     lead.fbclid && `<b>fbclid:</b> ${lead.fbclid}`,
+    lead.ttclid && `<b>ttclid:</b> ${lead.ttclid}`,
+    lead.msclkid && `<b>msclkid:</b> ${lead.msclkid}`,
     lead.referrer && `<b>Referrer:</b> ${lead.referrer}`,
   ].filter(Boolean)
   return linhas.join('<br>')

@@ -5,8 +5,10 @@ import { Button } from '@/components/ui/Button'
 import {
   leadSchema,
   CARGOS,
+  SETORES,
   FAIXAS_VENDEDORES,
   FAIXAS_FATURAMENTO,
+  DORES,
   type LeadSource,
 } from '@/lib/lead-schema'
 import { getStoredOrigin } from '@/lib/utm'
@@ -33,7 +35,7 @@ export type FormLeadProps = {
   ctaLabel?: string
   /** Cargo + Empresa (default: true). */
   perfil?: boolean
-  /** Qualificação comercial: nº de vendedores, faturamento e segmento (default: true). */
+  /** Qualificação comercial: setor, tamanho do time, faturamento e dores (default: true). */
   comercial?: boolean
   /** Textarea de mensagem livre. Passe um objeto para customizar label/placeholder. */
   mensagem?: boolean | { label?: string; placeholder?: string }
@@ -107,7 +109,8 @@ export function FormLead({
       empresa: (form.get('empresa') as string) || undefined,
       vendedores: (form.get('vendedores') as string) || undefined,
       faturamento: (form.get('faturamento') as string) || undefined,
-      segmento: (form.get('segmento') as string) || undefined,
+      setor: (form.get('setor') as string) || undefined,
+      dores: (form.getAll('dores') as string[]).filter(Boolean),
       mensagem: mensagemFinal,
       consentimento: form.get('consentimento') === 'on',
       website: String(form.get('website') ?? ''), // honeypot
@@ -197,7 +200,19 @@ export function FormLead({
 
         {showComercial && (
           <>
-            <Field label="Nº de vendedores" error={errors.vendedores}>
+            <Field label="Setor" error={errors.setor}>
+              <select name="setor" className={inputCls} defaultValue="">
+                <option value="" disabled>
+                  Selecione
+                </option>
+                {SETORES.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <Field label="Tamanho do time comercial" error={errors.vendedores}>
               <select name="vendedores" className={inputCls} defaultValue="">
                 <option value="" disabled>
                   Selecione
@@ -209,7 +224,7 @@ export function FormLead({
                 ))}
               </select>
             </Field>
-            <Field label="Faturamento mensal" error={errors.faturamento}>
+            <Field label="Faturamento anual" error={errors.faturamento} className="sm:col-span-2">
               <select name="faturamento" className={inputCls} defaultValue="">
                 <option value="" disabled>
                   Selecione
@@ -221,9 +236,20 @@ export function FormLead({
                 ))}
               </select>
             </Field>
-            <Field label="Segmento" error={errors.segmento} className="sm:col-span-2">
-              <input name="segmento" className={inputCls} />
-            </Field>
+            <fieldset className="sm:col-span-2">
+              <legend className={labelCls}>Principal desafio comercial (pode marcar mais de um)</legend>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {DORES.map((d) => (
+                  <label
+                    key={d}
+                    className="flex items-start gap-2 rounded-md border border-subtle bg-ink px-3 py-2 text-sm text-paper/85"
+                  >
+                    <input type="checkbox" name="dores" value={d} className="mt-1" />
+                    <span>{d}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
           </>
         )}
 

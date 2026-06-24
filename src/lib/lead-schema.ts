@@ -6,21 +6,53 @@ import { z } from 'zod'
  */
 
 export const CARGOS = [
-  'Sócio/CEO',
-  'Diretor/Head',
-  'Gerente/Coordenador',
-  'Vendedor/SDR/Closer',
-  'Outro',
+  'C-Level',
+  'CEO',
+  'Coordenador',
+  'Diretor',
+  'Executivo de Vendas',
+  'Fundador',
+  'Gerente',
+  'Head de Vendas',
+  'Líder',
+  'Presidente',
+  'Sócio',
+  'Supervisor',
+  'Vendedor',
+  'Vice-Presidente',
 ] as const
 
-export const FAIXAS_VENDEDORES = ['1-5', '6-20', '21-50', '51-100', '100+'] as const
+export const SETORES = [
+  'Agronegócio',
+  'Comércio',
+  'Distribuidoras',
+  'Educação',
+  'Franquias',
+  'Imobiliário',
+  'Indústria',
+  'Serviços',
+  'Tecnologia',
+  'Telecomunicações',
+] as const
+
+export const FAIXAS_VENDEDORES = ['1-5', '6-10', '11-20', '21-30', '31-40', '41-50', '50+'] as const
 
 export const FAIXAS_FATURAMENTO = [
-  'Até R$ 100k/mês',
-  'R$ 100k–500k/mês',
-  'R$ 500k–1M/mês',
-  'R$ 1M–5M/mês',
-  'Acima de R$ 5M/mês',
+  'Até R$ 500 mil',
+  'R$ 500 mil a R$ 1 milhão',
+  'R$ 1 milhão a R$ 5 milhões',
+  'R$ 5 milhões a R$ 10 milhões',
+  'R$ 10 milhões a R$ 50 milhões',
+  'R$ 50 milhões a R$ 100 milhões',
+  'Acima de R$ 100 milhões',
+] as const
+
+/** Dores / principal desafio comercial (o lead pode marcar mais de uma). */
+export const DORES = [
+  'Previsibilidade / Pipeline / Funil',
+  'Conversão baixa / Ciclo de venda longo',
+  'Gestão do time de vendas',
+  'Prospecção / Geração de leads',
 ] as const
 
 /** Origem da página — roteia o lead para o pipeline correto no Pipedrive. */
@@ -47,7 +79,8 @@ export const leadSchema = z.object({
   empresa: z.string().optional(),
   vendedores: z.enum(FAIXAS_VENDEDORES).optional(),
   faturamento: z.enum(FAIXAS_FATURAMENTO).optional(),
-  segmento: z.string().optional(),
+  setor: z.enum(SETORES).optional(),
+  dores: z.array(z.enum(DORES)).optional(),
   mensagem: z.string().max(2000).optional(),
   consentimento: z.literal(true, {
     errorMap: () => ({ message: 'É necessário aceitar a política de privacidade.' }),
@@ -64,6 +97,8 @@ export const leadSchema = z.object({
   utm_term: z.string().optional(),
   gclid: z.string().optional(),
   fbclid: z.string().optional(),
+  ttclid: z.string().optional(),
+  msclkid: z.string().optional(),
   page_url: z.string().optional(),
   referrer: z.string().optional(),
   // Token do Turnstile (validado no server)
