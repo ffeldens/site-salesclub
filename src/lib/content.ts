@@ -107,6 +107,7 @@ const THIAGO_CONCER: Mentor = {
   nome: 'Thiago Concer',
   cargo: 'Sócio-fundador e mentor',
   bio: 'Referência nacional em vendas, com mais de 20 anos dedicados à formação e à gestão de times comerciais de alta performance.',
+  foto: '/images/mentores/thiago-concer.png',
 }
 
 const STATS: Stat[] = [
