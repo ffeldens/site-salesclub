@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { leadSchema } from '@/lib/lead-schema'
 import { createPersonAndLead } from '@/lib/pipedrive'
+import { logLeadToSheets } from '@/lib/sheets-backup'
 
 /**
  * Endpoint de captura de leads (CLAUDE.md §6). Valida server-side com zod,
@@ -32,14 +33,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, skipped: true })
   }
 
+  // Redundância: grava TODO lead na planilha em paralelo ao Pipedrive. Iniciada
+  // antes de aguardar o CRM, captura o lead mesmo se o Pipedrive falhar/cair.
+  const backup = logLeadToSheets(lead) // never rejects
+
   try {
     const result = await createPersonAndLead(lead)
+    await backup
     if (!result.ok) {
       return NextResponse.json({ ok: false, error: result.error }, { status: 502 })
     }
     return NextResponse.json({ ok: true, mocked: result.mocked })
   } catch (err) {
-    // TODO(Fase 2): gravar fallback (log/e-mail) — nunca perder o lead.
+    await backup // garante a gravação no backup mesmo em erro inesperado
     console.error('[api/lead] erro ao processar lead', err)
     return NextResponse.json({ ok: false, error: 'internal' }, { status: 500 })
   }
