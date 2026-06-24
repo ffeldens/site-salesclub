@@ -13,9 +13,11 @@ import { FAQ } from '@/components/blocks/FAQ'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { FormLead } from '@/components/blocks/FormLead'
+import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { BadgeDREG } from '@/components/BadgeDREG'
 import { whatsappLink } from '@/lib/whatsapp'
 import { getImersao, getImersoes } from '@/content/imersoes'
+import { getVideoDepoimentosFeatured } from '@/content/depoimentos-video'
 
 export function generateStaticParams() {
   return getImersoes().map((i) => ({ slug: i.slug }))
@@ -102,6 +104,16 @@ export default async function ImersaoPage({ params }: { params: Promise<{ slug: 
       />
 
       <ParaQuem title="Para quem é esta imersão" segmentos={im.paraQuem} />
+
+      {im.slug === 'sales-strategy' && (
+        <VideoDepoimentos
+          eyebrow="Na voz de quem viveu"
+          title="Depoimentos de quem fez o Sales Strategy"
+          description="Veja mais histórias na página de cases."
+          videos={getVideoDepoimentosFeatured()}
+          tone="card"
+        />
+      )}
 
       <FAQ items={im.faq} />
 

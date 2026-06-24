@@ -13,6 +13,8 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.sanity.io' },
       // Thumbnails de vídeo Vimeo
       { protocol: 'https', hostname: 'i.vimeocdn.com' },
+      // Thumbnails de vídeo do YouTube (depoimentos do Sales Strategy)
+      { protocol: 'https', hostname: 'i.ytimg.com' },
     ],
   },
   // Headers de segurança (RNF §11 do PRD)

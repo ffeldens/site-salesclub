@@ -8,6 +8,7 @@ import { Beneficios } from '@/components/blocks/Beneficios'
 import { Mentores } from '@/components/blocks/Mentores'
 import { SalesVillage } from '@/components/blocks/SalesVillage'
 import { Depoimentos } from '@/components/blocks/Depoimentos'
+import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { FAQ } from '@/components/blocks/FAQ'
 import { CTASection } from '@/components/blocks/CTASection'
 import { Section, SectionHeading } from '@/components/ui/Section'
@@ -24,6 +25,7 @@ import { YoutubeIcon, SpotifyIcon } from '@/components/ui/icons'
 import { siteConfig } from '@/lib/site'
 import { formatDate } from '@/lib/format'
 import { getPosts } from '@/content/conteudo'
+import { getVideoDepoimentosFeatured } from '@/content/depoimentos-video'
 import {
   getClienteLogos,
   getDepoimentos,
@@ -79,6 +81,13 @@ export default async function HomePage() {
         <Mentores mentores={getMentoresHome()} />
 
         <SalesVillage />
+
+        <VideoDepoimentos
+          eyebrow="Na voz de quem viveu"
+          title="Depoimentos em vídeo"
+          description="Líderes de diferentes segmentos contam o que mudou com o Sales Club."
+          videos={getVideoDepoimentosFeatured(3)}
+        />
 
         <Depoimentos depoimentos={getDepoimentos()} />
 

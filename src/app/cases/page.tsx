@@ -7,8 +7,10 @@ import { Stats } from '@/components/blocks/Stats'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Depoimentos } from '@/components/blocks/Depoimentos'
+import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { CTASection } from '@/components/blocks/CTASection'
 import { getClienteLogos, getDepoimentos, getStats } from '@/lib/content'
+import { getVideoDepoimentos } from '@/content/depoimentos-video'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Cases e resultados',
@@ -55,6 +57,14 @@ export default function CasesPage() {
       </Section>
 
       <LogosProvaSocial logos={getClienteLogos()} />
+
+      <VideoDepoimentos
+        eyebrow="Na voz de quem viveu"
+        title="Depoimentos em vídeo"
+        description="Empresas de diferentes segmentos contam o que mudou depois de viver o Sales Strategy."
+        videos={getVideoDepoimentos()}
+        tone="card"
+      />
 
       <Depoimentos depoimentos={getDepoimentos()} />
 
