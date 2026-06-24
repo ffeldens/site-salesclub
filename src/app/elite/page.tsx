@@ -5,12 +5,12 @@ import { PageShell } from '@/components/PageShell'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Depoimentos } from '@/components/blocks/Depoimentos'
+import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { FormLead } from '@/components/blocks/FormLead'
 import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { CheckIcon, YoutubeIcon } from '@/components/ui/icons'
-import { getDepoimentos } from '@/lib/content'
 import { getEmpresasElite } from '@/content/elite'
+import { getResultadosElite, getDepoimentosVideoElite } from '@/content/elite-membros'
 import { siteConfig } from '@/lib/site'
 
 // TODO(conteúdo): validar pilares, benefícios e depoimentos de membros da ELITE.
@@ -131,7 +131,33 @@ export default function ElitePage() {
         </div>
       </Section>
 
-      <Depoimentos title="O que dizem os membros" depoimentos={getDepoimentos()} />
+      {/* Resultados reais dos membros */}
+      <Section>
+        <SectionHeading
+          eyebrow="Resultados"
+          title="O que muda para quem entra na ELITE"
+          accent="gold"
+          description="Crescimento real informado por membros da comunidade."
+        />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {getResultadosElite().map((r) => (
+            <Card key={r.empresa} as="article" className="bg-ink ring-1 ring-elite/10">
+              <p className="font-display text-display text-elite">{r.destaque}</p>
+              <p className="mt-1 text-sm text-paper/70">{r.contexto}</p>
+              <p className="mt-4 font-medium text-paper-pure">{r.empresa}</p>
+              {r.segmento && <p className="text-xs text-mute">{r.segmento}</p>}
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* Depoimentos em vídeo dos membros */}
+      <VideoDepoimentos
+        eyebrow="Na voz dos membros"
+        title="Depoimentos da comunidade"
+        videos={getDepoimentosVideoElite()}
+        accent="gold"
+      />
 
       {/* Podcast ELITE */}
       <Section tone="card">

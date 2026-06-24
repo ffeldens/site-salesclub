@@ -11,6 +11,8 @@ export type VideoDepoimentosProps = {
   description?: string
   videos: VideoDepoimento[]
   tone?: 'base' | 'card'
+  /** Cor do botão de play e do eyebrow (ex.: 'gold' na ELITE). */
+  accent?: 'brand' | 'gold'
 }
 
 /**
@@ -23,12 +25,14 @@ export function VideoDepoimentos({
   description,
   videos,
   tone = 'base',
+  accent = 'brand',
 }: VideoDepoimentosProps) {
   const [playing, setPlaying] = useState<string | null>(null)
+  const playBtnCls = accent === 'gold' ? 'bg-elite text-ink' : 'bg-brand text-paper-pure'
 
   return (
     <Section tone={tone}>
-      <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+      <SectionHeading eyebrow={eyebrow} title={title} description={description} accent={accent} />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {videos.map((v) => (
           <figure
@@ -59,7 +63,7 @@ export function VideoDepoimentos({
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <span className="absolute inset-0 grid place-items-center bg-ink/40 transition group-hover:bg-ink/20">
-                    <span className="grid h-14 w-14 place-items-center rounded-full bg-brand text-paper-pure shadow-lg transition group-hover:scale-110">
+                    <span className={`grid h-14 w-14 place-items-center rounded-full shadow-lg transition group-hover:scale-110 ${playBtnCls}`}>
                       <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6" fill="currentColor" aria-hidden>
                         <path d="M8 5v14l11-7z" />
                       </svg>
