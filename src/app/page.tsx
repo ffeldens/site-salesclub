@@ -28,7 +28,7 @@ import {
   getClienteLogos,
   getDepoimentos,
   getFaqHome,
-  getMentores,
+  getMentoresHome,
   getStats,
 } from '@/lib/content'
 
@@ -76,7 +76,7 @@ export default async function HomePage() {
           ]}
         />
 
-        <Mentores mentores={getMentores()} />
+        <Mentores mentores={getMentoresHome()} />
 
         <SalesVillage />
 
