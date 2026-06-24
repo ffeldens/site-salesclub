@@ -11,6 +11,8 @@ export type MentoresProps = {
 
 /** Cards de mentores: retrato em destaque quando há foto; iniciais como fallback. */
 export function Mentores({ eyebrow = 'Quem ensina', title = 'Mentores na mesa com você', mentores }: MentoresProps) {
+  // Sempre em ordem alfabética por nome (pt-BR), em todas as páginas.
+  const ordenados = [...mentores].sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'))
   return (
     <Section tone="card">
       <SectionHeading
@@ -19,7 +21,7 @@ export function Mentores({ eyebrow = 'Quem ensina', title = 'Mentores na mesa co
         description="Executivos que constroem operações de verdade — sentam à mesa com você para discutir o caso real da sua empresa, não no palco."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {mentores.map((m) => (
+        {ordenados.map((m) => (
           <Card key={m.nome} as="article" className="bg-ink">
             {m.foto ? (
               <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-lg bg-gradient-to-b from-ink-line to-ink">
