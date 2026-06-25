@@ -44,14 +44,16 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     if ('href' in props && props.href !== undefined) {
       const { href, ...rest } = props as ButtonAsLink
       const isExternal = href.startsWith('http') || href.startsWith('https')
-      if (isExternal) {
+      const isHash = href.startsWith('#')
+      // Externo: nova aba. Hash (#secao): âncora nativa — o navegador rola sozinho
+      // (next/link não rola de forma confiável em hash da mesma página).
+      if (isExternal || isHash) {
         return (
           <a
             ref={ref as React.Ref<HTMLAnchorElement>}
             href={href}
             className={classes}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             {...rest}
           >
             {children}

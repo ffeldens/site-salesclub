@@ -62,7 +62,7 @@ export default function SalesClubPeloBrasilPage() {
         eyebrow="Encontro executivo · 1 dia"
         title={ev.headline}
         subtitle={ev.subtitulo}
-        primaryCta={{ label: ev.ctaLabel, href: '#cta' }}
+        primaryCta={{ label: ev.ctaLabel, href: '#agenda' }}
         secondaryCta={{ label: 'Falar com um consultor', href: '/contato' }}
       />
 
@@ -77,7 +77,7 @@ export default function SalesClubPeloBrasilPage() {
       </Section>
 
       {/* Próximas edições */}
-      <Section tone="card">
+      <Section id="agenda" tone="card">
         <SectionHeading
           eyebrow="Agenda"
           title="Próximas edições"

@@ -11,6 +11,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Offset para âncoras não ficarem sob o header sticky (64px). */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply bg-ink text-paper font-sans antialiased;
   }
