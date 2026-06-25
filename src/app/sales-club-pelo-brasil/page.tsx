@@ -7,6 +7,7 @@ import { HeroInstitucional } from '@/components/blocks/HeroInstitucional'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { Stats } from '@/components/blocks/Stats'
 import { Modulos } from '@/components/blocks/Modulos'
 import { Mentores } from '@/components/blocks/Mentores'
@@ -93,6 +94,11 @@ export default function SalesClubPeloBrasilPage() {
               </div>
               <p className="mt-2 text-sm text-paper/80">📅 {e.data}</p>
               {e.local && <p className="mt-1 text-sm text-mute">📍 {e.local}</p>}
+              {e.inscricaoUrl && (
+                <Button href={e.inscricaoUrl} variant="primary" size="sm" className="mt-4 w-full">
+                  Garantir minha vaga
+                </Button>
+              )}
             </Card>
           ))}
         </div>

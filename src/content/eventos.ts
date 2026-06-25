@@ -13,6 +13,8 @@ export type Edicao = {
   data: string
   local?: string
   status?: string
+  /** Link de pagamento/checkout (ex.: Eduzz) — exibe botão de inscrição na edição. */
+  inscricaoUrl?: string
 }
 
 export const salesClubPeloBrasil = {
@@ -70,7 +72,7 @@ export const salesClubPeloBrasil = {
   ],
   // TODO(conteúdo): atualizar a agenda mensalmente.
   proximasEdicoes: [
-    { cidade: 'Campinas', uf: 'SP', data: 'Agosto', status: 'Inscrições abertas' },
+    { cidade: 'Campinas', uf: 'SP', data: 'Agosto', status: 'Inscrições abertas', inscricaoUrl: 'https://chk.eduzz.com/VWGN8RPV07' },
     { cidade: 'Itajaí', uf: 'SC', data: 'Setembro', status: 'Em breve' },
     { cidade: 'Luiz Eduardo Magalhães', uf: 'BA', data: 'Outubro', status: 'Em breve' },
   ] as Edicao[],
