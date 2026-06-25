@@ -79,6 +79,7 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
         title={c.headline}
         subtitle={c.subtitulo}
         primaryCta={{ label: c.ctaLabel, href: '#cta' }}
+        loginCta={{ label: 'Já sou aluno? Acessar a plataforma', href: 'https://salesclube.edusense.app/#/' }}
       />
 
       <Section>
