@@ -54,7 +54,9 @@ const nextConfig = {
       { source: '/corporate/mentoria', destination: '/corporate#mentoria', permanent: true },
       // Rebrand Sales Board → Sales Advisory
       { source: '/sales-board', destination: '/sales-advisory', permanent: true },
-      // TODO(Fase 5): 301 das URLs antigas (/imersao-presencial/*, salesclubtelecom, etc.)
+      // 301 das URLs antigas (WordPress): imersões presenciais → /imersoes/*
+      { source: '/imersao-presencial/:slug*', destination: '/imersoes/:slug*', permanent: true },
+      // TODO(Fase 5): demais URLs antigas do WordPress conforme a lista do Felipe.
     ]
   },
 }
