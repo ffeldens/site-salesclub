@@ -18,6 +18,7 @@ declare global {
   interface Window {
     dataLayer?: DataLayerObject[]
     fbq?: (...args: unknown[]) => void
+    gtag?: (...args: unknown[]) => void
   }
 }
 
@@ -38,8 +39,12 @@ export function track(event: AnalyticsEvent, payload: DataLayerObject = {}): voi
     if (standard) window.fbq('track', standard, payload)
     else window.fbq('trackCustom', event, payload)
   }
+  // GA4 (gtag) quando carregado
+  if (typeof window.gtag === 'function') window.gtag('event', event, payload)
 }
 
 // IDs públicos (expostos no client de qualquer forma). Fallback para os do Sales Club.
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-K5CH642X'
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '3787907997992821'
+// GA4: ativado quando NEXT_PUBLIC_GA4_ID (G-XXXXXXXXXX) for definido. Inerte sem ID.
+export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID

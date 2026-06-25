@@ -3,7 +3,7 @@
 import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
-import { GTM_ID, META_PIXEL_ID } from '@/lib/analytics'
+import { GTM_ID, META_PIXEL_ID, GA4_ID } from '@/lib/analytics'
 
 /**
  * Carrega Google Tag Manager + Meta Pixel (snippets oficiais) via next/script
@@ -20,6 +20,7 @@ export function Analytics() {
     }
     window.dataLayer?.push({ event: 'pageview', page_path: pathname })
     if (typeof window.fbq === 'function') window.fbq('track', 'PageView')
+    if (typeof window.gtag === 'function') window.gtag('event', 'page_view', { page_path: pathname })
   }, [pathname])
 
   return (
@@ -47,6 +48,21 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`}
         </Script>
+      )}
+
+      {GA4_ID && (
+        <>
+          <Script
+            id="ga4-lib"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga4-base" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','${GA4_ID}');`}
+          </Script>
+        </>
       )}
     </>
   )
