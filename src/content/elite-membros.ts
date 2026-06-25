@@ -28,6 +28,27 @@ export const resultadosElite: MembroResultado[] = [
 
 export const depoimentosVideoElite: VideoDepoimento[] = [
   {
+    empresa: 'Soldiers Nutrition',
+    segmento: 'E-commerce · Suplementos',
+    videoId: 'bHdQ6H7fCh0',
+    quote:
+      'A empresa começou a vender muito e eu não tinha capacidade de entregar — virou um desespero. Percebi que precisava organizar a casa, gestão e cultura, e foi isso que encontrei aqui.',
+    pessoa: 'Yuri Abreu, fundador e CEO',
+  },
+  {
+    empresa: 'WUP',
+    segmento: 'Consultoria',
+    videoId: '6YpQtpKKOTg',
+    quote:
+      'Eu tinha excelentes soluções, mas não conseguia vender. Precisava me capacitar em vendas — e foi na imersão que tudo fez sentido.',
+    pessoa: 'Marta Dias, CEO',
+  },
+  {
+    empresa: 'Umentor',
+    segmento: 'Software para RH',
+    videoId: 'i0ZqhLKvaZM',
+  },
+  {
     empresa: 'Tax.co',
     segmento: 'Contabilidade',
     videoId: 'QWwEUIX6GFQ',
