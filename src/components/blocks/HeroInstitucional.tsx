@@ -8,6 +8,8 @@ export type HeroInstitucionalProps = {
   subtitle?: string
   primaryCta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
+  /** Acesso para quem já é aluno/cliente (ex.: plataforma externa). Botão discreto. */
+  loginCta?: { label: string; href: string }
   /** Foto de fundo full-bleed (autoridade) com overlay escuro para legibilidade. */
   imagem?: { src: string; alt: string }
 }
@@ -19,6 +21,7 @@ export function HeroInstitucional({
   subtitle,
   primaryCta,
   secondaryCta,
+  loginCta,
   imagem,
 }: HeroInstitucionalProps) {
   return (
@@ -55,6 +58,13 @@ export function HeroInstitucional({
                   {secondaryCta.label}
                 </Button>
               )}
+            </div>
+          )}
+          {loginCta && (
+            <div className="mt-5">
+              <Button href={loginCta.href} variant="ghost" size="sm" className="px-0">
+                {loginCta.label} →
+              </Button>
             </div>
           )}
         </div>

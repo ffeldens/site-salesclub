@@ -53,6 +53,7 @@ export default function UniversidadePage() {
         subtitle={u.hero.subtitle}
         primaryCta={{ label: 'Estruturar minha universidade', href: '#cta' }}
         secondaryCta={{ label: 'Ver planos', href: '#planos' }}
+        loginCta={{ label: 'Já sou aluno? Acessar a plataforma', href: 'https://salesclube.edusense.app/#/' }}
       />
 
       {/* Answer-first + propósito */}
