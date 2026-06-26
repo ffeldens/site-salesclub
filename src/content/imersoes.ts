@@ -150,7 +150,7 @@ export const imersoes: Imersao[] = [
     headline: 'Sales AI: inteligência artificial sob comando da liderança comercial',
     subtitulo:
       'Imersão presencial para diretores comerciais, heads de vendas, gerentes nacionais e empreendedores que precisam colocar a IA em vendas sob comando da liderança — com governança, segurança de dados e impacto em funil, receita e ROI.',
-    data: 'Próxima turma a confirmar',
+    data: '15 de setembro',
     local: SALES_VILLAGE,
     formato: 'Presencial · dia inteiro (~8h)',
     resumo:
