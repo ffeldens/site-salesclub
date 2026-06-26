@@ -22,17 +22,30 @@ export function Ecossistema() {
             <h3 className="font-display text-heading text-paper-pure">{pilar.titulo}</h3>
             <p className="mt-2 text-sm text-paper/65">{pilar.descricao}</p>
             <ul className="mt-4 space-y-2 border-t border-subtle pt-4">
-              {pilar.itens.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="flex items-start gap-2 text-sm text-paper/85 hover:text-brand-vivid"
-                  >
+              {pilar.itens.map((item) => {
+                const isExternal = item.href.startsWith('http')
+                const cls = 'flex items-start gap-2 text-sm text-paper/85 hover:text-brand-vivid'
+                const inner = (
+                  <>
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
                     {item.label}
-                  </Link>
-                </li>
-              ))}
+                    {isExternal && <span aria-hidden> ↗</span>}
+                  </>
+                )
+                return (
+                  <li key={item.href}>
+                    {isExternal ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls}>
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className={cls}>
+                        {inner}
+                      </Link>
+                    )}
+                  </li>
+                )
+              })}
             </ul>
           </Card>
         ))}

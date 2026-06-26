@@ -41,7 +41,7 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
     titulo: 'Espaço & Conteúdo',
     descricao: 'Sede própria e conteúdo que sustentam a comunidade.',
     itens: [
-      { label: 'Sales Village (eventos e podcast)', href: '/sales-village' },
+      { label: 'Sales Village (eventos e podcast)', href: 'https://salesvillage.com.br/' },
       { label: 'Podcast & Conteúdo', href: '/podcast' },
     ],
   },

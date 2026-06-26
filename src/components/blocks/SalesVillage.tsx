@@ -32,7 +32,7 @@ export function SalesVillage({
         ))}
       </div>
       <div className="mt-8">
-        <Button href="/sales-village" size="lg">
+        <Button href="https://salesvillage.com.br/" size="lg">
           Reservar / Orçar evento
         </Button>
       </div>

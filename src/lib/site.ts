@@ -107,7 +107,7 @@ export const solutionsMenu: NavGroup[] = [
   {
     label: 'Espaço',
     items: [
-      { label: 'Sales Village', href: '/sales-village', description: 'Locação para eventos e podcast' },
+      { label: 'Sales Village', href: 'https://salesvillage.com.br/', description: 'Locação para eventos e podcast', external: true },
     ],
   },
   {
