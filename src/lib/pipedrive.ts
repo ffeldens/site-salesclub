@@ -199,6 +199,11 @@ export async function createPersonAndLead(lead: LeadInput): Promise<PipedriveRes
           .filter((x): x is number => x != null)
         if (!arr.length) return void unmatched.push({ entity, key, name: def.name, value })
         resolved = arr
+      } else if (def.field_type === 'double' || def.field_type === 'monetary') {
+        // Campo numérico (ex.: WhatsApp): envia só dígitos como número.
+        const digits = String(value).replace(/\D/g, '')
+        if (!digits) return void unmatched.push({ entity, key, name: def.name, value })
+        resolved = Number(digits)
       } else {
         resolved = Array.isArray(value) ? value.join(', ') : value
       }
