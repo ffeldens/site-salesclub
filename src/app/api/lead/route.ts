@@ -43,7 +43,12 @@ export async function POST(req: NextRequest) {
     if (!result.ok) {
       return NextResponse.json({ ok: false, error: result.error }, { status: 502 })
     }
-    return NextResponse.json({ ok: true, mocked: result.mocked })
+    // Em dry-run, devolve os payloads resolvidos (e rótulos sem opção) p/ validação.
+    return NextResponse.json({
+      ok: true,
+      mocked: result.mocked,
+      ...(result.dryRun ? { dryRun: true, payloads: result.payloads, unmatched: result.unmatched } : {}),
+    })
   } catch (err) {
     await backup // garante a gravação no backup mesmo em erro inesperado
     console.error('[api/lead] erro ao processar lead', err)
