@@ -177,6 +177,7 @@ export async function createPersonAndLead(lead: LeadInput): Promise<PipedriveRes
     }
 
     const unmatched: { entity: string; key: string; name?: string; value: unknown }[] = []
+    // Na API v2 os campos personalizados vão aninhados em `custom_fields`.
     const addCustom = (
       target: Record<string, unknown>,
       entity: string,
@@ -185,24 +186,24 @@ export async function createPersonAndLead(lead: LeadInput): Promise<PipedriveRes
     ) => {
       if (value == null || value === '' || (Array.isArray(value) && value.length === 0)) return
       const def = fields[key]
+      let resolved: unknown
       if (!def) {
-        target[key] = Array.isArray(value) ? value.join(', ') : value // sem def: envia cru
-        return
-      }
-      const t = def.field_type
-      if (t === 'enum') {
+        resolved = Array.isArray(value) ? value.join(', ') : value
+      } else if (def.field_type === 'enum') {
         const id = resolveOptionId(def, String(value))
-        if (id != null) target[key] = id
-        else unmatched.push({ entity, key, name: def.name, value })
-      } else if (t === 'set') {
+        if (id == null) return void unmatched.push({ entity, key, name: def.name, value })
+        resolved = id
+      } else if (def.field_type === 'set') {
         const arr = (Array.isArray(value) ? value : [value])
           .map((v) => resolveOptionId(def, String(v)))
           .filter((x): x is number => x != null)
-        if (arr.length) target[key] = arr
-        else unmatched.push({ entity, key, name: def.name, value })
+        if (!arr.length) return void unmatched.push({ entity, key, name: def.name, value })
+        resolved = arr
       } else {
-        target[key] = Array.isArray(value) ? value.join(', ') : value
+        resolved = Array.isArray(value) ? value.join(', ') : value
       }
+      const cf = (target.custom_fields ??= {}) as Record<string, unknown>
+      cf[key] = resolved
     }
 
     // ---- monta os payloads ----
