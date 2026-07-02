@@ -135,11 +135,34 @@ export function getCurso(slug: string): Curso | undefined {
 }
 
 /**
- * Depoimentos em vídeo de alunos do Sales Pro (Thiago, Débora, Simone).
- * TODO(vídeos): publicar os MP4s no YouTube (não listado) e preencher os
- * videoIds — a seção só aparece quando houver itens.
+ * Depoimentos em vídeo de alunos do Sales Pro (YouTube não listado).
+ * Frases extraídas das legendas e revisadas.
  */
-export const depoimentosVideoSalesPro: VideoDepoimento[] = []
+export const depoimentosVideoSalesPro: VideoDepoimento[] = [
+  {
+    empresa: 'Visa Limited',
+    segmento: 'Comércio exterior',
+    videoId: 'E_XapedTjB0',
+    quote:
+      'Foi como sair da caixinha preta do avião: comecei a enxergar o que eu não via. Hoje a empresa está muito mais fluida e estruturada — todo processo comercial do time tem um porquê, com início, meio e fim.',
+    pessoa: 'Débora, proprietária',
+  },
+  {
+    empresa: 'Thiago',
+    segmento: 'Líder de time comercial',
+    videoId: 'Ttr2MBBX3rU',
+    quote:
+      'Criamos a cultura do estudo: todos os dias o time assiste às aulas da universidade. Todo hábito recorrente vira cultura — e o que aprendemos numa semana não se perde, amadurece.',
+  },
+  {
+    empresa: 'Grupo Forte',
+    segmento: '',
+    videoId: 'esy3bN8wcnw',
+    quote:
+      'A metodologia abrange mais que a venda. Trouxemos toda a equipe e a liderança — melhoramos o comportamento, a maturidade e passamos a olhar melhor para os nossos resultados e indicadores.',
+    pessoa: 'Simone Bianchini, diretora',
+  },
+]
 
 export function getDepoimentosVideoSalesPro(): VideoDepoimento[] {
   return depoimentosVideoSalesPro
