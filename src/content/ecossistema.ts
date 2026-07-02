@@ -16,7 +16,7 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
     descricao: 'Imersões presenciais, formação contínua e encontros pelo país.',
     itens: [
       { label: 'Imersões (Strategy, Leadership, AI)', href: '/imersoes' },
-      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
+      { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil' },
     ],
   },
@@ -72,7 +72,7 @@ export const recomendadorDor: DorRecomendacao[] = [
     dor: 'Cada vendedor vende de um jeito; o bom resultado não se repete.',
     etapa: 'Educar',
     recomendados: [
-      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
+      { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
     ],
   },

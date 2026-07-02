@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const LINKS: { label: string; href: string; external?: boolean }[] = [
   { label: 'Imersões presenciais', href: '/imersoes' },
   { label: 'Sales Club pelo Brasil (encontros)', href: '/sales-club-pelo-brasil' },
-  { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
+  { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
   { label: 'Diagnóstico Comercial gratuito', href: '/servicos/diagnostico-comercial' },
   { label: 'Comunidade ELITE', href: '/elite' },
   ...(siteConfig.social.youtube

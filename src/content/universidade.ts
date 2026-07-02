@@ -1,4 +1,5 @@
 import type { Mentor, Faq } from '@/lib/content'
+import type { VideoDepoimento } from './depoimentos-video'
 
 /**
  * Cursos da Universidade Sales Club. Sales Pro reconstruído a partir da LP
@@ -131,4 +132,15 @@ export function getCursos(): Curso[] {
 
 export function getCurso(slug: string): Curso | undefined {
   return cursos.find((c) => c.slug === slug)
+}
+
+/**
+ * Depoimentos em vídeo de alunos do Sales Pro (Thiago, Débora, Simone).
+ * TODO(vídeos): publicar os MP4s no YouTube (não listado) e preencher os
+ * videoIds — a seção só aparece quando houver itens.
+ */
+export const depoimentosVideoSalesPro: VideoDepoimento[] = []
+
+export function getDepoimentosVideoSalesPro(): VideoDepoimento[] {
+  return depoimentosVideoSalesPro
 }

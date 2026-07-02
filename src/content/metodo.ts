@@ -58,7 +58,7 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
     etapa: 'Educar',
     solucoes: [
       { label: 'Imersões (Strategy, Leadership, AI)', href: '/imersoes' },
-      { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
+      { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
       { label: 'Corporate (capacitações, convenções, palestras)', href: '/corporate' },
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil' },
     ],

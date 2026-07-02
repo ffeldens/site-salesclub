@@ -179,7 +179,7 @@ export const trilhaPorEtapa: Record<DregEtapa, { label: string; href: string }[]
   ],
   Recrutar: [{ label: 'Máquina de Vendas', href: '/servicos/maquina-de-vendas' }],
   Educar: [
-    { label: 'Universidade · Sales Pro', href: '/universidade/sales-pro' },
+    { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
     { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
   ],
   Gerenciar: [
