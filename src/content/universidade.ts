@@ -148,11 +148,12 @@ export const depoimentosVideoSalesPro: VideoDepoimento[] = [
     pessoa: 'Débora, proprietária',
   },
   {
-    empresa: 'Thiago',
-    segmento: 'Líder de time comercial',
+    empresa: 'JC Decor',
+    segmento: '',
     videoId: 'Ttr2MBBX3rU',
     quote:
       'Criamos a cultura do estudo: todos os dias o time assiste às aulas da universidade. Todo hábito recorrente vira cultura — e o que aprendemos numa semana não se perde, amadurece.',
+    pessoa: 'Thiago, líder do time comercial',
   },
   {
     empresa: 'Grupo Forte',
