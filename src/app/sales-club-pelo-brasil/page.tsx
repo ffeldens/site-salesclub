@@ -96,7 +96,7 @@ export default function SalesClubPeloBrasilPage() {
               {e.local && <p className="mt-1 text-sm text-mute">📍 {e.local}</p>}
               {e.inscricaoUrl && (
                 <Button href={e.inscricaoUrl} variant="primary" size="sm" className="mt-4 w-full">
-                  Garantir minha vaga
+                  Garantir minha vaga · {e.data}
                 </Button>
               )}
             </Card>
