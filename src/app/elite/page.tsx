@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { FormLead } from '@/components/blocks/FormLead'
+import { MaterialGate } from '@/components/blocks/MaterialGate'
 import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { CheckIcon, YoutubeIcon } from '@/components/ui/icons'
 import { getEmpresasElite } from '@/content/elite'
@@ -181,13 +182,12 @@ export default function ElitePage() {
           accent="gold"
           description="Material de apoio da sessão de 16 de julho, com Felipe Feldens (COO do Sales Club): a IA não corrige nada — ela amplifica o que já está lá. Os pré-requisitos que decidem se você vai extrair valor ou apenas queimar orçamento."
         />
-        <a
-          href="/materiais/guia-mentoria-elite-nao-implemente-ia.pdf"
-          download
-          className="inline-flex items-center justify-center gap-2 rounded-cta bg-elite px-8 py-4 text-base font-semibold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-elite-dark"
-        >
-          ⬇ Baixar o guia (PDF)
-        </a>
+        <MaterialGate
+          fileUrl="/materiais/guia-mentoria-elite-nao-implemente-ia.pdf"
+          produto="Guia — Não implemente IA na sua empresa (Mentoria ELITE)"
+          ctaLabel="Baixar o guia (PDF)"
+          accent="gold"
+        />
       </Section>
 
       {/* CTA dourado */}
