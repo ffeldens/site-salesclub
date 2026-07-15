@@ -173,6 +173,23 @@ export default function ElitePage() {
         </Button>
       </Section>
 
+      {/* Material de apoio da mentoria */}
+      <Section>
+        <SectionHeading
+          eyebrow="Material"
+          title="Guia da mentoria: “Não implemente IA na sua empresa”"
+          accent="gold"
+          description="Material de apoio da sessão de 16 de julho, com Felipe Feldens (COO do Sales Club): a IA não corrige nada — ela amplifica o que já está lá. Os pré-requisitos que decidem se você vai extrair valor ou apenas queimar orçamento."
+        />
+        <a
+          href="/materiais/guia-mentoria-elite-nao-implemente-ia.pdf"
+          download
+          className="inline-flex items-center justify-center gap-2 rounded-cta bg-elite px-8 py-4 text-base font-semibold uppercase tracking-wide text-ink transition-colors duration-200 hover:bg-elite-dark"
+        >
+          ⬇ Baixar o guia (PDF)
+        </a>
+      </Section>
+
       {/* CTA dourado */}
       <Section id="cta">
         <SectionHeading
