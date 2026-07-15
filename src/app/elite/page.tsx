@@ -175,7 +175,7 @@ export default function ElitePage() {
       </Section>
 
       {/* Material de apoio da mentoria */}
-      <Section>
+      <Section id="guia-ia">
         <SectionHeading
           eyebrow="Material"
           title="Guia da mentoria: “Não implemente IA na sua empresa”"
