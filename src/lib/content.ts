@@ -99,7 +99,8 @@ const MENTORES: Mentor[] = [
 ]
 
 /**
- * Thiago Concer — exibido na home (getMentoresHome) e na imersão Sales Strategy.
+ * Thiago Concer — exibido APENAS na home (getMentoresHome); removido dos
+ * materiais da Sales Strategy (2026-07-20, a pedido).
  * Não entra na lista institucional do /sobre (decisão do projeto). Sem foto no
  * projeto ainda → card renderiza com iniciais (fallback do componente Mentores).
  */
