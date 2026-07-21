@@ -72,7 +72,7 @@ export const salesClubPeloBrasil = {
   ],
   // TODO(conteúdo): atualizar a agenda mensalmente.
   proximasEdicoes: [
-    { cidade: 'Campinas', uf: 'SP', data: '14 de agosto', status: 'Inscrições abertas', inscricaoUrl: 'https://chk.eduzz.com/VWGN8RPV07' },
+    { cidade: 'Campinas', uf: 'SP', data: 'Data a ser definida', status: 'Em breve' },
     { cidade: 'Itajaí', uf: 'SC', data: 'Setembro', status: 'Em breve' },
     { cidade: 'Luiz Eduardo Magalhães', uf: 'BA', data: 'Outubro', status: 'Em breve' },
   ] as Edicao[],
