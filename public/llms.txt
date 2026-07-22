@@ -1,6 +1,6 @@
 # Sales Club
 
-> O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE), conselho consultivo (Sales Advisory) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria — o Sales Village, em São Paulo.
+> O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria — o Sales Village, em São Paulo.
 
 ## Método
 - [Método DREG](https://salesclub.com.br/metodo): Desenhar, Recrutar, Educar e Gerenciar — método do Sales Club para construir uma máquina de vendas previsível (livro de Hélio Azevedo e Gustavo Pagotto). A Máquina de Vendas é o modelo prático que implementa o DREG.
@@ -21,7 +21,7 @@
 
 ## Comunidade e Conselho
 - [ELITE](https://salesclub.com.br/elite): comunidade de empresários (capacitação + Máquina de Vendas + mentoria + networking).
-- [Sales Advisory](https://salesclub.com.br/sales-advisory): conselho consultivo de vendas.
+- [ELITE Advisor](https://salesclub.com.br/sales-advisory): programa de conselho — conselheiro dedicado por 12 meses (12 sessões individuais), 6 mentorias com especialistas e conexões de alto valor.
 
 ## Espaço
 - [Sales Village](https://salesclub.com.br/sales-village): sede em São Paulo e espaço para locação de eventos e podcast (10–150 pessoas).

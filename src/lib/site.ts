@@ -100,7 +100,7 @@ export const solutionsMenu: NavGroup[] = [
     label: 'Comunidade & Conselho',
     items: [
       { label: 'ELITE', href: '/elite', description: 'Comunidade de empresários' },
-      { label: 'Sales Advisory', href: '/sales-advisory', description: 'Conselho consultivo' },
+      { label: 'ELITE Advisor', href: '/sales-advisory', description: 'Conselheiro dedicado por 12 meses' },
     ],
   },
   {

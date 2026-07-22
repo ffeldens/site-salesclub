@@ -150,7 +150,7 @@ const FAQ_HOME: Faq[] = [
   {
     pergunta: 'O que é o Sales Club?',
     resposta:
-      'O Sales Club é o maior ecossistema de vendas do Brasil: reúne imersões presenciais, serviços de consultoria, uma comunidade de empresários (ELITE), conselho consultivo (Sales Advisory) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial.',
+      'O Sales Club é o maior ecossistema de vendas do Brasil: reúne imersões presenciais, serviços de consultoria, uma comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial.',
   },
   {
     pergunta: 'Para quem são as imersões?',

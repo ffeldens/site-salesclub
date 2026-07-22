@@ -34,7 +34,7 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
     descricao: 'Comunidade e conselho para crescer entre pares.',
     itens: [
       { label: 'ELITE — comunidade de empresários', href: '/elite' },
-      { label: 'Sales Advisory — conselho de vendas', href: '/sales-advisory' },
+      { label: 'ELITE Advisor — conselheiro dedicado', href: '/sales-advisory' },
     ],
   },
   {
@@ -81,7 +81,7 @@ export const recomendadorDor: DorRecomendacao[] = [
     etapa: 'Gerenciar',
     recomendados: [
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
-      { label: 'Sales Advisory', href: '/sales-advisory' },
+      { label: 'ELITE Advisor', href: '/sales-advisory' },
     ],
   },
 ]

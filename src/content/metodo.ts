@@ -68,7 +68,7 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
     solucoes: [
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
       { label: 'Máquina de Vendas (governança)', href: '/servicos/maquina-de-vendas' },
-      { label: 'Sales Advisory', href: '/sales-advisory' },
+      { label: 'ELITE Advisor', href: '/sales-advisory' },
       { label: 'Mentoria (Corporate)', href: '/corporate#mentoria' },
     ],
   },

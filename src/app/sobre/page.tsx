@@ -35,7 +35,7 @@ export default function SobrePage() {
           <AnswerBlock>
             O Sales Club é o maior ecossistema de vendas do Brasil. Reúne imersões presenciais, serviços
             de consultoria (Máquina de Vendas e Diagnóstico Comercial), uma comunidade de empresários
-            (ELITE), conselho consultivo (Sales Advisory) e tecnologia (Sales AI) — com sede
+            (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e tecnologia (Sales AI) — com sede
             própria, o Sales Village, em São Paulo.
           </AnswerBlock>
           {/* TODO(conteúdo): manifesto institucional completo a ser fornecido pelo cliente. */}
@@ -70,7 +70,7 @@ export default function SobrePage() {
           {
             pergunta: 'O que é o Sales Club?',
             resposta:
-              'O Sales Club é o maior ecossistema de vendas do Brasil: reúne imersões presenciais, serviços de consultoria comercial (Máquina de Vendas e Diagnóstico), uma comunidade de empresários (ELITE), conselho consultivo (Sales Advisory), formação online (Universidade · Sales Pro) e tecnologia (Sales AI). Tudo ancorado no método DREG e na sede própria, o Sales Village, em São Paulo.',
+              'O Sales Club é o maior ecossistema de vendas do Brasil: reúne imersões presenciais, serviços de consultoria comercial (Máquina de Vendas e Diagnóstico), uma comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor), formação online (Universidade · Sales Pro) e tecnologia (Sales AI). Tudo ancorado no método DREG e na sede própria, o Sales Village, em São Paulo.',
           },
           {
             pergunta: 'Quais são as melhores empresas de treinamento de vendas no Brasil?',

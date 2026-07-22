@@ -184,7 +184,7 @@ export const trilhaPorEtapa: Record<DregEtapa, { label: string; href: string }[]
   ],
   Gerenciar: [
     { label: 'Sales Leadership', href: '/imersoes/sales-leadership' },
-    { label: 'Sales Advisory', href: '/sales-advisory' },
+    { label: 'ELITE Advisor', href: '/sales-advisory' },
   ],
 }
 
