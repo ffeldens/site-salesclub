@@ -96,7 +96,7 @@ export const cursos: Curso[] = [
     instrutores: [
       { nome: 'Viviane Machado', cargo: 'Especialista em Enablement', bio: '10+ anos em Treinamento & Desenvolvimento, com passagem estratégica pela Proteste e background em consultoria de Máquina de Vendas.', foto: '/images/mentores/viviane-machado.webp' },
       { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: '20+ anos em educação executiva e estratégia empresarial; papel estratégico na FGV, conectando formação de lideranças e resultados de negócio.', foto: '/images/mentores/luiz-paulo-teixeira.webp' },
-      { nome: 'Raphael Lassance', cargo: 'Sócio-mentor', bio: 'Fundador da primeira agência de growth hacking do Brasil; 20+ anos ajudando empresas a crescer com método, métricas e ROI.', foto: '/images/mentores/raphael-lassance.webp' },
+      { nome: 'Raphael Lassance', cargo: 'CEO do Growth Team e sócio do Sales Club', bio: 'Empreendedor serial com 27 anos de mercado, Co-fundador e CEO do Growth Team, a primeira agência de growth marketing do Brasil, co-fundador da CLHUB, hub de soluções em audiovisual, sócio e mentor do Sales Club.', foto: '/images/mentores/raphael-lassance.webp' },
       { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: '30+ anos em IBM, Microsoft e SAP; estrutura operações comerciais previsíveis, escaláveis e orientadas a dados.', foto: '/images/mentores/helio-azevedo.webp' },
       { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: 'Especialista em estratégia, inovação e transformação organizacional; advisor em IA aplicada aos negócios.', foto: '/images/mentores/felipe-feldens.webp' },
     ],

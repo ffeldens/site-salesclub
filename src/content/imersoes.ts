@@ -57,7 +57,7 @@ export const imersoes: Imersao[] = [
       { numero: 4, titulo: 'Liderança comercial, incentivos e disciplina de gestão', descricao: 'O papel da liderança na sustentação da máquina de vendas: responsabilidades, modelo de comissionamento, desenvolvimento e retenção do time, rotinas e fóruns de gestão.' },
     ],
     mentores: [
-      { nome: 'Raphael Lassance', cargo: 'Sócio-mentor', bio: 'Fundador da primeira agência de growth hacking do Brasil; comunidade E-commerce Hacks.', foto: '/images/mentores/raphael-lassance.webp' },
+      { nome: 'Raphael Lassance', cargo: 'CEO do Growth Team e sócio do Sales Club', bio: 'Empreendedor serial com 27 anos de mercado, Co-fundador e CEO do Growth Team, a primeira agência de growth marketing do Brasil, co-fundador da CLHUB, hub de soluções em audiovisual, sócio e mentor do Sales Club.', foto: '/images/mentores/raphael-lassance.webp' },
       { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Investidor e estrategista em vendas e marketing B2B.', foto: '/images/mentores/helio-azevedo.webp' },
       { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: 'Líder do maior ecossistema de vendas do Brasil.', foto: '/images/mentores/luiz-paulo-teixeira.webp' },
       { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: 'Estratégia, inovação e transformação organizacional.', foto: '/images/mentores/felipe-feldens.webp' },

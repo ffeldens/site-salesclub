@@ -56,8 +56,8 @@ const MENTORES: Mentor[] = [
   },
   {
     nome: 'Raphael Lassance',
-    cargo: 'Sócio-mentor',
-    bio: 'Fundador da primeira agência de growth hacking do Brasil; 25 anos construindo operações de receita.',
+    cargo: 'CEO do Growth Team e sócio do Sales Club',
+    bio: 'Empreendedor serial com 27 anos de mercado, Co-fundador e CEO do Growth Team, a primeira agência de growth marketing do Brasil, co-fundador da CLHUB, hub de soluções em audiovisual, sócio e mentor do Sales Club.',
     foto: '/images/mentores/raphael-lassance.webp',
   },
   {

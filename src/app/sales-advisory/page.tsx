@@ -29,7 +29,7 @@ const ADVISORS = [
   { nome: 'Hélio Azevedo', role: 'CRO Sales Club · Ex-IBM, Microsoft, SAP', tag: 'ESTRUTURA', foto: '/images/mentores/helio-azevedo.webp', desc: 'Pra destravar a máquina comercial: arquitetura de vendas, estratégia e IA aplicada a receita.' },
   { nome: 'Felipe Feldens', role: 'COO Sales Club · Ex-Sicredi, Renner', tag: 'ESTRUTURA', foto: '/images/mentores/felipe-feldens.webp', desc: 'Transformação com método: gestão, dados e mudança cultural, de quem liderou viradas em grandes operações.' },
   { nome: 'Denis Tassitano', role: 'CRO SAP Concur LATAM · Autor de PowerHub', tag: 'CONECTA', foto: '/images/mentores/denis-tassitano.jpg', desc: 'Pra quem precisa abrir portas: networking estratégico e acesso, de quem literalmente escreveu o livro sobre conexões.' },
-  { nome: 'Raphael Lassance', role: 'CEO Growth Team · Co-fundador Sales Club', tag: 'PROTOTIPA', foto: '/images/mentores/raphael-lassance.webp', desc: 'Pra quem precisa de suporte para encontrar alavancas de geração de leads e escalar a receita com eficiência.' },
+  { nome: 'Raphael Lassance', role: 'CEO do Growth Team e sócio do Sales Club', tag: 'PROTOTIPA', foto: '/images/mentores/raphael-lassance.webp', desc: 'Pra quem precisa de suporte para encontrar alavancas de geração de leads e escalar a receita com eficiência.' },
 ]
 
 const MESES = Array.from({ length: 12 }, (_, i) => `M${i + 1}`)
