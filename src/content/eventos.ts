@@ -11,9 +11,13 @@ export type Edicao = {
   cidade: string
   uf: string
   data: string
+  /** Horário do encontro (ex.: "9h às 12h30") — exibido junto à data no card. */
+  horario?: string
   local?: string
   status?: string
-  /** Link de pagamento/checkout (ex.: Eduzz) — exibe botão de inscrição na edição. */
+  /** Formato/chamada curta da edição (ex.: café executivo, almoço com mentor). */
+  descricao?: string
+  /** Link de inscrição/checkout (Eduzz, Sympla, LP) — exibe botão na edição. */
   inscricaoUrl?: string
 }
 
@@ -72,9 +76,31 @@ export const salesClubPeloBrasil = {
   ],
   // TODO(conteúdo): atualizar a agenda mensalmente.
   proximasEdicoes: [
-    { cidade: 'Campinas', uf: 'SP', data: 'Data a ser definida', status: 'Em breve' },
+    {
+      cidade: 'Belém',
+      uf: 'PA',
+      data: '26 de agosto',
+      horario: '11h às 15h',
+      status: 'Inscrições abertas',
+      descricao:
+        'Almoço executivo com mentoria direta de Luiz Paulo Teixeira, CEO do Sales Club — realização com a ADVB-PA. Não é palestra: é sentar à mesa com quem transforma estratégia em execução comercial.',
+      inscricaoUrl:
+        'https://www.sympla.com.br/evento/sales-club-advb-pa-almoco-executivo-com-luiz-paulo-teixeira/3536617',
+    },
+    {
+      cidade: 'Teresina',
+      uf: 'PI',
+      data: '2 de setembro',
+      horario: '9h às 12h30',
+      local: 'Restaurante Santa Grelha',
+      status: 'Inscrições abertas',
+      descricao:
+        'O Sales Club retorna ao Piauí: café executivo para quem lidera de verdade — diagnóstico claro do que trava as vendas e método prático para crescer sem depender só de você. Grupo pequeno, conversa de alto nível.',
+      inscricaoUrl: 'https://lp.salesclub.com.br/sales-club-pelo-brasil-cafe/teresina-pi',
+    },
     { cidade: 'Itajaí', uf: 'SC', data: 'Setembro', status: 'Em breve' },
     { cidade: 'Luiz Eduardo Magalhães', uf: 'BA', data: 'Outubro', status: 'Em breve' },
+    { cidade: 'Campinas', uf: 'SP', data: 'Data a ser definida', status: 'Em breve' },
   ] as Edicao[],
   ultimasEdicoes: [
     { cidade: 'Garibaldi', uf: 'RS', data: 'Junho', local: 'Mosteiro Hotel de Charme' },

@@ -92,8 +92,12 @@ export default function SalesClubPeloBrasilPage() {
                 </h3>
                 {e.status && <Badge tone="brand">{e.status}</Badge>}
               </div>
-              <p className="mt-2 text-sm text-paper/80">📅 {e.data}</p>
+              <p className="mt-2 text-sm text-paper/80">
+                📅 {e.data}
+                {e.horario ? ` · ${e.horario}` : ''}
+              </p>
               {e.local && <p className="mt-1 text-sm text-mute">📍 {e.local}</p>}
+              {e.descricao && <p className="mt-3 text-sm text-paper/70">{e.descricao}</p>}
               {e.inscricaoUrl && (
                 <Button href={e.inscricaoUrl} variant="primary" size="sm" className="mt-4 w-full">
                   Garantir minha vaga · {e.data}
