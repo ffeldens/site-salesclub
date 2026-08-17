@@ -81,6 +81,7 @@ export const salesClubPeloBrasil = {
       uf: 'PA',
       data: '26 de agosto',
       horario: '11h às 15h',
+      local: 'Tio Armênio',
       status: 'Inscrições abertas',
       descricao:
         'Almoço executivo com mentoria direta de Luiz Paulo Teixeira, CEO do Sales Club — realização com a ADVB-PA. Não é palestra: é sentar à mesa com quem transforma estratégia em execução comercial.',
