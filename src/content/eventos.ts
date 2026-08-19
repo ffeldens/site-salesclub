@@ -99,6 +99,17 @@ export const salesClubPeloBrasil = {
         'O Sales Club retorna ao Piauí: café executivo para quem lidera de verdade — diagnóstico claro do que trava as vendas e método prático para crescer sem depender só de você. Grupo pequeno, conversa de alto nível.',
       inscricaoUrl: 'https://lp.salesclub.com.br/sales-club-pelo-brasil-cafe/teresina-pi',
     },
+    {
+      cidade: 'São Luís',
+      uf: 'MA',
+      data: '4 de setembro',
+      horario: '8h às 12h',
+      local: 'Profissionalle Hotel',
+      status: 'Inscrições abertas',
+      descricao:
+        'Mesa redonda e mentoria com Felipe Feldens, Diretor de Produtos, Serviços e Vendas do Sales Club: como transformar estratégia em execução comercial de alto nível. Formato fechado, grupo pequeno, conversa de alto nível.',
+      inscricaoUrl: 'https://lp.salesclub.com.br/sales-club-pelo-brasil-cafe/sao-luis-ma',
+    },
     { cidade: 'Itajaí', uf: 'SC', data: 'Setembro', status: 'Em breve' },
     { cidade: 'Luiz Eduardo Magalhães', uf: 'BA', data: 'Outubro', status: 'Em breve' },
     { cidade: 'Campinas', uf: 'SP', data: 'Data a ser definida', status: 'Em breve' },
