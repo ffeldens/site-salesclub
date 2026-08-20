@@ -43,7 +43,7 @@ export const imersoes: Imersao[] = [
     headline: 'Sales Strategy: máquina de vendas com governança para a alta liderança',
     subtitulo:
       'Imersão presencial para empresários, CEOs e heads de vendas que precisam reduzir a dependência de pessoas e organizar a área comercial com funil estratégico, processos claros, rotinas de gestão e indicadores confiáveis.',
-    data: '9 e 10 de julho',
+    data: '10 e 11 de setembro',
     local: SALES_VILLAGE,
     formato: 'Presencial',
     resumo:
@@ -96,7 +96,7 @@ export const imersoes: Imersao[] = [
     headline: 'Sales Leadership: formando líderes comerciais de alta performance',
     subtitulo:
       'Em 2 dias intensivos você fortalece sua liderança comercial com metodologia e ferramentas práticas para criar rotinas de gestão consistentes, ganhar previsibilidade de receita e alinhar pessoas, processos e indicadores.',
-    data: '21 e 22 de agosto',
+    data: '22 e 23 de outubro',
     local: SALES_VILLAGE,
     formato: 'Presencial · 20 horas',
     resumo:
