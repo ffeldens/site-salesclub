@@ -25,7 +25,9 @@ const LINKS: { label: string; href: string; external?: boolean }[] = [
   ...(siteConfig.social.spotify
     ? [{ label: '🎧 Ouça nosso podcast (Spotify)', href: siteConfig.social.spotify, external: true }]
     : []),
-  { label: 'Falar com especialista (WhatsApp)', href: whatsappLink(), external: true },
+  ...(siteConfig.whatsapp.enabled
+    ? [{ label: 'Falar com especialista (WhatsApp)', href: whatsappLink(), external: true }]
+    : [{ label: 'Falar com especialista', href: '/contato', external: false }]),
 ]
 
 export default function LinksPage() {

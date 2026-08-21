@@ -17,6 +17,9 @@ export const siteConfig = {
   address:
     'Sales Village — R. Verbo Divino, 2001, 17º andar, Torre A, Chácara Santo Antônio, São Paulo/SP, CEP 04719-002',
   whatsapp: {
+    // DESABILITADO TEMPORARIAMENTE (2026-08-21, a pedido) — voltar para true reativa
+    // o float e todos os CTAs de WhatsApp do site.
+    enabled: false,
     // Mesmo número da LP salesclub.mudacao.com.br (/api/config em produção).
     number: '5511917577760',
     defaultMessage: 'Olá! Vim pelo site do Sales Club e quero falar com um especialista.',

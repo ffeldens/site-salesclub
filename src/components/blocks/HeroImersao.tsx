@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { CalendarIcon } from '@/components/ui/icons'
 import { cn } from '@/lib/cn'
+import { siteConfig } from '@/lib/site'
 
 export type HeroImersaoImagem = { src: string; alt: string }
 
@@ -83,9 +84,15 @@ export function HeroImersao({
             <Button href={applyHref} size="lg">
               Aplicar para a turma
             </Button>
-            <Button href={whatsappHref} variant="whatsapp" size="lg">
-              Falar com especialista
-            </Button>
+            {siteConfig.whatsapp.enabled ? (
+              <Button href={whatsappHref} variant="whatsapp" size="lg">
+                Falar com especialista
+              </Button>
+            ) : (
+              <Button href="/contato" variant="secondary" size="lg">
+                Falar com especialista
+              </Button>
+            )}
           </div>
         </div>
 

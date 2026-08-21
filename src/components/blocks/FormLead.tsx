@@ -142,7 +142,7 @@ export function FormLead({
       setStatus('success')
     } catch {
       setStatus('error')
-      setErrors({ form: 'Não foi possível enviar agora. Tente novamente ou fale no WhatsApp.' })
+      setErrors({ form: 'Não foi possível enviar agora. Tente novamente em instantes.' })
     }
   }
 

@@ -3,9 +3,11 @@
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { whatsappLink } from '@/lib/whatsapp'
 import { track } from '@/lib/analytics'
+import { siteConfig } from '@/lib/site'
 
 /** Botão flutuante de WhatsApp com mensagem parametrizável por página. */
 export function WhatsAppFloat({ message }: { message?: string }) {
+  if (!siteConfig.whatsapp.enabled) return null
   return (
     <a
       href={whatsappLink(message)}

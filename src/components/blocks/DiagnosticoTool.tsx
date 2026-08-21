@@ -8,6 +8,7 @@ import { cn } from '@/lib/cn'
 import { getStoredOrigin } from '@/lib/utm'
 import { track } from '@/lib/analytics'
 import { whatsappLink } from '@/lib/whatsapp'
+import { siteConfig } from '@/lib/site'
 import {
   sections,
   tamanhoOptions,
@@ -209,9 +210,11 @@ export function DiagnosticoTool() {
           </p>
           <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
             <Button href="/contato" size="lg">Falar com um especialista</Button>
-            <Button href={whatsappLink(`Olá! Fiz o diagnóstico (score ${resultado.geral.toFixed(1)}/10) e quero conversar.`)} variant="whatsapp" size="lg">
-              WhatsApp
-            </Button>
+            {siteConfig.whatsapp.enabled && (
+              <Button href={whatsappLink(`Olá! Fiz o diagnóstico (score ${resultado.geral.toFixed(1)}/10) e quero conversar.`)} variant="whatsapp" size="lg">
+                WhatsApp
+              </Button>
+            )}
           </div>
           <button
             onClick={() => { setAnswers({}); setStep(0); setErro(null) }}
