@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/sales-advisory',
     '/sales-village',
     '/sales-club-pelo-brasil',
+    '/destino-futuro',
     '/universidade',
     '/metodo',
     '/podcast',

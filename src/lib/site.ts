@@ -95,6 +95,7 @@ export const solutionsMenu: NavGroup[] = [
     label: 'Eventos & Educação',
     items: [
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil', description: 'Encontros executivos de 1 dia pelo país' },
+      { label: 'Destino Futuro (SXSW 2027)', href: '/destino-futuro', description: 'Comitiva executiva para Austin com curadoria e mentoria' },
       { label: 'Universidade Sales Club', href: '/universidade', description: 'Plataforma de treinamento para empresas + Formação Sales Pro' },
       { label: 'Podcast', href: '/podcast', description: 'Episódios no Spotify e YouTube' },
     ],
