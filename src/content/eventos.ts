@@ -92,7 +92,7 @@ export const salesClubPeloBrasil = {
       cidade: 'Teresina',
       uf: 'PI',
       data: '2 de setembro',
-      horario: '9h às 12h30',
+      horario: '12h às 16h',
       local: 'Restaurante Santa Grelha',
       status: 'Inscrições abertas',
       descricao:
