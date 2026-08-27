@@ -8,6 +8,7 @@ import { Section, SectionHeading } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
+import { FAQ } from '@/components/blocks/FAQ'
 import { BadgeDREG } from '@/components/BadgeDREG'
 
 export const metadata: Metadata = buildMetadata({
@@ -263,6 +264,35 @@ export default function EliteAdvisorPage() {
           </Card>
         </div>
       </Section>
+
+      {/* GEO-FAQ */}
+      <FAQ
+        eyebrow="Perguntas frequentes"
+        title="ELITE Advisor: dúvidas comuns"
+        accent="gold"
+        items={[
+          {
+            pergunta: 'O que é o ELITE Advisor do Sales Club?',
+            resposta:
+              'É o programa de conselho do Sales Club: um conselheiro dedicado acompanha o empresário por 12 meses, em 12 sessões individuais mensais, complementadas por 6 mentorias com especialistas e conexões de alto valor — para quem toma decisões de alto risco e precisa de uma segunda opinião qualificada.',
+          },
+          {
+            pergunta: 'Como funciona a jornada de 12 meses?',
+            resposta:
+              'São 12 sessões mensais com o conselheiro fixo, pré-agendadas desde o primeiro dia, e 6 mentorias individuais com especialistas encaixadas a cada dois meses — acionadas no momento em que o gargalo aparece, seguindo a necessidade real do negócio.',
+          },
+          {
+            pergunta: 'Quem são os conselheiros do ELITE Advisor?',
+            resposta:
+              'O conselho reúne Cleber Voelzke (ex-Walmart e Salesforce), Luiz Paulo Teixeira (CEO do Sales Club, ex-FGV), Hélio Azevedo (CRO, ex-IBM, Microsoft e SAP), Felipe Feldens (COO, ex-Sicredi e Renner), Denis Tassitano (CRO SAP Concur LATAM, autor de PowerHub) e Raphael Lassance (CEO do Growth Team). O conselheiro com melhor encaixe é indicado na primeira reunião — a decisão final é sempre do empresário.',
+          },
+          {
+            pergunta: 'O ELITE Advisor executa pela minha empresa?',
+            resposta:
+              'Não. O ELITE Advisor é um espaço estratégico para decisões difíceis, com relação contínua e registro cumulativo da evolução. Não é consultoria de execução (o conselheiro orienta, não executa), não é mentoria pontual e não é suporte 24/7.',
+          },
+        ]}
+      />
 
       {/* CTA */}
       <Section id="cta" tone="card">

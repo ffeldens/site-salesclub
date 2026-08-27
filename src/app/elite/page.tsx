@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { VideoDepoimentos } from '@/components/blocks/VideoDepoimentos'
 import { FormLead } from '@/components/blocks/FormLead'
 import { MaterialGate } from '@/components/blocks/MaterialGate'
+import { FAQ } from '@/components/blocks/FAQ'
 import { YoutubeEmbed } from '@/components/YoutubeEmbed'
 import { CheckIcon, YoutubeIcon } from '@/components/ui/icons'
 import { getEmpresasElite } from '@/content/elite'
@@ -189,6 +190,35 @@ export default function ElitePage() {
           accent="gold"
         />
       </Section>
+
+      {/* GEO-FAQ */}
+      <FAQ
+        eyebrow="Perguntas frequentes"
+        title="ELITE: dúvidas comuns"
+        accent="gold"
+        items={[
+          {
+            pergunta: 'O que é a comunidade ELITE do Sales Club?',
+            resposta:
+              'A ELITE é a comunidade premium de empresários do Sales Club. Combina quatro pilares: capacitação contínua (imersões e trilhas), a metodologia Máquina de Vendas aplicada ao negócio, mentoria com sócios e mentores de marca, e networking qualificado entre empresários B2B. O acesso é por aplicação.',
+          },
+          {
+            pergunta: 'Como entrar na comunidade ELITE?',
+            resposta:
+              'O acesso é por aplicação: você preenche o formulário na página da ELITE contando sobre a sua empresa e trajetória; o time do Sales Club avalia o perfil e retorna. O modelo preserva a qualidade e a senioridade do grupo.',
+          },
+          {
+            pergunta: 'Que resultados os membros da ELITE relatam?',
+            resposta:
+              'Resultados informados por membros incluem: Soldiers Nutrition com +1.080% de crescimento no primeiro ano, Mave com +500% em dois anos, WUP com +300% após a Imersão 360, Umentor com +142% desde a entrada, além de empresas batendo 119% a 130% da meta mensal.',
+          },
+          {
+            pergunta: 'O que é o Sales Club na Estrada?',
+            resposta:
+              'É uma das entregas da comunidade: encontros itinerantes que levam os membros da ELITE para vivências, trocas e networking em diferentes lugares do Brasil.',
+          },
+        ]}
+      />
 
       {/* CTA dourado */}
       <Section id="cta">

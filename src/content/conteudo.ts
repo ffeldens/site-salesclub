@@ -168,7 +168,12 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)]|order(dataPubli
 async function fetchSanityPosts(): Promise<Post[] | null> {
   try {
     const docs = await sanityClient.fetch<Post[]>(POSTS_QUERY)
-    return docs && docs.length > 0 ? docs : null
+    // Higiene: descarta rascunhos/testes do Studio (sem título/resumo ou com
+    // slug auto-gerado tipo "page-2f06997a615504fd").
+    const valid = (docs ?? []).filter(
+      (p) => p.titulo && p.resumo && p.slug && !/^page-[0-9a-f]{8,}$/i.test(p.slug),
+    )
+    return valid.length > 0 ? valid : null
   } catch {
     return null
   }

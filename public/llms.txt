@@ -1,5 +1,7 @@
 # Sales Club
 
+> Versão completa para ingestão: https://salesclub.com.br/llms-full.txt
+
 > O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria — o Sales Village, em São Paulo.
 
 ## Método

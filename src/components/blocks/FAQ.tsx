@@ -10,13 +10,15 @@ export type FAQProps = {
   eyebrow?: string
   title?: string
   items: Faq[]
+  /** Cor do eyebrow/ícones — 'gold' nas páginas ELITE. */
+  accent?: 'brand' | 'gold'
 }
 
 /**
  * Accordion de FAQ. Emite JSON-LD FAQPage (SEO/GEO). As perguntas devem ser
  * alinhadas a prompts reais (CLAUDE.md §8). Respostas ficam no HTML inicial.
  */
-export function FAQ({ eyebrow = 'Dúvidas', title = 'Perguntas frequentes', items }: FAQProps) {
+export function FAQ({ eyebrow = 'Dúvidas', title = 'Perguntas frequentes', items, accent = 'brand' }: FAQProps) {
   const [open, setOpen] = useState<number | null>(0)
 
   const jsonLd = {
@@ -35,7 +37,7 @@ export function FAQ({ eyebrow = 'Dúvidas', title = 'Perguntas frequentes', item
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <SectionHeading eyebrow={eyebrow} title={title} />
+      <SectionHeading eyebrow={eyebrow} title={title} accent={accent} />
       <div className="mx-auto max-w-3xl divide-y divide-subtle border-y border-subtle">
         {items.map((item, i) => {
           const isOpen = open === i
@@ -48,7 +50,11 @@ export function FAQ({ eyebrow = 'Dúvidas', title = 'Perguntas frequentes', item
               >
                 <span className="font-medium text-paper">{item.pergunta}</span>
                 <ChevronDownIcon
-                  className={cn('h-5 w-5 shrink-0 text-brand-vivid transition-transform', isOpen && 'rotate-180')}
+                  className={cn(
+                    'h-5 w-5 shrink-0 transition-transform',
+                    accent === 'gold' ? 'text-elite' : 'text-brand-vivid',
+                    isOpen && 'rotate-180',
+                  )}
                 />
               </button>
               {/* resposta sempre no DOM (SEO/GEO), apenas oculta visualmente */}

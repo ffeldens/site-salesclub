@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/Button'
 import { Stats } from '@/components/blocks/Stats'
 import { Mentores } from '@/components/blocks/Mentores'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
+import { FAQ } from '@/components/blocks/FAQ'
 import { FormLead } from '@/components/blocks/FormLead'
 import { CheckIcon } from '@/components/ui/icons'
 
@@ -238,6 +239,34 @@ export default function DestinoFuturoPage() {
           </div>
         </div>
       </Section>
+
+      {/* GEO-FAQ */}
+      <FAQ
+        eyebrow="Perguntas frequentes"
+        title="Destino Futuro 2027: dúvidas comuns"
+        items={[
+          {
+            pergunta: 'O que é o Destino Futuro 2027?',
+            resposta:
+              'É a comitiva executiva do Sales Club com a Tangerine para o SXSW, em Austin (Texas): viagem completa de 13 a 22 de março de 2027, com ingresso Platinum, roteiro curado, mentoria de Adri Gomes e Felipe Feldens, visitas a empresas e o relatório Download pós-evento.',
+          },
+          {
+            pergunta: 'Quanto custa ir ao SXSW com o Sales Club?',
+            resposta:
+              'USD 7.800 por pessoa, em quarto duplo, parcelável em até 10x — incluindo hotel, passagem, transfer, ingresso Platinum do SXSW, curadoria, mentoria e os adicionais (reunião preliminar, kit viagem, welcome dinner, happy hour, Download e relatórios finais). Quarto individual sob consulta.',
+          },
+          {
+            pergunta: 'Quais são as datas da missão?',
+            resposta:
+              'A viagem completa vai de 13 a 22 de março de 2027 (com deslocamento e city tour); a conferência oficial do SXSW acontece de 15 a 21 de março. O roteiro combina conferência, experiências e visitas a empresas.',
+          },
+          {
+            pergunta: 'O que é o Download?',
+            resposta:
+              'É o relatório pós-evento que traduz o SXSW para a agenda de quem foi: os sinais e tendências que importam para o seu negócio, não um resumo de palestras. O modelo foi testado com GPTW e Ipsos e é assinado por Adri Gomes e Felipe Feldens — os mesmos mentores que acompanham a comitiva.',
+          },
+        ]}
+      />
 
       {/* Captura */}
       <Section id="cta" tone="card">
