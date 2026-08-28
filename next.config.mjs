@@ -46,6 +46,13 @@ const nextConfig = {
         destination: 'https://salesclub.com.br/:path*',
         permanent: true,
       },
+      // Domínio temporário do MVP → canônico (elimina conteúdo duplicado).
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'sc.mudacao.com.br' }],
+        destination: 'https://salesclub.com.br/:path*',
+        permanent: true,
+      },
       // Corporate consolidado em página única com âncoras (P2.5)
       { source: '/corporate/capacitacoes', destination: '/corporate#capacitacoes', permanent: true },
       { source: '/corporate/palestras', destination: '/corporate#palestras', permanent: true },

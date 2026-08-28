@@ -109,11 +109,11 @@ export const servicos: Servico[] = [
     titulo: 'Diagnóstico Comercial',
     headline: 'Descubra onde sua operação comercial está perdendo vendas — e como corrigir agora.',
     subtitulo:
-      'Em 5 minutos, receba um diagnóstico gratuito dos 10 pilares que movem (ou travam) o crescimento comercial da sua empresa, com score geral, análise pilar a pilar e recomendações práticas.',
+      'Em 5 minutos, receba um diagnóstico gratuito dos 8 pilares que movem (ou travam) o crescimento comercial da sua empresa, com score geral, análise pilar a pilar e recomendações práticas.',
     resumo:
-      'O Diagnóstico Comercial do Sales Club é uma ferramenta gratuita de autoavaliação de maturidade comercial. Em cerca de 5 minutos você responde perguntas objetivas sobre 10 pilares de vendas e recebe, na hora, um score geral, a análise de cada pilar e recomendações práticas para priorizar melhorias.',
+      'O Diagnóstico Comercial do Sales Club é uma ferramenta gratuita de autoavaliação de maturidade comercial. Em cerca de 5 minutos você responde perguntas objetivas sobre 8 pilares de vendas e recebe, na hora, um score geral, a análise de cada pilar e recomendações práticas para priorizar melhorias.',
     descricao:
-      'Uma ferramenta de autodiagnóstico gratuita, desenvolvida com base em centenas de diagnósticos aplicados em empresas. Compartilhe rapidamente o cenário da sua operação e receba um panorama completo dos 10 pilares do crescimento comercial.',
+      'Uma ferramenta de autodiagnóstico gratuita, desenvolvida com base em centenas de diagnósticos aplicados em empresas. Compartilhe rapidamente o cenário da sua operação e receba um panorama completo dos 8 pilares do crescimento comercial.',
     tipo: 'ferramenta-gratuita',
     componentes: [
       { titulo: 'Perfil Ideal de Cliente (ICP)', descricao: 'Definição clara de ICP melhora a qualidade dos leads e a produtividade.' },
@@ -127,7 +127,7 @@ export const servicos: Servico[] = [
     ],
     fases: [
       { numero: 1, titulo: 'Informe seus dados', descricao: 'Nome, empresa, telefone e e-mail corporativo para personalizar o diagnóstico.' },
-      { numero: 2, titulo: 'Avalie seu processo comercial', descricao: 'Perguntas objetivas divididas nos 10 pilares, em uma escala de 0 a 10.' },
+      { numero: 2, titulo: 'Avalie seu processo comercial', descricao: 'Perguntas objetivas divididas nos 8 pilares, em uma escala de 0 a 10.' },
       { numero: 3, titulo: 'Receba seu resultado na hora', descricao: 'Score geral, análise pilar a pilar e recomendações práticas — imediatamente.' },
     ],
     diferenciais: [
@@ -138,7 +138,7 @@ export const servicos: Servico[] = [
     ],
     beneficios: [
       'Score geral de maturidade comercial',
-      'Análise detalhada de cada um dos 10 pilares',
+      'Análise detalhada de cada um dos 8 pilares',
       'Recomendações práticas para priorizar melhorias',
       'Decisões baseadas em dados, não em intuição',
     ],

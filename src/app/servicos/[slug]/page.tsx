@@ -84,7 +84,7 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
         <Section tone="card">
           <SectionHeading
             eyebrow={isImplementacao ? 'O modelo' : 'O que avaliamos'}
-            title={isImplementacao ? 'Os componentes da sua máquina de vendas' : 'Os 10 pilares do processo comercial'}
+            title={isImplementacao ? 'Os componentes da sua máquina de vendas' : 'Os 8 pilares do processo comercial'}
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {s.componentes.map((c) => (

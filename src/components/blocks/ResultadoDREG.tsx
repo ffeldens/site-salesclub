@@ -16,7 +16,7 @@ export function ResultadoDREG() {
       <SectionHeading
         eyebrow="Seu resultado, lido pelo DREG"
         title="Da nota à ação: por onde começar"
-        description="No resultado, os 10 pilares são organizados nas quatro etapas do método DREG. A etapa com a menor nota é o seu maior gargalo — e aponta a trilha recomendada para começar."
+        description="No resultado, os 8 pilares são organizados nas quatro etapas do método DREG. A etapa com a menor nota é o seu maior gargalo — e aponta a trilha recomendada para começar."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {dregEtapas.map((e) => (

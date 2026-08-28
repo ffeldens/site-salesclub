@@ -33,14 +33,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dynamicRoutes = [
     ...getImersoes().map((i) => `/imersoes/${i.slug}`),
     ...getServicos().map((s) => `/servicos/${s.slug}`),
-    ...(await getPosts()).map((p) => `/conteudo/${p.slug}`),
     // LPs de campanha indexáveis (mídia paga costuma ser noindex)
     ...getCampanhas().filter((c) => !c.noindex).map((c) => `/lp/${c.slug}`),
   ]
 
-  return [...staticRoutes, ...dynamicRoutes].map((route) => ({
-    url: `${siteConfig.url}${route}`,
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.7,
+  // Artigos entram com lastmod confiável (dataAtualizacao do conteúdo).
+  const postRoutes = (await getPosts()).map((p) => ({
+    url: `${siteConfig.url}/conteudo/${p.slug}`,
+    lastModified: p.dataAtualizacao,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
   }))
+
+  return [
+    ...[...staticRoutes, ...dynamicRoutes].map((route) => ({
+      url: `${siteConfig.url}${route}`,
+      changeFrequency: 'weekly' as const,
+      priority: route === '' ? 1 : 0.7,
+    })),
+    ...postRoutes,
+  ]
 }
