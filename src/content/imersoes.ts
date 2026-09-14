@@ -43,7 +43,7 @@ export const imersoes: Imersao[] = [
     headline: 'Sales Strategy: máquina de vendas com governança para a alta liderança',
     subtitulo:
       'Imersão presencial para empresários, CEOs e heads de vendas que precisam reduzir a dependência de pessoas e organizar a área comercial com funil estratégico, processos claros, rotinas de gestão e indicadores confiáveis.',
-    data: '10 e 11 de setembro',
+    data: '12 e 13 de novembro',
     local: SALES_VILLAGE,
     formato: 'Presencial',
     resumo:
