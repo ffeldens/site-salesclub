@@ -17,6 +17,7 @@ import { FormLead } from '@/components/blocks/FormLead'
 import { CheckIcon } from '@/components/ui/icons'
 import { BadgeDREG } from '@/components/BadgeDREG'
 import { YoutubeEmbed } from '@/components/YoutubeEmbed'
+import { InstagramReelFacade } from '@/components/InstagramReelFacade'
 import { getSalesClubPeloBrasil } from '@/content/eventos'
 
 const ev = getSalesClubPeloBrasil()
@@ -143,6 +144,20 @@ export default function SalesClubPeloBrasilPage() {
         </div>
       </Section>
 
+      {/* Como foi: reel das edições de Teresina e São Luís */}
+      <Section tone="card">
+        <SectionHeading
+          eyebrow="Como foi"
+          title="Teresina (PI) e São Luís (MA)"
+          description="Mesas redondas e mentoria direta em duas edições recentes do encontro no Nordeste."
+        />
+        <InstagramReelFacade
+          url="https://www.instagram.com/reel/Dc6YIBFBqHI/"
+          label="Teresina e São Luís"
+          caption="Reel oficial das edições de setembro."
+        />
+      </Section>
+
       <Stats stats={ev.stats} />
 
       <Modulos eyebrow="Como funciona" title="O encontro em 4 etapas" modulos={ev.comoFunciona} />
@@ -198,7 +213,7 @@ export default function SalesClubPeloBrasilPage() {
             ctaLabel={ev.ctaLabel}
             comercial={false}
             extras={[
-              { name: 'cidade_interesse', label: 'Cidade de interesse', type: 'text', full: true, placeholder: 'Ex.: Campinas, Itajaí, Luiz Eduardo Magalhães…' },
+              { name: 'cidade_interesse', label: 'Cidade de interesse', type: 'text', full: true, placeholder: 'Ex.: Rio de Janeiro, Itajaí, Boa Vista…' },
             ]}
             mensagem={{ label: 'Mensagem (opcional)', placeholder: 'Quer participar, levar o time ou receber o evento na sua cidade?' }}
           />
