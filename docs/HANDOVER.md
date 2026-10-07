@@ -53,7 +53,7 @@ O conteúdo vive em **`src/content/*.ts`** (tipado). As mudanças mais frequente
 | Universidade (plataforma) + Formação Sales Pro (programa, `#sales-pro`) | `src/content/universidade-sc.ts` (plataforma) e `src/content/universidade.ts` (curso + vídeos de alunos) |
 | Depoimentos em vídeo do Sales Strategy (22) | `src/content/depoimentos-video.ts` (`featured` = destaque na home/imersão) |
 | ELITE: resultados de membros + vídeos | `src/content/elite-membros.ts` |
-| Mentores da home/Sobre (lista compartilhada; home = lista + Thiago Concer) | `src/lib/content.ts` (`MENTORES`, `getMentoresHome`) — exibição sempre em ordem alfabética (componente `Mentores`) |
+| Mentores da home/Sobre (mesma lista nas duas páginas) | `src/lib/content.ts` (`MENTORES`, `getMentores`) — exibição sempre em ordem alfabética (componente `Mentores`) |
 | Stats (+500 mil, +800…) | `src/lib/content.ts` (`STATS`) |
 | Menu, contatos, WhatsApp, redes, CNPJ | `src/lib/site.ts` |
 | Campos dos formulários (cargos, setores, faixas, dores) | `src/lib/lead-schema.ts` (⚠️ sincronizar com `src/content/diagnostico.ts` e com as opções dos campos no Pipedrive) |

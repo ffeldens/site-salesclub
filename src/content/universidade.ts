@@ -4,7 +4,7 @@ import type { VideoDepoimento } from './depoimentos-video'
 /**
  * Cursos da Universidade Sales Club. Sales Pro reconstruído a partir da LP
  * oficial (salesclub.com.br/universidade/sales-pro) — mesma estrutura/seções e
- * copy. Mentor Thiago Concer omitido por decisão do projeto.
+ * copy.
  */
 
 export type CursoModulo = { periodo: string; titulo: string; eixo: string }

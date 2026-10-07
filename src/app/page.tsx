@@ -28,7 +28,7 @@ import { getVideoDepoimentosFeatured } from '@/content/depoimentos-video'
 import {
   getClienteLogos,
   getFaqHome,
-  getMentoresHome,
+  getMentores,
   getStats,
 } from '@/lib/content'
 
@@ -76,7 +76,7 @@ export default async function HomePage() {
           ]}
         />
 
-        <Mentores mentores={getMentoresHome()} />
+        <Mentores mentores={getMentores()} />
 
         <SalesVillage />
 

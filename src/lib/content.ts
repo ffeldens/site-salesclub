@@ -98,19 +98,6 @@ const MENTORES: Mentor[] = [
   },
 ]
 
-/**
- * Thiago Concer — exibido APENAS na home (getMentoresHome); removido dos
- * materiais da Sales Strategy (2026-07-20, a pedido).
- * Não entra na lista institucional do /sobre (decisão do projeto). Sem foto no
- * projeto ainda → card renderiza com iniciais (fallback do componente Mentores).
- */
-const THIAGO_CONCER: Mentor = {
-  nome: 'Thiago Concer',
-  cargo: 'Sócio-fundador e mentor',
-  bio: 'Referência nacional em vendas, com mais de 20 anos dedicados à formação e à gestão de times comerciais de alta performance.',
-  foto: '/images/mentores/thiago-concer.png',
-}
-
 const STATS: Stat[] = [
   { valor: '+500 mil', label: 'profissionais formados' },
   { valor: '+800', label: 'empresas atendidas' },
@@ -194,11 +181,6 @@ const VILLAGE_FOTOS: VillageFoto[] = [
 
 export function getMentores(): Mentor[] {
   return MENTORES
-}
-
-/** Lista da home: mentores institucionais + Thiago Concer (não usada no /sobre). */
-export function getMentoresHome(): Mentor[] {
-  return [...MENTORES, THIAGO_CONCER]
 }
 
 export function getStats(): Stat[] {
