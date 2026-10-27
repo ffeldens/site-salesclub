@@ -11,12 +11,12 @@ import { Button } from '@/components/ui/Button'
 import { AnswerBlock } from '@/components/blocks/AnswerBlock'
 import { DregDiagrama } from '@/components/blocks/DregDiagrama'
 import { FAQ } from '@/components/blocks/FAQ'
-import { dregEtapas, dregMapa, dregLivro } from '@/content/metodo'
+import { dregEtapas, dregMapa, referenciasMetodo } from '@/content/metodo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Método DREG — a arquitetura de vendas de alta performance',
+  title: 'Método DREG: Desenhar, Recrutar, Educar e Gerenciar',
   description:
-    'DREG (Desenhar, Recrutar, Educar, Gerenciar) é o método do Sales Club para construir uma máquina de vendas previsível. A teoria do livro de Hélio Azevedo e o modelo prático da Máquina de Vendas.',
+    'DREG (Desenhar, Recrutar, Educar, Gerenciar) é o método do Sales Club para construir uma máquina de vendas previsível. O método na teoria e, na prática, a metodologia Máquina de Vendas (livro em breve).',
   path: '/metodo',
 })
 
@@ -44,8 +44,8 @@ export default function MetodoPage() {
           <AnswerBlock>
             DREG é o método proprietário do Sales Club para construir uma máquina de vendas previsível,
             em quatro etapas: Desenhar a arquitetura comercial, Recrutar as pessoas certas, Educar de
-            forma contínua e Gerenciar para sustentar resultados. É a teoria do livro Arquitetura de
-            Vendas de Alta Performance — e a Máquina de Vendas é o modelo que a coloca em prática.
+            forma contínua e Gerenciar para sustentar resultados. Essa é a teoria; a metodologia Máquina
+            de Vendas (livro em breve) é o modelo que a coloca em prática.
           </AnswerBlock>
         </div>
       </Section>
@@ -114,20 +114,21 @@ export default function MetodoPage() {
         </div>
       </Section>
 
-      {/* Autoria / livro */}
+      {/* Referências: metodologia + livro */}
       <Section>
         <Card className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-vivid">Autoria</p>
-            <h3 className="mt-2 font-display text-heading text-paper-pure">{dregLivro.titulo}</h3>
-            <p className="mt-1 text-sm text-paper/70">Por {dregLivro.autores}.</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-vivid">Para aprofundar</p>
+            <h3 className="mt-2 font-display text-heading text-paper-pure">
+              Metodologia {referenciasMetodo.metodologia.nome} (livro em breve)
+            </h3>
+            <p className="mt-1 text-sm text-paper/70">
+              Leia também {referenciasMetodo.livro.titulo}, de {referenciasMetodo.livro.autor}.
+            </p>
           </div>
-          {/* TODO(livro): capa em alta + link de compra (Pendência #4). */}
-          {dregLivro.link && (
-            <Button href={dregLivro.link} size="md">
-              Conhecer o livro
-            </Button>
-          )}
+          <Button href={referenciasMetodo.metodologia.href} size="md">
+            Conhecer a Máquina de Vendas
+          </Button>
         </Card>
       </Section>
 

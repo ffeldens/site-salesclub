@@ -10,7 +10,7 @@ export function MetodoDREG() {
       <SectionHeading
         eyebrow="Nosso método"
         title="Vender não é talento. É arquitetura."
-        description="Toda equipe de vendas de alta performance se constrói como uma casa: com planta antes do primeiro tijolo. É o método DREG, criado pelo nosso CRO, Hélio Azevedo, no livro Arquitetura de Vendas de Alta Performance."
+        description="Toda equipe de vendas de alta performance se constrói como uma casa: com planta antes do primeiro tijolo. É o método DREG, que ganha forma prática na metodologia Máquina de Vendas (livro em breve)."
       />
 
       <DregDiagrama />

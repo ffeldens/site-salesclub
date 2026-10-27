@@ -58,7 +58,6 @@ export const imersoes: Imersao[] = [
     ],
     mentores: [
       { nome: 'Raphael Lassance', cargo: 'CEO do Growth Team e sócio do Sales Club', bio: 'Empreendedor serial com 27 anos de mercado, Co-fundador e CEO do Growth Team, a primeira agência de growth marketing do Brasil, co-fundador da CLHUB, hub de soluções em audiovisual, sócio e mentor do Sales Club.', foto: '/images/mentores/raphael-lassance.webp' },
-      { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Investidor e estrategista em vendas e marketing B2B.', foto: '/images/mentores/helio-azevedo.webp' },
       { nome: 'Luiz Paulo Teixeira', cargo: 'CEO do Sales Club', bio: 'Líder do maior ecossistema de vendas do Brasil.', foto: '/images/mentores/luiz-paulo-teixeira.webp' },
       { nome: 'Felipe Feldens', cargo: 'COO do Sales Club', bio: 'Estratégia, inovação e transformação organizacional.', foto: '/images/mentores/felipe-feldens.webp' },
       { nome: 'Guilherme Junqueira', cargo: 'CEO da Delta Academy', bio: 'Empreendedor e investidor; Forbes Under 30.', foto: '/images/mentores/guilherme-junqueira.webp' },
@@ -163,7 +162,6 @@ export const imersoes: Imersao[] = [
       { numero: 4, titulo: 'Conversão e estratégia de vendas', descricao: 'Use IA para personalizar abordagens e aumentar as taxas de fechamento.' },
     ],
     mentores: [
-      { nome: 'Hélio Azevedo', cargo: 'CRO do Sales Club', bio: 'Ex-Microsoft e SAP. Especialista em IA para geração e conversão de demanda.' },
       { nome: 'Thais Sterenberg', cargo: 'Founder da Elephan.ai', bio: 'CEO de plataforma de inteligência de receita com IA. Top 10 Female Founders.' },
       { nome: 'Guilherme Junqueira', cargo: 'CEO da Delta Academy', bio: 'Fundador da Gama Academy (vendida à Ânima Educação). Forbes Under 30.' },
     ],

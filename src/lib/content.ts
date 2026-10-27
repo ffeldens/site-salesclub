@@ -43,12 +43,6 @@ const MENTORES: Mentor[] = [
     foto: '/images/mentores/luiz-paulo-teixeira.webp',
   },
   {
-    nome: 'Hélio Azevedo',
-    cargo: 'CRO do Sales Club',
-    bio: '30+ anos em IBM, Microsoft e SAP. Especialista em operações comerciais B2B complexas e IA aplicada à receita.',
-    foto: '/images/mentores/helio-azevedo.webp',
-  },
-  {
     nome: 'Felipe Feldens',
     cargo: 'COO do Sales Club',
     bio: 'Especialista em estratégia, inovação e transformação organizacional; 18+ anos liderando mudanças em grandes empresas e scale-ups.',
