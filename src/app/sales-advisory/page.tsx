@@ -27,7 +27,7 @@ const PILARES = [
 const ADVISORS = [
   { nome: 'Cleber Voelzke', role: 'Conselheiro certificado · Ex-Walmart, Salesforce', tag: 'PROVOCA', foto: '/images/mentores/cleber-voelzke.jpg', desc: 'Pra quem precisa de alguém que já sentou em um conselho de verdade e vai confrontar a decisão que você está adiando.' },
   { nome: 'Luiz Paulo Teixeira', role: 'CEO Sales Club · Ex-FGV', tag: 'ESTRUTURA', foto: '/images/mentores/luiz-paulo-teixeira.webp', desc: 'Visão sistêmica de cultura, governança e execução: o olhar de quem constrói empresas que sustentam crescimento.' },
-  { nome: 'Hélio Azevedo', role: 'CRO Sales Club · Ex-IBM, Microsoft, SAP', tag: 'ESTRUTURA', foto: '/images/mentores/helio-azevedo.webp', desc: 'Pra destravar a máquina comercial: arquitetura de vendas, estratégia e IA aplicada a receita.' },
+  { nome: 'Hélio Azevedo', role: 'Educador e mentor · Ex-IBM, Microsoft, SAP', tag: 'ESTRUTURA', foto: '/images/mentores/helio-azevedo.webp', desc: 'Pra destravar a máquina comercial: estratégia e IA aplicada a receita. Autor do livro Arquitetura de Vendas.' },
   { nome: 'Felipe Feldens', role: 'COO Sales Club · Ex-Sicredi, Renner', tag: 'ESTRUTURA', foto: '/images/mentores/felipe-feldens.webp', desc: 'Transformação com método: gestão, dados e mudança cultural, de quem liderou viradas em grandes operações.' },
   { nome: 'Denis Tassitano', role: 'CRO SAP Concur LATAM · Autor de PowerHub', tag: 'CONECTA', foto: '/images/mentores/denis-tassitano.jpg', desc: 'Pra quem precisa abrir portas: networking estratégico e acesso, de quem literalmente escreveu o livro sobre conexões.' },
   { nome: 'Raphael Lassance', role: 'CEO do Growth Team e sócio do Sales Club', tag: 'PROTOTIPA', foto: '/images/mentores/raphael-lassance.webp', desc: 'Pra quem precisa de suporte para encontrar alavancas de geração de leads e escalar a receita com eficiência.' },
@@ -284,7 +284,7 @@ export default function EliteAdvisorPage() {
           {
             pergunta: 'Quem são os conselheiros do ELITE Advisor?',
             resposta:
-              'O conselho reúne Cleber Voelzke (ex-Walmart e Salesforce), Luiz Paulo Teixeira (CEO do Sales Club, ex-FGV), Hélio Azevedo (CRO, ex-IBM, Microsoft e SAP), Felipe Feldens (COO, ex-Sicredi e Renner), Denis Tassitano (CRO SAP Concur LATAM, autor de PowerHub) e Raphael Lassance (CEO do Growth Team). O conselheiro com melhor encaixe é indicado na primeira reunião — a decisão final é sempre do empresário.',
+              'O conselho reúne Cleber Voelzke (ex-Walmart e Salesforce), Luiz Paulo Teixeira (CEO do Sales Club, ex-FGV), Hélio Azevedo (educador e mentor, ex-IBM, Microsoft e SAP), Felipe Feldens (COO, ex-Sicredi e Renner), Denis Tassitano (CRO SAP Concur LATAM, autor de PowerHub) e Raphael Lassance (CEO do Growth Team). O conselheiro com melhor encaixe é indicado na primeira reunião — a decisão final é sempre do empresário.',
           },
           {
             pergunta: 'O ELITE Advisor executa pela minha empresa?',

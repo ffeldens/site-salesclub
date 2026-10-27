@@ -33,7 +33,7 @@ export default function MetodoPage() {
 
       <HeroInstitucional
         eyebrow="Nosso método"
-        title="Vender não é talento. É arquitetura."
+        title="Vender não é talento. É processo."
         subtitle="O método DREG — Desenhar, Recrutar, Educar e Gerenciar — é a forma do Sales Club de construir uma área comercial de alta performance: com planta antes do primeiro tijolo."
         primaryCta={{ label: 'Descobrir minha etapa mais fraca', href: '/servicos/diagnostico-comercial' }}
         secondaryCta={{ label: 'Conhecer a Máquina de Vendas', href: '/servicos/maquina-de-vendas' }}
@@ -123,7 +123,8 @@ export default function MetodoPage() {
               Metodologia {referenciasMetodo.metodologia.nome} (livro em breve)
             </h3>
             <p className="mt-1 text-sm text-paper/70">
-              Leia também {referenciasMetodo.livro.titulo}, de {referenciasMetodo.livro.autor}.
+              E o livro {referenciasMetodo.livro.titulo}, de {referenciasMetodo.livro.autor}, apresenta{' '}
+              {referenciasMetodo.livro.descricao}.
             </p>
           </div>
           <Button href={referenciasMetodo.metodologia.href} size="md">

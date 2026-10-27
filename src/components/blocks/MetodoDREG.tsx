@@ -9,7 +9,7 @@ export function MetodoDREG() {
     <Section tone="card">
       <SectionHeading
         eyebrow="Nosso método"
-        title="Vender não é talento. É arquitetura."
+        title="Vender não é talento. É processo."
         description="Toda equipe de vendas de alta performance se constrói como uma casa: com planta antes do primeiro tijolo. É o método DREG, que ganha forma prática na metodologia Máquina de Vendas (livro em breve)."
       />
 

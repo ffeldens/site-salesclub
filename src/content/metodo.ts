@@ -86,6 +86,8 @@ export const referenciasMetodo = {
   livro: {
     titulo: 'Queime o Plano',
     autor: 'Felipe Feldens',
+    capa: '/images/livro/queime-o-plano.webp',
+    descricao: 'o modelo de gestão contínua de estratégia, resultados e cultura',
     // TODO(livro): link de compra/landing do Queime o Plano (quando disponível).
     link: null as string | null,
   },
