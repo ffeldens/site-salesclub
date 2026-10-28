@@ -2,7 +2,7 @@
 
 > Versão completa para ingestão: https://salesclub.com.br/llms-full.txt
 
-> O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria — o Sales Village, em São Paulo.
+> O maior ecossistema de vendas do Brasil: imersões presenciais, serviços de consultoria comercial, comunidade de empresários (ELITE) e conselho com conselheiro dedicado (ELITE Advisor) para dar previsibilidade e escala à área comercial de empresas B2B. Sede própria: o Sales Village, em São Paulo.
 
 ## Método
 - [Método DREG](https://salesclub.com.br/metodo): Desenhar, Recrutar, Educar e Gerenciar: método do Sales Club para construir uma máquina de vendas previsível. A metodologia Máquina de Vendas (livro em breve) é o modelo prático que implementa o DREG. O livro "Queime o Plano", de Felipe Feldens, apresenta o modelo de gestão contínua de estratégia, resultados e cultura.
@@ -10,7 +10,6 @@
 ## Imersões
 - [Sales Strategy](https://salesclub.com.br/imersoes/sales-strategy): imersão de estratégia comercial para líderes.
 - [Sales Leadership](https://salesclub.com.br/imersoes/sales-leadership): imersão de liderança de vendas.
-- [Sales AI](https://salesclub.com.br/imersoes/sales-ai): IA aplicada a vendas.
 
 ## Serviços
 - [Máquina de Vendas](https://salesclub.com.br/servicos/maquina-de-vendas): squad de especialistas que estrutura a operação comercial.

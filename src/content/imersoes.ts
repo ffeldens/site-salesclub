@@ -142,51 +142,6 @@ export const imersoes: Imersao[] = [
     heroModo: 'recorte',
     dreg: 'Gerenciar',
   },
-  {
-    slug: 'sales-ai',
-    titulo: 'Sales AI',
-    headline: 'Sales AI: inteligência artificial sob comando da liderança comercial',
-    subtitulo:
-      'Imersão presencial para diretores comerciais, heads de vendas, gerentes nacionais e empreendedores que precisam colocar a IA em vendas sob comando da liderança — com governança, segurança de dados e impacto em funil, receita e ROI.',
-    data: '21 de outubro',
-    local: SALES_VILLAGE,
-    formato: 'Presencial · dia inteiro (~8h)',
-    resumo:
-      'Sales AI é a imersão de um dia do Sales Club para colocar a inteligência artificial a serviço do funil, da gestão e das decisões de receita. Resolve o Shadow AI (uso descontrolado com risco de vazamento) e a ineficiência operacional, com governança e um playbook prático de IA em vendas.',
-    descricao:
-      'Um dia para colocar a Inteligência Artificial a serviço do seu funil de vendas, da gestão e das decisões de receita. A imersão resolve dois problemas críticos: Shadow AI (uso descontrolado de ferramentas com risco de vazamento de dados) e ineficiência operacional (falta de tempo, leads desqualificados, baixa previsibilidade).',
-    modulos: [
-      { numero: 1, titulo: 'Fundamentos e oportunidades', descricao: 'Desmistifique a IA e entenda como ela pode gerar vantagem competitiva no seu negócio.' },
-      { numero: 2, titulo: 'Produtividade do empresário', descricao: 'Otimize seu tempo e suas decisões com ferramentas que fazem o trabalho pesado por você.' },
-      { numero: 3, titulo: 'Geração de demanda com IA', descricao: 'Atraia leads qualificados com campanhas e dados inteligentes.' },
-      { numero: 4, titulo: 'Conversão e estratégia de vendas', descricao: 'Use IA para personalizar abordagens e aumentar as taxas de fechamento.' },
-    ],
-    mentores: [
-      { nome: 'Thais Sterenberg', cargo: 'Founder da Elephan.ai', bio: 'CEO de plataforma de inteligência de receita com IA. Top 10 Female Founders.' },
-      { nome: 'Guilherme Junqueira', cargo: 'CEO da Delta Academy', bio: 'Fundador da Gama Academy (vendida à Ânima Educação). Forbes Under 30.' },
-    ],
-    beneficios: [
-      'Inteligência artificial sob governança',
-      'Funil mais limpo e time focado em negócios',
-      'Produtividade pessoal em alto nível',
-      'Playbook prático de IA em vendas',
-      'Acesso às gravações por 12 meses',
-      'Grupo seleto de empresários e lideranças comerciais',
-    ],
-    paraQuem: [
-      'Diretores e heads de vendas',
-      'Gerentes comerciais',
-      'Empreendedores e sócios',
-      'Lideranças que buscam eficiência e escala sem perder governança',
-    ],
-    faq: [
-      { pergunta: 'É necessário saber programar ou ter conhecimento técnico?', resposta: 'Não. É uma imersão de negócios, formatada para que gestores entendam estratégia e aplicação prática sem escrever código.' },
-      { pergunta: 'Como funciona o formato?', resposta: 'Experiência presencial de aproximadamente 8 horas, dia inteiro, no Sales Village em São Paulo.' },
-      { pergunta: 'Qual o valor do investimento?', resposta: 'Os valores variam conforme lote, condições comerciais e parcerias. Entre em contato para receber uma proposta atualizada.' },
-    ],
-    ctaLabel: 'Entrar na lista de espera',
-    dreg: 'Desenhar',
-  },
 ]
 
 export function getImersoes(): Imersao[] {

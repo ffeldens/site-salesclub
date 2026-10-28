@@ -34,7 +34,7 @@ Componentes de UI: próprios + (opcional) shadcn/ui. Validação: **zod**. Anti-
 
 ```
 /                         Home (hub do ecossistema; destacar ELITE)
-/imersoes  +  /imersoes/[slug]        sales-strategy | sales-leadership | sales-ai
+/imersoes  +  /imersoes/[slug]        sales-strategy | sales-leadership
 /servicos  +  /servicos/[slug]        maquina-de-vendas | diagnostico-comercial
 /corporate +  /corporate/[slug]       capacitacoes | palestras | convencoes | projetos-especiais | mentoria
 /elite                    Comunidade de empresários (membership)

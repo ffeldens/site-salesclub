@@ -46,7 +46,6 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
       { label: 'Diagnóstico Comercial', href: '/servicos/diagnostico-comercial' },
       { label: 'Sales Strategy', href: '/imersoes/sales-strategy' },
       { label: 'Máquina de Vendas (desenho)', href: '/servicos/maquina-de-vendas' },
-      { label: 'Sales AI', href: '/imersoes/sales-ai' },
     ],
   },
   {
@@ -56,7 +55,7 @@ export const dregMapa: { etapa: string; solucoes: { label: string; href: string 
   {
     etapa: 'Educar',
     solucoes: [
-      { label: 'Imersões (Strategy, Leadership, AI)', href: '/imersoes' },
+      { label: 'Imersões (Strategy e Leadership)', href: '/imersoes' },
       { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
       { label: 'Corporate (capacitações, convenções, palestras)', href: '/corporate' },
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil' },

@@ -61,6 +61,9 @@ const nextConfig = {
       { source: '/corporate/mentoria', destination: '/corporate#mentoria', permanent: true },
       // Rebrand Sales Board → Sales Advisory
       { source: '/sales-board', destination: '/sales-advisory', permanent: true },
+      // Sales AI descontinuada: URL indexada e presente em materiais antigos
+      { source: '/imersoes/sales-ai', destination: '/imersoes', permanent: true },
+      { source: '/imersao-presencial/sales-ai', destination: '/imersoes', permanent: true },
       // 301 das URLs antigas (WordPress): imersões presenciais → /imersoes/*
       { source: '/imersao-presencial/:slug*', destination: '/imersoes/:slug*', permanent: true },
       // Unificação Universidade + Sales Pro (Sales Pro é um programa da Universidade)

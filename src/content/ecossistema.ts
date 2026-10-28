@@ -15,7 +15,7 @@ export const ecossistemaPilares: EcossistemaPilar[] = [
     titulo: 'Aprender',
     descricao: 'Imersões presenciais, formação contínua e encontros pelo país.',
     itens: [
-      { label: 'Imersões (Strategy, Leadership, AI)', href: '/imersoes' },
+      { label: 'Imersões (Strategy e Leadership)', href: '/imersoes' },
       { label: 'Universidade · Sales Pro', href: '/universidade#sales-pro' },
       { label: 'Sales Club pelo Brasil', href: '/sales-club-pelo-brasil' },
     ],

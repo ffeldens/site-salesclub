@@ -50,8 +50,7 @@ em ChatGPT/Perplexity/Gemini e buscadores. Executada em 27/08/2026 (lote P0).
   `GPT_VISIBILITY_EXTERNAL_ACTIONS` na lista externa (DNS/hospedagem de cada um).
 
 ### P0-6 · Datas de turmas — ✅ CONSISTENTES
-- Fonte única em `src/content/imersoes.ts` (Strategy 10–11/set · Leadership 22–23/out ·
-  Sales AI 15/set); listagem e detalhe consomem o mesmo dado.
+- Fonte única em `src/content/imersoes.ts` (Strategy 10–11/set · Leadership 22–23/out); listagem e detalhe consomem o mesmo dado.
 
 ## Falso positivo registrado
 - "Post-lixo `page-2f06997a615504fd` no blog": era o nome do chunk JS da própria página

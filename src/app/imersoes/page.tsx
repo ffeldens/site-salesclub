@@ -13,7 +13,7 @@ import { getImersoes } from '@/content/imersoes'
 export const metadata: Metadata = buildMetadata({
   title: 'Imersões presenciais de vendas',
   description:
-    'Imersões presenciais do Sales Club para empresários e líderes comerciais: Sales Strategy, Sales Leadership e Sales AI, no Sales Village em São Paulo.',
+    'Imersões presenciais do Sales Club para empresários e líderes comerciais: Sales Strategy e Sales Leadership, no Sales Village em São Paulo.',
   path: '/imersoes',
 })
 
@@ -31,10 +31,10 @@ export default function ImersoesPage() {
       <Section>
         <SectionHeading
           eyebrow="Escolha a sua"
-          title="Três imersões, um ecossistema"
-          description="Estratégia comercial, liderança de vendas e IA aplicada — para empresários, gestores e times que querem previsibilidade."
+          title="Duas imersões, um ecossistema"
+          description="Estratégia comercial e liderança de vendas, para empresários, gestores e times que querem previsibilidade."
         />
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-2">
           {imersoes.map((im) => (
             <Card key={im.slug} as="article" className="flex flex-col">
               <div className="mb-3 flex flex-wrap gap-2">

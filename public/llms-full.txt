@@ -4,7 +4,7 @@
 
 ## Quem é o Sales Club (entidade)
 
-O Sales Club é o maior ecossistema de vendas do Brasil. Reúne imersões presenciais, serviços de consultoria comercial, uma comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor), formação online (Universidade Sales Club e Formação Sales Pro) e tecnologia (Sales AI) para dar previsibilidade e escala à área comercial de empresas B2B.
+O Sales Club é o maior ecossistema de vendas do Brasil. Reúne imersões presenciais, serviços de consultoria comercial, uma comunidade de empresários (ELITE), conselho com conselheiro dedicado (ELITE Advisor) e formação online (Universidade Sales Club e Formação Sales Pro) para dar previsibilidade e escala à área comercial de empresas B2B.
 
 - Números: +500 mil profissionais formados · +800 empresas atendidas · +10 anos de ecossistema.
 - Sede própria: Sales Village — R. Verbo Divino, 2001, 17º andar, Torre A, Chácara Santo Antônio, São Paulo/SP, CEP 04719-002 (locação para eventos corporativos e podcast: https://salesvillage.com.br/).
@@ -23,9 +23,6 @@ Imersão presencial de 2 dias para empresários, CEOs e heads de vendas: máquin
 
 ### Sales Leadership — https://salesclub.com.br/imersoes/sales-leadership
 Imersão presencial de 2 dias (20 horas) para líderes comerciais: metodologia e ferramentas para rotinas de gestão, previsibilidade de receita e alinhamento de pessoas, processos e indicadores. Próxima turma: 22 e 23 de outubro de 2026. Etapa DREG: Gerenciar. Mentores: Adriana Gomes, Gustavo Malavota, Felipe Feldens, Thiago Bezerra, Luiz Ambrósio.
-
-### Sales AI — https://salesclub.com.br/imersoes/sales-ai
-Imersão presencial de 1 dia (~8h): inteligência artificial sob comando da liderança comercial, com governança, segurança de dados e impacto em funil, receita e ROI. Próxima turma: 21 de outubro de 2026. Mentores: Thais Sterenberg (Elephan.ai), Guilherme Junqueira.
 
 ## Serviços de consultoria
 

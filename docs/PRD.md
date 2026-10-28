@@ -58,7 +58,7 @@ Construir o novo site do Sales Club, unificando as propriedades hoje fragmentada
 ```
 /                         Home (hub do ecossistema)
 /imersoes                 Índice de imersões
-/imersoes/[slug]          sales-strategy | sales-leadership | sales-ai
+/imersoes/[slug]          sales-strategy | sales-leadership
 /servicos                 Índice de serviços produtizados (B2B, foco PME/scale-up)
 /servicos/[slug]          maquina-de-vendas | diagnostico-comercial
 /corporate                Hub enterprise/grande conta (Bayer, Axia, Unipar...)
@@ -215,7 +215,7 @@ Toda página e post deve seguir:
 
 ## 10. Conteúdo a migrar/produzir
 
-- Imersões: Sales Strategy, Sales Leadership, Sales AI (textos, módulos, mentores, FAQ — já existem, migrar).
+- Imersões: Sales Strategy, Sales Leadership (textos, módulos, mentores, FAQ — já existem, migrar).
 - Serviços: Máquina de Vendas (squad de 3 especialistas), Diagnóstico Comercial.
 - **Corporate** (enterprise/grande conta): hub + 5 páginas-filhas (capacitações/educação corporativa, palestras, convenções, projetos especiais, mentoria). Prova social com clientes enterprise atendidos (Bayer, Axia, Unipar etc.) e cases. CTA "Solicitar proposta". Schema `Service` (e `Event` p/ palestras/convenções).
 - **ELITE** (comunidade de empresários): página de produto explicando os pilares (capacitação + Máquina de Vendas + mentoria + networking qualificado), benefícios de associação, depoimentos de membros e CTA "Aplicar para a comunidade". É a expressão do conceito "clube" — diferencial central frente aos concorrentes. Avaliar área de membros logada em fase futura.

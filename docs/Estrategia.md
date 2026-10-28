@@ -115,8 +115,7 @@ Analisados sob o mesmo framework: posicionamento, estrutura, ofertas, prova soci
 / (Home — hub do ecossistema)
 ├── /imersoes
 │   ├── /imersoes/sales-strategy
-│   ├── /imersoes/sales-leadership
-│   └── /imersoes/sales-ai
+│   └── /imersoes/sales-leadership
 ├── /servicos                (ofertas produtizadas — B2B, foco PME/scale-up)
 │   ├── /servicos/maquina-de-vendas      (corrigir noindex → index)
 │   └── /servicos/diagnostico-comercial  (corrigir noindex → index)

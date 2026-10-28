@@ -28,7 +28,7 @@ ou publicação. Responder → o dev aplica em minutos.
 
 ## 5. Carga horária oficial por imersão
 - Sales Leadership: "20 horas" publicado. Sales Strategy: "2 dias" sem carga horária.
-  Sales AI: "~8h". Confirmar números oficiais para padronizar (schema CourseInstance).
+  Confirmar números oficiais para padronizar (schema CourseInstance).
 
 ## 6. Dados agregados do Diagnóstico para estudo proprietário
 - OK para publicar o "Panorama da Maturidade Comercial" com dados agregados e anônimos

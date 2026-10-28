@@ -11,7 +11,6 @@ correspondente (substituindo os placeholders atuais).
 ## `imersoes/` — fundos / imagens dos heros das imersões
 - `sales-strategy.jpg`
 - `sales-leadership.jpg`
-- `sales-ai.jpg`
 (usadas no hero de cada `/imersoes/[slug]` e nos cards do índice)
 
 ## `sales-village/` — galeria do espaço
@@ -33,7 +32,7 @@ Nome em kebab-case do mentor. Ex.:
 - `guilherme-junqueira.jpg`
 - (Sales Leadership / squad) `gustavo-malavota.jpg`, `adriana-gomes.jpg`,
   `thiago-bezerra.jpg`, `luiz-ambrosio.jpg`, `giovanna-galetto.jpg`,
-  `viviane-machado.jpg`, `thais-sterenberg.jpg`
+  `viviane-machado.jpg`
 (hoje os cards mostram as iniciais; com a foto, troco automaticamente)
 
 ## `clientes/` — logos de clientes (prova social)

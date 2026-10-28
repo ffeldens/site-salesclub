@@ -71,7 +71,6 @@ export const solutionsMenu: NavGroup[] = [
     items: [
       { label: 'Sales Strategy', href: '/imersoes/sales-strategy', description: 'Estratégia comercial' },
       { label: 'Sales Leadership', href: '/imersoes/sales-leadership', description: 'Liderança de vendas' },
-      { label: 'Sales AI', href: '/imersoes/sales-ai', description: 'IA aplicada a vendas' },
     ],
   },
   {

@@ -72,7 +72,7 @@ export default async function HomePage() {
             { titulo: 'Processo comercial estruturado', descricao: 'Do topo do funil ao fechamento, com etapas claras.' },
             { titulo: 'Gestão por indicadores e OKRs', descricao: 'Decisões guiadas por dados, não por achismo.' },
             { titulo: 'Times mais produtivos', descricao: 'Playbooks, cadências e ritmo de vendas.' },
-            { titulo: 'IA aplicada a vendas', descricao: 'Ganho de eficiência com Sales AI e automações.' },
+            { titulo: 'Automação e dados', descricao: 'Ganho de eficiência com CRM higienizado, dashboards e automações.' },
           ]}
         />
 

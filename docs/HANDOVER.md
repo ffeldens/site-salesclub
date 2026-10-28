@@ -49,7 +49,7 @@ O conteúdo vive em **`src/content/*.ts`** (tipado). As mudanças mais frequente
 | O que mudar | Arquivo |
 |---|---|
 | Edições do Sales Club pelo Brasil (cidades, datas, link de inscrição/botão) | `src/content/eventos.ts` (`proximasEdicoes` / `ultimasEdicoes`; campo `inscricaoUrl` cria o botão "Garantir minha vaga · {data}") |
-| Datas/turmas/mentores das imersões (Strategy, Leadership, AI) | `src/content/imersoes.ts` |
+| Datas/turmas/mentores das imersões (Strategy, Leadership) | `src/content/imersoes.ts` |
 | Universidade (plataforma) + Formação Sales Pro (programa, `#sales-pro`) | `src/content/universidade-sc.ts` (plataforma) e `src/content/universidade.ts` (curso + vídeos de alunos) |
 | Depoimentos em vídeo do Sales Strategy (22) | `src/content/depoimentos-video.ts` (`featured` = destaque na home/imersão) |
 | ELITE: resultados de membros + vídeos | `src/content/elite-membros.ts` |
